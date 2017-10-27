@@ -62,7 +62,7 @@ class LibraryLoader extends ExtensionLoader
 			return $name;
 		}
 
-		array_splice($nameParts, 1, 1, array($nameParts[1], 'layouts', 'twig'));
+		array_splice($nameParts, 1, 1, array($nameParts[1], 'layouts'));
 
 		return implode('/', $nameParts);
 	}
