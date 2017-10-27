@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" client="site" type="plugin" group="twig" method="upgrade">
+	<name>PLG_TWIG_JHTML</name>
+	<version>1.0.0</version>
+	<creationDate>October 2017</creationDate>
+	<author>Roberto Segura</author>
+	<authorEmail>roberto@phproberto.com</authorEmail>
+	<authorUrl>www.phproberto.com</authorUrl>
+	<copyright>Copyright (C) 2017 Roberto Segura López. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later, see LICENSE.</license>
+	<description>PLG_TWIG_JHTML_DESC</description>
+	<files>
+		<folder>language</folder>
+		<filename plugin="jhtml">jhtml.php</filename>
+		<filename>jhtml.xml</filename>
+	</files>
+</extension>

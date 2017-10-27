@@ -1,0 +1,10 @@
+{
+	"libraries"  : ["twig"],
+	"packages"   : ["twig"],
+	"plugins" : {
+		"twig" : [
+			"cache", "debug", "jarray", "japp", "jdoc", "jhtml", "jlang", "jlayout", "jposition", "jprofiler", 
+			"jroute", "jsession", "jtext", "juri", "juser", "unserialize"
+		]
+	}
+}

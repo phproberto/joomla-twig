@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="2.5" client="site" type="plugin" group="twig" method="upgrade">
+	<name>PLG_TWIG_DEBUG</name>
+	<version>1.0.0</version>
+	<creationDate>October 2017</creationDate>
+	<author>Roberto Segura</author>
+	<authorEmail>roberto@phproberto.com</authorEmail>
+	<authorUrl>www.phproberto.com</authorUrl>
+	<copyright>Copyright (C) 2017 Roberto Segura López. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later, see LICENSE.</license>
+	<description>PLG_TWIG_DEBUG_DESC</description>
+	<files>
+		<folder>language</folder>
+		<filename plugin="debug">debug.php</filename>
+		<filename>debug.xml</filename>
+	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="mode"
+					type="list"
+					label="PLG_TWIG_DEBUG_PARAM_MODE"
+					description="PLG_TWIG_DEBUG_PARAM_MODE_DESC"
+					default="auto"
+					>
+					<option value="auto">PLG_TWIG_DEBUG_PARAM_MODE_OPTION_AUTO</option>
+					<option value="always">PLG_TWIG_DEBUG_PARAM_MODE_OPTION_ALWAYS</option>
+					<option value="never">PLG_TWIG_DEBUG_PARAM_MODE_OPTION_NEVER</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
+</extension>

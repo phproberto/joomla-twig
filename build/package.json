@@ -1,0 +1,34 @@
+{
+  "name": "joomla-twig",
+  "version": "0.0.1",
+  "description": "Gulp build system for joomla-twig library",
+  "main": "gulpfile.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.15.0",
+    "del": "^2.2.2",
+    "gulp": "^3.9.1",
+    "gulp-composer": "^0.4.0",
+    "gulp-zip": "^3.2.0",
+    "joomla-gulp": "^1.1.1",
+    "require-dir": "^0.3.0",
+    "xml2js": "^0.4.17"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/phproberto/joomla-twig"
+  },
+  "keywords": [
+    "joomla",
+    "gulp",
+    "twig"
+  ],
+  "author": "Roberto Segura <roberto@phproberto.com>",
+  "license": "GPL-2.0"
+}

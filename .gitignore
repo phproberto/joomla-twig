@@ -1,0 +1,12 @@
+# Build
+gulp-config.json
+node_modules/
+
+# Composer
+/vendor/
+composer.lock
+
+# Tests
+/clover.xml
+coverage/
+phpunit.xml

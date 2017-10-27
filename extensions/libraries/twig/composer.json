@@ -1,0 +1,24 @@
+{
+    "name": "phproberto/joomla-twig",
+    "type": "library",
+    "description": "Twig integration for joomla",
+    "keywords": ["joomla", "twig"],
+    "homepage": "https://github.com/phproberto/joomla-twig",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Roberto Segura",
+            "email": "roberto@phproberto.com",
+            "homepage": "http://www.phproberto.com"
+        }
+    ],
+    "require"    : {
+        "twig/twig": "~2.0",
+        "twig/extensions": "^1.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Phproberto\\Joomla\\Twig\\": "src/"
+        }
+    }
+}

@@ -1,0 +1,5 @@
+Copyright © 2017 Roberto Segura López
+
+Each file included in this library is licensed under GNU LESSER GENERAL PUBLIC LICENSE
+
+See LICENSE for the full text of the GNU LESSER GENERAL PUBLIC LICENSE.

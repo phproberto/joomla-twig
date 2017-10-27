@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="library" method="upgrade" version="3.6">
+	<name>Twig - Library</name>
+	<libraryname>twig</libraryname>
+	<creationDate>October 2017</creationDate>
+	<author>Roberto Segura</author>
+	<authorEmail>roberto@phproberto.com</authorEmail>
+	<authorUrl>www.phproberto.com</authorUrl>
+	<copyright>Copyright (C) 2017 Roberto Segura López. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later, see LICENSE.</license>
+	<version>0.0.1</version>
+	<description>Twig library</description>
+	<files>
+		<folder>form</folder>
+		<folder>language</folder>
+		<folder>src</folder>
+		<folder>vendor</folder>
+		<filename>library.php</filename>
+	</files>
+</extension>
