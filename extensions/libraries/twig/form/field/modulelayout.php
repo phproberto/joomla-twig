@@ -16,7 +16,7 @@ use Phproberto\Joomla\Twig\Field\LayoutSelector;
 /**
  * Module layout selector.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.0.0
  */
 class TwigFormFieldModulelayout extends LayoutSelector
 {

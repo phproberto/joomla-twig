@@ -15,7 +15,7 @@ use Twig\Loader\ChainLoader;
 /**
  * Twig rendering class
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.0.0
  */
 final class Twig
 {

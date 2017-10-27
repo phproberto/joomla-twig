@@ -17,7 +17,7 @@ use Twig\TwigFilter;
 /**
  * Twig filter to unserialize data.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.0.0
  */
 class Unserialize extends AbstractExtension
 {

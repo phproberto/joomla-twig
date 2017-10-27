@@ -14,7 +14,7 @@ defined('_JEXEC') or die;
 /**
  * Joomla extension file system loader.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.0.0
  */
 abstract class ExtensionLoader extends \Twig_Loader_Filesystem
 {

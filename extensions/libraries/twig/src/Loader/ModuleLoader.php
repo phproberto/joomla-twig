@@ -14,7 +14,7 @@ defined('_JEXEC') or die;
 /**
  * Joomla module file system loader.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.0.0
  */
 class ModuleLoader extends ExtensionLoader
 {

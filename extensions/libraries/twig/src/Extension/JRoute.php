@@ -18,7 +18,7 @@ use Twig\TwigFunction;
 /**
  * JRoute integration for Twig.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.0.0
  */
 class JRoute extends AbstractExtension
 {

@@ -18,7 +18,7 @@ use Joomla\CMS\Form\FormField;
 /**
  * Base twig extension plugin.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.0.0
  */
 abstract class LayoutSelector extends \JFormFieldGroupedList
 {

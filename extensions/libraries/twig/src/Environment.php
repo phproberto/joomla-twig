@@ -16,7 +16,7 @@ use Twig\Environment as BaseEnvironment;
 /**
  * Joomla Twig enviroment.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.0.0
  */
 final class Environment extends BaseEnvironment
 {

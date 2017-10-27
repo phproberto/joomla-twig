@@ -17,7 +17,7 @@ use Twig\TwigFilter;
 /**
  * Extension to improve array handling.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.0.0
  */
 class JArray extends AbstractExtension
 {
