@@ -1,6 +1,6 @@
 # Twig integration for Joomla!
 
-> Integrate [Twig 2.0](https://twig.symfony.com/doc/2.x/) with Joomla! and start enjoying the power of this template system. 
+> [Twig 2.0](https://twig.symfony.com/doc/2.x/) && [Twig extensions](http://twig-extensions.readthedocs.io/en/latest/) integration for Joomla!
 
 ## Index <a id="index"></a>
 
