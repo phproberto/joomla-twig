@@ -1,13 +1,41 @@
 # Twig integration for Joomla!
 
-> Integrate [Twig 2.0](https://twig.symfony.com/doc/2.x/) with Joomla! and start enjoying the power of this template system.  
+> Integrate [Twig 2.0](https://twig.symfony.com/doc/2.x/) with Joomla! and start enjoying the power of this template system. 
 
 ## Index <a id="index"></a>
 
+* [Description](#description)
 * [Installation](#installation)
 * [Documentation](#documentation)
 * [Requirements](#requirements)
 * [Copyright & License](#license)
+
+## Description <a id="description"></a>
+
+After integrating Twig with some projects I found the need to create some kind of standard package that can be used & extended by anbody at any project.  
+
+This Twig integration includes common global variables & functions required when using Twig in Joomla!  
+
+Some highlights:  
+
+* Integrates [Twig 2.0](https://github.com/twigphp/Twig)
+* Integrates official [Twig extensions](http://twig-extensions.readthedocs.io/en/latest/)
+* Global variables to access active application, active document, session, active user, etc.
+* Functions to use JLayout, JProfiler, JRoute, JUri, JLanguage, JHtml, etc.
+* Integrated cache.
+* Integrated debug mode.
+* All the extensions are integrated through plugins so you can extend/replace any plugin you need.
+
+Example usage:  
+
+```php
+JLoader::import('twig.library');
+
+// This will render a twig layout in: templates/{ACTIVE_TEMPLATE}/html/view.html.twig
+echo Twig::render('@template/view.html.twig');  
+```
+
+You can find more examples/usages in the [documentation](./docs/README.md);  
 
 ## Installation <a id="installation"></a>
 
