@@ -41,7 +41,7 @@ class Pkg_TwigInstallerScript
 			{
 				$extType = (string) $node->attributes()->type;
 
-				if ($extType != 'plugin')
+				if ($extType !== 'plugin')
 				{
 					continue;
 				}
@@ -56,7 +56,7 @@ class Pkg_TwigInstallerScript
 				$extName  = (string) $node->attributes()->id;
 				$extGroup = (string) $node->attributes()->group;
 
-				$db = JFactory::getDBO();
+				$db = JFactory::getDbo();
 				$query = $db->getQuery(true);
 				$query->update($db->quoteName("#__extensions"));
 				$query->set("enabled=1");
@@ -64,7 +64,7 @@ class Pkg_TwigInstallerScript
 				$query->where("element=" . $db->quote($extName));
 				$query->where("folder=" . $db->quote($extGroup));
 				$db->setQuery($query);
-				$db->query();
+				$db->execute();
 			}
 		}
 	}
@@ -78,7 +78,7 @@ class Pkg_TwigInstallerScript
 	 */
 	protected function getManifest($parent)
 	{
-		if (null === $this->manifest)
+		if ($this->manifest === null)
 		{
 			$this->loadManifest($parent);
 		}
@@ -99,7 +99,7 @@ class Pkg_TwigInstallerScript
 		$elementParts = explode('_', $element);
 
 		// Type not properly detected or not a package
-		if (count($elementParts) != 2 || strtolower($elementParts[0]) != 'pkg')
+		if (count($elementParts) != 2 || strtolower($elementParts[0]) !== 'pkg')
 		{
 			$this->manifest = $parent->get('manifest');
 
