@@ -78,7 +78,7 @@ class Pkg_TwigInstallerScript
 	 */
 	protected function getManifest($parent)
 	{
-		if ($this->manifest === null)
+		if (null === $this->manifest)
 		{
 			$this->loadManifest($parent);
 		}
