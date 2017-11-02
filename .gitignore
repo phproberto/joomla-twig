@@ -5,6 +5,7 @@ node_modules/
 # Composer
 /vendor/
 composer.lock
+!/extensions/libraries/twig/vendor
 
 # Tests
 /clover.xml
