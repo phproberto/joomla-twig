@@ -39,13 +39,13 @@ final class Twig
 	private function __construct()
 	{
 		$loader = new ChainLoader(
-			array(
+			[
 				new Loader\ComponentLoader,
 				new Loader\LibraryLoader,
 				new Loader\ModuleLoader,
 				new Loader\PluginLoader,
 				new Loader\TemplateLoader
-			)
+			]
 		);
 
 		$this->environment = new Environment($loader);

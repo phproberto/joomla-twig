@@ -1,0 +1,29 @@
+{
+  "name": "phproberto/joomla-twig",
+  "description": "Twig 2.0 integration for Joomla!",
+  "license": "GPL-2.0",
+  "authors": [
+      {
+          "name": "Roberto Segura López",
+          "email": "roberto@phproberto.com",
+          "homepage": "http://phproberto.com"
+      }
+  ],
+  "require": {
+    "php": "^7.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "Phproberto\\Joomla\\Twig\\": "extensions/libraries/twig/src/"
+    }
+  },
+  "autoload-dev": {
+      "psr-4": {
+          "Phproberto\\Joomla\\Twig\\": "tests/"
+      }
+  },
+  "require-dev": {
+    "joomla/coding-standards": "~2.0@alpha",
+    "squizlabs/php_codesniffer": "~2.8"
+  }
+}
