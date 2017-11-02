@@ -25,9 +25,9 @@ final class Environment extends BaseEnvironment
 	 *
 	 * @var  array
 	 */
-	private $importedPluginTypes = array(
+	private $importedPluginTypes = [
 		'twig'
-	);
+	];
 
 	/**
 	 * Constructor.
