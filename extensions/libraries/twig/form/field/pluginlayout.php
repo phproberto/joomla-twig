@@ -60,9 +60,12 @@ class TwigFormFieldPluginlayout extends LayoutSelector
 	{
 		$appFolder = $this->clientId ? JPATH_ADMINISTRATOR : JPATH_SITE;
 
+		$mainFolder = $appFolder . '/plugins/' . $this->pluginGroup . '/' . $this->pluginName . '/tmpl/';
+		$overridesFolder = $appFolder . '/templates/' . $this->activeTemplate() . '/html/plugins/' . $this->pluginGroup . '/' . $this->pluginName;
+
 		return array(
-			JText::_('LIB_TWIG_LBL_PLUGIN')   => $appFolder . '/plugins/' . $this->pluginGroup . '/' . $this->pluginName . '/tmpl/',
-			JText::_('LIB_TWIG_LBL_TEMPLATE') => $appFolder . '/templates/' . $this->activeTemplate() . '/html/plugins/' . $this->pluginGroup . '/' . $this->pluginName
+			JText::_('LIB_TWIG_LBL_PLUGIN')   => $mainFolder,
+			JText::_('LIB_TWIG_LBL_TEMPLATE') => $tplFolder
 		);
 	}
 
