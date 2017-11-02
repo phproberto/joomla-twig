@@ -1,11 +1,12 @@
 # Build
 gulp-config.json
 node_modules/
+/build/releases
 
 # Composer
 /vendor/
 composer.lock
-!/extensions/libraries/twig/vendor
+/extensions/libraries/twig/vendor
 
 # Tests
 /clover.xml
