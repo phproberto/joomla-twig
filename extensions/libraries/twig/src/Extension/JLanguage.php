@@ -32,9 +32,9 @@ class JLanguage extends AbstractExtension
 	 */
 	public function getFunctions()
 	{
-		return array(
-			new TwigFunction('jlang', array(Language::class, 'getInstance'))
-		);
+		return [
+			new TwigFunction('jlang', [Language::class, 'getInstance'])
+		];
 	}
 
 	/**

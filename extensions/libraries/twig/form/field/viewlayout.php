@@ -63,10 +63,10 @@ class TwigFormFieldViewlayout extends LayoutSelector
 		$mainFolder = $appFolder . '/components/' . $this->component . '/views/' . $this->view . '/tmpl';
 		$overridesFolder = $appFolder . '/templates/' . $this->activeTemplate() . '/html/' . $this->component . '/' . $this->view;
 
-		return array(
+		return [
 			JText::_('LIB_TWIG_LBL_COMPONENT') => $mainFolder,
 			JText::_('LIB_TWIG_LBL_TEMPLATE')  => $overridesFolder
-		);
+		];
 	}
 
 	/**

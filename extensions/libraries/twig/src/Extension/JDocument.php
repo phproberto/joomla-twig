@@ -29,9 +29,9 @@ class JDocument extends AbstractExtension
 	 */
 	public function getFunctions()
 	{
-		return array(
-			new TwigFunction('jdoc', array(Document::class, 'getInstance'))
-		);
+		return [
+			new TwigFunction('jdoc', [Document::class, 'getInstance'])
+		];
 	}
 
 	/**

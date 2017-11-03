@@ -29,9 +29,9 @@ class JRoute extends AbstractExtension
 	 */
 	public function getFunctions()
 	{
-		return array(
-			new TwigFunction('jroute', array(Route::class, '_')),
-		);
+		return [
+			new TwigFunction('jroute', [Route::class, '_']),
+		];
 	}
 
 	/**

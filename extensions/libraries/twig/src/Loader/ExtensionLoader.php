@@ -30,7 +30,7 @@ abstract class ExtensionLoader extends \Twig_Loader_Filesystem
 	 *
 	 * @param   string|array  $paths  A path or an array of paths where to look for templates
 	 */
-	public function __construct($paths = array())
+	public function __construct($paths = [])
 	{
 		$this->setPaths($this->getTemplatePaths(), $this->extensionNamespace);
 

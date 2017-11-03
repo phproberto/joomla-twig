@@ -30,7 +30,7 @@ class PlgTwigJlayout extends BasePlugin
 	 *
 	 * @return  void
 	 */
-	public function onTwigAfterLoad(Environment $environment, $params = array())
+	public function onTwigAfterLoad(Environment $environment, $params = [])
 	{
 		$environment->addExtension(new JLayout);
 	}

@@ -74,7 +74,7 @@ final class Twig
 	 *
 	 * @return  string
 	 */
-	public static function render($layout, $data = array())
+	public static function render($layout, $data = [])
 	{
 		return self::getInstance()->environment()->render($layout, $data);
 	}

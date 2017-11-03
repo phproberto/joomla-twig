@@ -29,10 +29,10 @@ class JText extends AbstractExtension
 	 */
 	public function getFunctions()
 	{
-		return array(
-			new TwigFunction('jtext', array(Text::class, '_')),
-			new TwigFunction('jtext_sprintf', array(Text::class, 'sprintf')),
-		);
+		return [
+			new TwigFunction('jtext', [Text::class, '_']),
+			new TwigFunction('jtext_sprintf', [Text::class, 'sprintf']),
+		];
 	}
 
 	/**

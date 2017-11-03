@@ -29,9 +29,9 @@ class JApplication extends AbstractExtension
 	 */
 	public function getFunctions()
 	{
-		return array(
-			new TwigFunction('japp', array(CMSApplication::class, 'getInstance'))
-		);
+		return [
+			new TwigFunction('japp', [CMSApplication::class, 'getInstance'])
+		];
 	}
 
 	/**

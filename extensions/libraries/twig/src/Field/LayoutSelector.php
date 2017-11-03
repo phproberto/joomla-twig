@@ -27,7 +27,7 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 	 *
 	 * @var  string
 	 */
-	protected static $activeTemplates = array();
+	protected static $activeTemplates = [];
 
 	/**
 	 * Application client id.
@@ -41,7 +41,7 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 	 *
 	 * @var  array
 	 */
-	private static $cachedGroups = array();
+	private static $cachedGroups = [];
 
 	/**
 	 * Get the list of layout folders.
@@ -117,20 +117,20 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 
 		if (!is_dir($folder))
 		{
-			return array();
+			return [];
 		}
 
 		$layouts = array_map(
 			function ($file)
 			{
-				return array(
+				return [
 					basename($file, '.html.twig') => $file
-				);
+				];
 			},
 			\JFolder::files($folder, '^[^_]*\.html.twig$')
 		);
 
-		return $layouts ? call_user_func_array('array_merge', $layouts) : array();
+		return $layouts ? call_user_func_array('array_merge', $layouts) : [];
 	}
 
 	/**
@@ -141,11 +141,11 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 	protected function loadGroups()
 	{
 		$groups = parent::getGroups();
-		$added = array();
+		$added =[];
 
 		foreach ($this->getLayoutFolders() as $title => $folder)
 		{
-			$options[$title] = array();
+			$options[$title] = [];
 
 			$layouts = array_diff_key($this->getFolderLayouts($folder), $added);
 

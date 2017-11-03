@@ -30,13 +30,13 @@ class JPosition extends AbstractExtension
 	 */
 	public function getFunctions()
 	{
-		$options = array(
-			'is_safe' => array('html')
-		);
+		$options = [
+			'is_safe' => ['html']
+		];
 
-		return array(
-			new TwigFunction('jposition', array($this, 'render'), $options)
-		);
+		return [
+			new TwigFunction('jposition', [$this, 'render'], $options)
+		];
 	}
 
 	/**
@@ -47,7 +47,7 @@ class JPosition extends AbstractExtension
 	 *
 	 * @return  string
 	 */
-	public function render($position, $attribs = array())
+	public function render($position, $attribs = [])
 	{
 		$modules  = ModuleHelper::getModules($position);
 		$renderer = Factory::getDocument()->loadRenderer('module');

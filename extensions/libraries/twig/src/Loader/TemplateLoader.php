@@ -32,7 +32,7 @@ class TemplateLoader extends ExtensionLoader
 	 */
 	protected function getTemplatePaths()
 	{
-		$paths = array();
+		$paths = [];
 
 		$tplOverrides = JPATH_THEMES . '/' . \JFactory::getApplication()->getTemplate() . '/html';
 

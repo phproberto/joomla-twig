@@ -30,11 +30,11 @@ class JLayout extends AbstractExtension
 	 */
 	public function getFunctions()
 	{
-		return array(
-			new TwigFunction('jlayout', array($this, 'jlayout')),
-			new TwigFunction('jlayout_render', array(LayoutHelper::class, 'render')),
-			new TwigFunction('jlayout_debug', array(LayoutHelper::class, 'debug'))
-		);
+		return [
+			new TwigFunction('jlayout', [$this, 'jlayout']),
+			new TwigFunction('jlayout_render', [LayoutHelper::class, 'render']),
+			new TwigFunction('jlayout_debug', [LayoutHelper::class, 'debug'])
+		];
 	}
 
 	/**

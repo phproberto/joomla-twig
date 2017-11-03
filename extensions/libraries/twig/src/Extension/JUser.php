@@ -32,9 +32,9 @@ class JUser extends AbstractExtension
 	 */
 	public function getFunctions()
 	{
-		return array(
-			new TwigFunction('juser', array(Factory::class, 'getUser'))
-		);
+		return [
+			new TwigFunction('juser', [Factory::class, 'getUser'])
+		];
 	}
 
 	/**

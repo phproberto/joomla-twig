@@ -53,10 +53,10 @@ class TwigFormFieldModulelayout extends LayoutSelector
 	{
 		$appFolder = $this->clientId ? JPATH_ADMINISTRATOR : JPATH_SITE;
 
-		return array(
+		return [
 			JText::_('LIB_TWIG_LBL_MODULE')   => $appFolder . '/modules/' . $this->module . '/tmpl',
 			JText::_('LIB_TWIG_LBL_TEMPLATE') => $appFolder . '/templates/' . $this->activeTemplate() . '/html/' . $this->module
-		);
+		];
 	}
 
 	/**

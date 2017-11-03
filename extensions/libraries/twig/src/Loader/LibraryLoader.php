@@ -32,7 +32,7 @@ class LibraryLoader extends ExtensionLoader
 	 */
 	protected function getTemplatePaths()
 	{
-		$paths = array();
+		$paths = [];
 
 		$tplOverrides = JPATH_THEMES . '/' . \JFactory::getApplication()->getTemplate() . '/html/libraries';
 
@@ -62,7 +62,7 @@ class LibraryLoader extends ExtensionLoader
 			return $name;
 		}
 
-		array_splice($nameParts, 1, 1, array($nameParts[1], 'layouts'));
+		array_splice($nameParts, 1, 1, [$nameParts[1], 'layouts']);
 
 		return implode('/', $nameParts);
 	}

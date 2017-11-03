@@ -30,7 +30,7 @@ class PlgTwigJsession extends BasePlugin
 	 *
 	 * @return  void
 	 */
-	public function onTwigAfterLoad(Environment $environment, $params = array())
+	public function onTwigAfterLoad(Environment $environment, $params = [])
 	{
 		$environment->addExtension(new JSession);
 		$environment->addGlobal('jsession', \JFactory::getSession());

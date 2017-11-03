@@ -63,10 +63,10 @@ class TwigFormFieldPluginlayout extends LayoutSelector
 		$mainFolder = $appFolder . '/plugins/' . $this->pluginGroup . '/' . $this->pluginName . '/tmpl/';
 		$overridesFolder = $appFolder . '/templates/' . $this->activeTemplate() . '/html/plugins/' . $this->pluginGroup . '/' . $this->pluginName;
 
-		return array(
+		return [
 			JText::_('LIB_TWIG_LBL_PLUGIN')   => $mainFolder,
 			JText::_('LIB_TWIG_LBL_TEMPLATE') => $tplFolder
-		);
+		];
 	}
 
 	/**

@@ -29,13 +29,13 @@ class JHtml extends AbstractExtension
 	 */
 	public function getFunctions()
 	{
-		$options = array(
-			'is_safe' => array('html')
-		);
+		$options = [
+			'is_safe' => ['html']
+		];
 
-		return array(
-			new TwigFunction('jhtml', array(HTMLHelper::class, '_'), $options)
-		);
+		return [
+			new TwigFunction('jhtml', [HTMLHelper::class, '_'], $options)
+		];
 	}
 
 	/**

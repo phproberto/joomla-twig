@@ -35,13 +35,13 @@ final class Environment extends BaseEnvironment
 	 * @param   LoaderInterface  $loader   Loader instance
 	 * @param   array            $options  An array of options
 	 */
-	public function __construct(LoaderInterface $loader, $options = array())
+	public function __construct(LoaderInterface $loader, $options = [])
 	{
-		$this->trigger('onTwigBeforeLoad', array(&$loader, &$options));
+		$this->trigger('onTwigBeforeLoad', [&$loader, &$options]);
 
 		parent::__construct($loader, $options);
 
-		$this->trigger('onTwigAfterLoad', array($options));
+		$this->trigger('onTwigAfterLoad', [$options]);
 	}
 
 	/**
@@ -65,7 +65,7 @@ final class Environment extends BaseEnvironment
 	 *
 	 * @return  mixed
 	 */
-	public function trigger($event, $params = array())
+	public function trigger($event, $params = [])
 	{
 		$dispatcher = \JEventDispatcher::getInstance();
 

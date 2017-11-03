@@ -29,9 +29,9 @@ class JUri extends AbstractExtension
 	 */
 	public function getFunctions()
 	{
-		return array(
-			new TwigFunction('juri', array(Uri::class, 'getInstance'))
-		);
+		return [
+			new TwigFunction('juri', [Uri::class, 'getInstance'])
+		];
 	}
 
 	/**

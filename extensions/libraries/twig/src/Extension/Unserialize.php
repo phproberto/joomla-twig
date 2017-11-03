@@ -28,9 +28,9 @@ class Unserialize extends AbstractExtension
 	 */
 	public function getFilters()
 	{
-		return array(
+		return [
 			new TwigFilter('unserialize', 'unserialize')
-		);
+		];
 	}
 
 	/**

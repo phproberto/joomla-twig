@@ -29,9 +29,9 @@ class JProfiler extends AbstractExtension
 	 */
 	public function getFunctions()
 	{
-		return array(
-			new TwigFunction('jprofiler', array(Profiler::class, 'getInstance'))
-		);
+		return [
+			new TwigFunction('jprofiler', [Profiler::class, 'getInstance'])
+		];
 	}
 
 	/**

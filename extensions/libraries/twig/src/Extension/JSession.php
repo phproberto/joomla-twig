@@ -29,9 +29,9 @@ class JSession extends AbstractExtension
 	 */
 	public function getFunctions()
 	{
-		return array(
-			new TwigFunction('jsession', array(Factory::class, 'getSession'))
-		);
+		return [
+			new TwigFunction('jsession', [Factory::class, 'getSession'])
+		];
 	}
 
 	/**

@@ -73,7 +73,7 @@ class PlgTwigDebug extends BasePlugin
 	 *
 	 * @return  void
 	 */
-	public function onTwigAfterLoad(Environment $environment, $options = array())
+	public function onTwigAfterLoad(Environment $environment, $options = [])
 	{
 		if ($this->isDebugEnabled())
 		{

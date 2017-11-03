@@ -32,7 +32,7 @@ class ComponentLoader extends ExtensionLoader
 	 */
 	protected function getTemplatePaths()
 	{
-		$paths = array();
+		$paths = [];
 
 		$tplOverrides = JPATH_THEMES . '/' . \JFactory::getApplication()->getTemplate() . '/html';
 
@@ -62,7 +62,7 @@ class ComponentLoader extends ExtensionLoader
 			return $name;
 		}
 
-		array_splice($nameParts, 2, 1, array('views', $nameParts[2], 'tmpl'));
+		array_splice($nameParts, 2, 1, ['views', $nameParts[2], 'tmpl']);
 
 		return implode('/', $nameParts);
 	}
