@@ -9,15 +9,15 @@
 
 namespace Phproberto\Joomla\Twig\Tests\Unit\Extension;
 
-use Joomla\CMS\Application\CMSApplication;
-use Phproberto\Joomla\Twig\Extension\JApplication;
+use Joomla\CMS\Document\Document;
+use Phproberto\Joomla\Twig\Extension\JDocument;
 
 /**
- * JApplication extension test.
+ * JDocument extension test.
  *
  * @since   __DEPLOY_VERSION__
  */
-class JApplicationTest extends \TestCaseDatabase
+class JDocumentTest extends \TestCase
 {
 	private $extension;
 
@@ -30,24 +30,8 @@ class JApplicationTest extends \TestCaseDatabase
 	protected function setUp()
 	{
 		parent::setUp();
-		$this->saveFactoryState();
-		\JFactory::$session     = $this->getMockSession();
-		\JFactory::$config      = $this->getMockConfig();
-		\JFactory::$application = $this->getMockCmsApp();
 
-		$this->extension = new JApplication;
-	}
-
-	/**
-	 * Tears down the fixture, for example, closes a network connection.
-	 * This method is called after a test is executed.
-	 *
-	 * @return  void
-	 */
-	protected function tearDown()
-	{
-		$this->restoreFactoryState();
-		parent::tearDown();
+		$this->extension = new JDocument;
 	}
 
 	/**
@@ -63,18 +47,18 @@ class JApplicationTest extends \TestCaseDatabase
 
 		$callable = $function->getCallable();
 		$this->assertTrue(is_callable($callable));
-		$this->assertEquals('japp', $function->getName());
-		$this->assertEquals(CMSApplication::class, $callable[0]);
+		$this->assertEquals('jdoc', $function->getName());
+		$this->assertEquals(Document::class, $callable[0]);
 		$this->assertEquals('getInstance', $callable[1]);
 	}
 
 	/**
-	 * getName returns japp.
+	 * getName returns correct name.
 	 *
 	 * @return  void
 	 */
-	public function testGetNameReturnsJapp()
+	public function testGetNameReturnsCorrectName()
 	{
-		$this->assertEquals('japp', $this->extension->getName());
+		$this->assertEquals('jdoc', $this->extension->getName());
 	}
 }

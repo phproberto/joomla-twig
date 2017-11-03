@@ -19,7 +19,7 @@
   },
   "autoload-dev": {
       "psr-4": {
-          "Phproberto\\Joomla\\Twig\\": "tests/"
+          "Phproberto\\Joomla\\Twig\\Tests\\": "tests/"
       }
   },
   "require-dev": {

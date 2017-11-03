@@ -7,7 +7,7 @@
  * @license    See COPYING.txt
  */
 
-namespace Phproberto\Joomla\Twig\Test\Unit\Extension;
+namespace Phproberto\Joomla\Twig\Tests\Unit\Extension;
 
 use Phproberto\Joomla\Twig\Extension\JArray;
 
@@ -16,7 +16,7 @@ use Phproberto\Joomla\Twig\Extension\JArray;
  *
  * @since   __DEPLOY_VERSION__
  */
-class JArrayTest extends \TestCaseDatabase
+class JArrayTest extends \TestCase
 {
 	private $extension;
 
@@ -29,25 +29,8 @@ class JArrayTest extends \TestCaseDatabase
 	protected function setUp()
 	{
 		parent::setUp();
-		$this->saveFactoryState();
-		\JFactory::$session     = $this->getMockSession();
-		\JFactory::$config      = $this->getMockConfig();
-		\JFactory::$application = $this->getMockCmsApp();
 
 		$this->extension = new JArray;
-	}
-
-
-	/**
-	 * Tears down the fixture, for example, closes a network connection.
-	 * This method is called after a test is executed.
-	 *
-	 * @return  void
-	 */
-	protected function tearDown()
-	{
-		$this->restoreFactoryState();
-		parent::tearDown();
 	}
 
 	/**
