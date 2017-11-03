@@ -6,6 +6,10 @@ php:
   - 7.0.21
   - 7.1
 
+branches:
+  only:
+  - master
+  - develop
 script:
   - composer install --prefer-dist --no-interaction --no-progress
   - ./vendor/bin/phpcs --standard="ruleset.xml"
