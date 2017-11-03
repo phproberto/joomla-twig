@@ -141,7 +141,7 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 	protected function loadGroups()
 	{
 		$groups = parent::getGroups();
-		$added =[];
+		$added = [];
 
 		foreach ($this->getLayoutFolders() as $title => $folder)
 		{
