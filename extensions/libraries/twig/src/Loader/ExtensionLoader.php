@@ -11,6 +11,8 @@ namespace Phproberto\Joomla\Twig\Loader;
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Factory;
+
 /**
  * Joomla extension file system loader.
  *
@@ -44,7 +46,7 @@ abstract class ExtensionLoader extends \Twig_Loader_Filesystem
 	 */
 	protected function getBaseAppPath()
 	{
-		if (\JFactory::getApplication()->isAdmin())
+		if (Factory::getApplication()->isAdmin())
 		{
 			return JPATH_ADMINISTRATOR;
 		}

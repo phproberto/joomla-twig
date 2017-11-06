@@ -11,6 +11,7 @@ defined('_JEXEC') or die;
 
 JLoader::import('twig.library');
 
+use Joomla\CMS\Factory;
 use Phproberto\Joomla\Twig\Extension\JLanguage;
 use Phproberto\Joomla\Twig\Plugin\BasePlugin;
 use Twig\Environment;
@@ -33,6 +34,6 @@ class PlgTwigJlang extends BasePlugin
 	public function onTwigAfterLoad(Environment $environment, $params)
 	{
 		$environment->addExtension(new JLanguage);
-		$environment->addGlobal('jlang', \JFactory::getLanguage());
+		$environment->addGlobal('jlang', Factory::getLanguage());
 	}
 }

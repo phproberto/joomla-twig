@@ -11,6 +11,8 @@ namespace Phproberto\Joomla\Twig\Loader;
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Factory;
+
 /**
  * Joomla plugin file system loader.
  *
@@ -34,7 +36,7 @@ class PluginLoader extends ExtensionLoader
 	{
 		$paths = [];
 
-		$tplOverrides = JPATH_THEMES . '/' . \JFactory::getApplication()->getTemplate() . '/html/plugins';
+		$tplOverrides = JPATH_THEMES . '/' . Factory::getApplication()->getTemplate() . '/html/plugins';
 
 		if (is_dir($tplOverrides))
 		{

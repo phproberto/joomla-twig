@@ -13,7 +13,7 @@ defined('_JEXEC') or die;
 
 \JFormHelper::loadFieldClass('groupedlist');
 
-use Joomla\CMS\Form\FormField;
+use Joomla\CMS\Factory;
 
 /**
  * Base twig extension plugin.
@@ -59,7 +59,7 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 	{
 		if (!isset(static::$activeTemplates[$this->clientId]))
 		{
-			$db = \JFactory::getDbo();
+			$db = Factory::getDbo();
 
 			$query = $db->getQuery(true)
 				->select('template')

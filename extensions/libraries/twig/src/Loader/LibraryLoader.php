@@ -11,6 +11,8 @@ namespace Phproberto\Joomla\Twig\Loader;
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Factory;
+
 /**
  * Joomla library file system loader.
  *
@@ -34,7 +36,7 @@ class LibraryLoader extends ExtensionLoader
 	{
 		$paths = [];
 
-		$tplOverrides = JPATH_THEMES . '/' . \JFactory::getApplication()->getTemplate() . '/html/libraries';
+		$tplOverrides = JPATH_THEMES . '/' . Factory::getApplication()->getTemplate() . '/html/libraries';
 
 		if (is_dir($tplOverrides))
 		{
