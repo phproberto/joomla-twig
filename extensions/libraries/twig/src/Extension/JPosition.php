@@ -21,7 +21,7 @@ use Twig\TwigFunction;
  *
  * @since  1.0.0
  */
-class JPosition extends AbstractExtension
+final class JPosition extends AbstractExtension
 {
 	/**
 	 * Inject functions.

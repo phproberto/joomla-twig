@@ -19,7 +19,7 @@ use Twig\TwigFilter;
  *
  * @since  1.0.0
  */
-class JArray extends AbstractExtension
+final class JArray extends AbstractExtension
 {
 	/**
 	 * Inject our filter.

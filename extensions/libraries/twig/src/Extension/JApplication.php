@@ -20,7 +20,7 @@ use Twig\TwigFunction;
  *
  * @since  1.0.0
  */
-class JApplication extends AbstractExtension
+final class JApplication extends AbstractExtension
 {
 	/**
 	 * Inject functions.

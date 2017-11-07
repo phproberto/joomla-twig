@@ -21,7 +21,7 @@ use Twig\TwigFunction;
  *
  * @since  1.0.0
  */
-class JLayout extends AbstractExtension
+final class JLayout extends AbstractExtension
 {
 	/**
 	 * Inject functions.

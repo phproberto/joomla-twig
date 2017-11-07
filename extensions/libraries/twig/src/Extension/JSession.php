@@ -20,7 +20,7 @@ use Twig\TwigFunction;
  *
  * @since  1.0.0
  */
-class JSession extends AbstractExtension
+final class JSession extends AbstractExtension
 {
 	/**
 	 * Inject functions.

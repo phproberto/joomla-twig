@@ -1,5 +1,7 @@
 # Twig integration for Joomla!
 
+[![Build Status](https://travis-ci.org/phproberto/joomla-twig.svg?branch=master)](https://travis-ci.org/phproberto/joomla-twig)
+
 > [Twig 2.0](https://twig.symfony.com/doc/2.x/) && [Twig extensions](http://twig-extensions.readthedocs.io/en/latest/) integration for Joomla!
 
 ## Index <a id="index"></a>

@@ -20,7 +20,7 @@ use Twig\TwigFunction;
  *
  * @since  1.0.0
  */
-class JRoute extends AbstractExtension
+final class JRoute extends AbstractExtension
 {
 	/**
 	 * Inject functions.

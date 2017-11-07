@@ -23,7 +23,7 @@ use Twig\TwigFunction;
  *
  * @since  1.0.0
  */
-class JLanguage extends AbstractExtension
+final class JLanguage extends AbstractExtension
 {
 	/**
 	 * Inject functions.

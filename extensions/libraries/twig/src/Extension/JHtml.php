@@ -20,7 +20,7 @@ use Twig\TwigFunction;
  *
  * @since  1.0.0
  */
-class JHtml extends AbstractExtension
+final class JHtml extends AbstractExtension
 {
 	/**
 	 * Inject functions.

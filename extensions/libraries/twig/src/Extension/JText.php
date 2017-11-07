@@ -20,7 +20,7 @@ use Twig\TwigFunction;
  *
  * @since  1.0.0
  */
-class JText extends AbstractExtension
+final class JText extends AbstractExtension
 {
 	/**
 	 * Inject functions.

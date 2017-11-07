@@ -19,7 +19,7 @@ use Twig\TwigFilter;
  *
  * @since  1.0.0
  */
-class Unserialize extends AbstractExtension
+final class Unserialize extends AbstractExtension
 {
 	/**
 	 * Inject our filter.
@@ -40,6 +40,6 @@ class Unserialize extends AbstractExtension
 	 */
 	public function getName()
 	{
-		return 'unserialize';
+		return 'junserialize';
 	}
 }

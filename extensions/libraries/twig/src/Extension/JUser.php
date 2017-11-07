@@ -23,7 +23,7 @@ use Twig\TwigFunction;
  *
  * @since  1.0.0
  */
-class JUser extends AbstractExtension
+final class JUser extends AbstractExtension
 {
 	/**
 	 * Inject functions.

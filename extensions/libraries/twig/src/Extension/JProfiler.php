@@ -20,7 +20,7 @@ use Twig\TwigFunction;
  *
  * @since  1.0.0
  */
-class JProfiler extends AbstractExtension
+final class JProfiler extends AbstractExtension
 {
 	/**
 	 * Inject functions.

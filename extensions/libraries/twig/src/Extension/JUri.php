@@ -20,7 +20,7 @@ use Twig\Extension\AbstractExtension;
  *
  * @since  1.0.0
  */
-class JUri extends AbstractExtension
+final class JUri extends AbstractExtension
 {
 	/**
 	 * Inject functions.
