@@ -7,7 +7,7 @@
  * @license    See COPYING.txt
  */
 
-defined('_JEXEC') or die;
+defined('_JEXEC') || die;
 
 JLoader::import('twig.library');
 

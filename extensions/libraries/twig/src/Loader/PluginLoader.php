@@ -9,7 +9,7 @@
 
 namespace Phproberto\Joomla\Twig\Loader;
 
-defined('_JEXEC') or die;
+defined('_JEXEC') || die;
 
 use Joomla\CMS\Factory;
 

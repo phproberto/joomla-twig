@@ -9,7 +9,7 @@
 
 namespace Phproberto\Joomla\Twig\Extension;
 
-defined('_JEXEC') or die;
+defined('_JEXEC') || die;
 
 use Twig\TwigFunction;
 use Joomla\CMS\Uri\Uri;

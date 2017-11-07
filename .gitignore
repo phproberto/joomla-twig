@@ -2,6 +2,7 @@
 gulp-config.json
 node_modules/
 /build/releases
+.scannerwork
 
 # Composer
 /vendor/

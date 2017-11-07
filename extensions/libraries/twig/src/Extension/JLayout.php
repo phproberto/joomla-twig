@@ -9,7 +9,7 @@
 
 namespace Phproberto\Joomla\Twig\Extension;
 
-defined('_JEXEC') or die;
+defined('_JEXEC') || die;
 
 use Joomla\CMS\Layout\FileLayout;
 use Joomla\CMS\Layout\LayoutHelper;

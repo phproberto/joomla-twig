@@ -9,7 +9,7 @@
 
 namespace Phproberto\Joomla\Twig\Plugin;
 
-defined('_JEXEC') or die;
+defined('_JEXEC') || die;
 
 use Joomla\CMS\Plugin\CMSPlugin;
 

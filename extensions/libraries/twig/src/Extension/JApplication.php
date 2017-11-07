@@ -9,7 +9,7 @@
 
 namespace Phproberto\Joomla\Twig\Extension;
 
-defined('_JEXEC') or die;
+defined('_JEXEC') || die;
 
 use Joomla\CMS\Application\CMSApplication;
 use Twig\Extension\AbstractExtension;

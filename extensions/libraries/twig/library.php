@@ -7,7 +7,7 @@
  * @license    See COPYING.txt
  */
 
-defined('_JEXEC') or die;
+defined('_JEXEC') || die;
 
 defined('JPATH_TWIG_LIBRARY') || define('JPATH_TWIG_LIBRARY', __DIR__);
 

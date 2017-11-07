@@ -9,7 +9,7 @@
 
 namespace Phproberto\Joomla\Twig\Extension;
 
-defined('_JEXEC') or die;
+defined('_JEXEC') || die;
 
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFilter;

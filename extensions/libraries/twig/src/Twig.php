@@ -8,7 +8,7 @@
 
 namespace Phproberto\Joomla\Twig;
 
-defined('_JEXEC') or die;
+defined('_JEXEC') || die;
 
 use Twig\Loader\ChainLoader;
 
