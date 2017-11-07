@@ -11,16 +11,20 @@ defined('_JEXEC') or die;
 
 defined('JPATH_TWIG_LIBRARY') || define('JPATH_TWIG_LIBRARY', __DIR__);
 
-$composerAutoload = __DIR__ . '/vendor/autoload.php';
-
-if (!file_exists($composerAutoload))
+// Tests already run autoload
+if (!class_exists('Phproberto\Joomla\Twig\Twig'))
 {
-	throw new \RuntimeException("Cannot find Twig library autoloader");
+	$composerAutoload = __DIR__ . '/vendor/autoload.php';
+
+	if (!file_exists($composerAutoload))
+	{
+		throw new \RuntimeException("Cannot find Twig library autoloader");
+	}
+
+	require_once $composerAutoload;
+
+	class_alias(Phproberto\Joomla\Twig\Twig::class, 'Twig');
 }
-
-require_once $composerAutoload;
-
-class_alias(Phproberto\Joomla\Twig\Twig::class, 'Twig');
 
 JLoader::setup();
 JLoader::registerPrefix('Twig', JPATH_TWIG_LIBRARY);

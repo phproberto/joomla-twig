@@ -14,5 +14,5 @@ if (!defined('JPATH_TESTS_PHPROBERTO'))
 	define('JPATH_TESTS_PHPROBERTO', realpath(__DIR__));
 }
 
-require_once dirname(__FILE__) . '/../vendor/autoload.php';
-require_once JPATH_SITE . '/libraries/twig/vendor/autoload.php';
+require_once __DIR__ . '/../vendor/autoload.php';
+require_once __DIR__ . '/../extensions/libraries/twig/vendor/autoload.php';
