@@ -31,7 +31,24 @@ class JLanguageTest extends \TestCase
 	{
 		parent::setUp();
 
+		$this->saveFactoryState();
+		\JFactory::$session     = $this->getMockSession();
+		\JFactory::$config      = $this->getMockConfig();
+		\JFactory::$application = $this->getMockCmsApp();
+
 		$this->extension = new JLanguage;
+	}
+
+	/**
+	 * Tears down the fixture, for example, closes a network connection.
+	 * This method is called after a test is executed.
+	 *
+	 * @return  void
+	 */
+	protected function tearDown()
+	{
+		$this->restoreFactoryState();
+		parent::tearDown();
 	}
 
 	/**

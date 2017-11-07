@@ -15,4 +15,4 @@ if (!defined('JPATH_TESTS_PHPROBERTO'))
 }
 
 require_once dirname(__FILE__) . '/../vendor/autoload.php';
-require_once dirname(__FILE__) . '/../extensions/libraries/twig/vendor/autoload.php';
+require_once JPATH_SITE . '/libraries/twig/vendor/autoload.php';
