@@ -97,7 +97,7 @@ class JLayoutTest extends \TestCase
 	 */
 	public function testJlayoutReturnsAFileLayoutInstance()
 	{
-		$fileLayout = $this->extension->jlayout('joomla.system.message');
+		$fileLayout = $this->extension->getFileLayout('joomla.system.message');
 
 		$this->assertInstanceOf(FileLayout::class, $fileLayout);
 		$this->assertSame('joomla.system.message', $fileLayout->getLayoutId());
@@ -113,7 +113,7 @@ class JLayoutTest extends \TestCase
 		return [
 			'jlayout'        => [
 				'class'  => JLayout::class,
-				'method' => 'jlayout'
+				'method' => 'getFileLayout'
 			],
 			'jlayout_render' => [
 				'class'  => LayoutHelper::class,

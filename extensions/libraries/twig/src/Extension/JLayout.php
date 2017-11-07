@@ -31,7 +31,7 @@ final class JLayout extends AbstractExtension
 	public function getFunctions()
 	{
 		return [
-			new TwigFunction('jlayout', [$this, 'jlayout']),
+			new TwigFunction('jlayout', [$this, 'getFileLayout']),
 			new TwigFunction('jlayout_render', [LayoutHelper::class, 'render']),
 			new TwigFunction('jlayout_debug', [LayoutHelper::class, 'debug'])
 		];
@@ -42,7 +42,7 @@ final class JLayout extends AbstractExtension
 	 *
 	 * @return  FileLayout
 	 */
-	public function jlayout()
+	public function getFileLayout()
 	{
 		$class = new \ReflectionClass(FileLayout::class);
 

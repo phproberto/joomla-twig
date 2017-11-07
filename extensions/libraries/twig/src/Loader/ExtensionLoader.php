@@ -86,6 +86,7 @@ abstract class ExtensionLoader extends \Twig_Loader_Filesystem
 		}
 		catch (\Exception $e)
 		{
+			$result = false;
 		}
 
 		if ($result)

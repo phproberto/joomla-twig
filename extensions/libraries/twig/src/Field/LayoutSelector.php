@@ -147,18 +147,18 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 
 		foreach ($this->getLayoutFolders() as $title => $folder)
 		{
-			$options[$title] = [];
+			$groups[$title] = [];
 
 			$layouts = array_diff_key($this->getFolderLayouts($folder), $added);
 
 			foreach ($layouts as $layout => $file)
 			{
-				$options[$title][] = HTMLHelper::_('select.option', $layout, $layout, 'value', 'text', false);
+				$groups[$title][] = HTMLHelper::_('select.option', $layout, $layout, 'value', 'text', false);
 				$added[$layout] = $file;
 			}
 		}
 
-		return $options;
+		return $groups;
 	}
 
 	/**
