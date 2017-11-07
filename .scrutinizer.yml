@@ -1,7 +1,9 @@
 filter:
     paths: ['extensions/libraries/twig/src']
 checks:
-    php: true
+    php:
+        code_rating: true
+        duplication: true
 coding_style:
     php:
         indentation:
