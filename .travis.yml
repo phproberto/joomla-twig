@@ -10,10 +10,9 @@ branches:
   only:
   - master
   - develop
+
+before_script:
+  - ./ci/setup.sh
+
 script:
-  - composer install --prefer-dist --no-interaction --no-progress
-  - ./vendor/bin/phpcs --standard="ruleset.xml"
-  - git clone https://github.com/joomla/joomla-cms.git /tmp/joomla-cms
-  - composer install -d /tmp/joomla-cms
-  - composer install -d ./extensions/libraries/twig
-  - ./vendor/bin/phpunit --configuration ci/phpunit.ci.xml
+  - ./ci/test.sh

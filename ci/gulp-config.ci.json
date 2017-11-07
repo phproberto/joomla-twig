@@ -1,0 +1,6 @@
+{
+	"wwwDir"           : "/tmp/joomla-cms",
+	"browserConfig" : {
+		"proxy" : "localhost/joomla-cms"
+	}
+}
