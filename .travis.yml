@@ -29,3 +29,5 @@ before_script:
 
 script:
   - ./ci/test.sh
+  - sonar-scanner
+  
