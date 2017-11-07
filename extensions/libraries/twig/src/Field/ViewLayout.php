@@ -11,6 +11,8 @@ namespace Phproberto\Joomla\Twig\Field;
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Language\Text;
+
 /**
  * View layout selector.
  *
@@ -62,8 +64,8 @@ class ViewLayout extends LayoutSelector
 		$overridesFolder = $appFolder . '/templates/' . $this->activeTemplate() . '/html/' . $this->component . '/' . $this->view;
 
 		return [
-			\JText::_('LIB_TWIG_LBL_COMPONENT') => $mainFolder,
-			\JText::_('LIB_TWIG_LBL_TEMPLATE')  => $overridesFolder
+			Text::_('LIB_TWIG_LBL_COMPONENT') => $mainFolder,
+			Text::_('LIB_TWIG_LBL_TEMPLATE')  => $overridesFolder
 		];
 	}
 

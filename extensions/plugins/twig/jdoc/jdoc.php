@@ -11,8 +11,9 @@ defined('_JEXEC') or die;
 
 JLoader::import('twig.library');
 
-use Phproberto\Joomla\Twig\Extension\JDocument;
+use Joomla\CMS\Factory;
 use Phproberto\Joomla\Twig\Plugin\BasePlugin;
+use Phproberto\Joomla\Twig\Extension\JDocument;
 use Twig\Environment;
 
 /**
@@ -33,6 +34,6 @@ class PlgTwigJdoc extends BasePlugin
 	public function onTwigAfterLoad(Environment $environment, $params = [])
 	{
 		$environment->addExtension(new JDocument);
-		$environment->addGlobal('jdoc', \JFactory::getDocument());
+		$environment->addGlobal('jdoc', Factory::getDocument());
 	}
 }

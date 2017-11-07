@@ -11,10 +11,11 @@ defined('_JEXEC') or die;
 
 JLoader::import('twig.library');
 
+use Joomla\CMS\Factory;
 use Phproberto\Joomla\Twig\Plugin\BasePlugin;
 use Twig\Environment;
-use Twig\Extension\DebugExtension;
 use Twig\Loader\LoaderInterface;
+use Twig\Extension\DebugExtension;
 
 /**
  * Plugin to activate twig cache.
@@ -34,6 +35,6 @@ class PlgTwigCache extends BasePlugin
 	 */
 	public function onTwigBeforeLoad(Environment $environment, LoaderInterface $loader, &$options)
 	{
-		$options['cache'] = \JFactory::getConfig()->get('cache_path', JPATH_CACHE) . '/twig';
+		$options['cache'] = Factory::getConfig()->get('cache_path', JPATH_CACHE) . '/twig';
 	}
 }

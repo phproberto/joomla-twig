@@ -11,9 +11,11 @@ namespace Phproberto\Joomla\Twig\Field;
 
 defined('_JEXEC') or die;
 
-\JFormHelper::loadFieldClass('groupedlist');
-
 use Joomla\CMS\Factory;
+use Joomla\CMS\Form\FormHelper;
+use Joomla\CMS\HTML\HTMLHelper;
+
+FormHelper::loadFieldClass('groupedlist');
 
 /**
  * Base twig extension plugin.
@@ -151,7 +153,7 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 
 			foreach ($layouts as $layout => $file)
 			{
-				$options[$title][] = \JHtml::_('select.option', $layout, $layout, 'value', 'text', false);
+				$options[$title][] = HTMLHelper::_('select.option', $layout, $layout, 'value', 'text', false);
 				$added[$layout] = $file;
 			}
 		}

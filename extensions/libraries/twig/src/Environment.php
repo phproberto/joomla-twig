@@ -10,6 +10,7 @@ namespace Phproberto\Joomla\Twig;
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Plugin\PluginHelper;
 use Twig\Loader\LoaderInterface;
 use Twig\Environment as BaseEnvironment;
 
@@ -53,7 +54,7 @@ final class Environment extends BaseEnvironment
 	{
 		foreach ($this->importedPluginTypes as $pluginType)
 		{
-			\JPluginHelper::importPlugin($pluginType);
+			PluginHelper::importPlugin($pluginType);
 		}
 	}
 

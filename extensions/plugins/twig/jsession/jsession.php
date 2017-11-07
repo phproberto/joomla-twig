@@ -11,8 +11,9 @@ defined('_JEXEC') or die;
 
 JLoader::import('twig.library');
 
-use Phproberto\Joomla\Twig\Extension\JSession;
+use Joomla\CMS\Factory;
 use Phproberto\Joomla\Twig\Plugin\BasePlugin;
+use Phproberto\Joomla\Twig\Extension\JSession;
 use Twig\Environment;
 
 /**
@@ -33,6 +34,6 @@ class PlgTwigJsession extends BasePlugin
 	public function onTwigAfterLoad(Environment $environment, $params = [])
 	{
 		$environment->addExtension(new JSession);
-		$environment->addGlobal('jsession', \JFactory::getSession());
+		$environment->addGlobal('jsession', Factory::getSession());
 	}
 }

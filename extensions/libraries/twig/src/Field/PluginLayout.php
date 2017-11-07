@@ -11,6 +11,8 @@ namespace Phproberto\Joomla\Twig\Field;
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Language\Text;
+
 /**
  * Plugin layout selector.
  *
@@ -62,8 +64,8 @@ class PluginLayout extends LayoutSelector
 		$overridesFolder = $appFolder . '/templates/' . $this->activeTemplate() . '/html/plugins/' . $this->pluginGroup . '/' . $this->pluginName;
 
 		return [
-			\JText::_('LIB_TWIG_LBL_PLUGIN')   => $mainFolder,
-			\JText::_('LIB_TWIG_LBL_TEMPLATE') => $overridesFolder
+			Text::_('LIB_TWIG_LBL_PLUGIN')   => $mainFolder,
+			Text::_('LIB_TWIG_LBL_TEMPLATE') => $overridesFolder
 		];
 	}
 

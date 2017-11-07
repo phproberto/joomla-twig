@@ -11,6 +11,8 @@ namespace Phproberto\Joomla\Twig\Field;
 
 defined('_JEXEC') or die;
 
+use Joomla\CMS\Language\Text;
+
 /**
  * Module layout selector.
  *
@@ -52,8 +54,8 @@ class ModuleLayout extends LayoutSelector
 		$appFolder = $this->clientId ? JPATH_ADMINISTRATOR : JPATH_SITE;
 
 		return [
-			\JText::_('LIB_TWIG_LBL_MODULE')   => $appFolder . '/modules/' . $this->module . '/tmpl',
-			\JText::_('LIB_TWIG_LBL_TEMPLATE') => $appFolder . '/templates/' . $this->activeTemplate() . '/html/' . $this->module
+			Text::_('LIB_TWIG_LBL_MODULE')   => $appFolder . '/modules/' . $this->module . '/tmpl',
+			Text::_('LIB_TWIG_LBL_TEMPLATE') => $appFolder . '/templates/' . $this->activeTemplate() . '/html/' . $this->module
 		];
 	}
 

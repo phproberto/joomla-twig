@@ -11,8 +11,9 @@ defined('_JEXEC') or die;
 
 JLoader::import('twig.library');
 
-use Phproberto\Joomla\Twig\Extension\JApplication;
+use Joomla\CMS\Factory;
 use Phproberto\Joomla\Twig\Plugin\BasePlugin;
+use Phproberto\Joomla\Twig\Extension\JApplication;
 use Twig\Environment;
 
 /**
@@ -33,6 +34,6 @@ class PlgTwigJapp extends BasePlugin
 	public function onTwigAfterLoad(Environment $environment, $params = [])
 	{
 		$environment->addExtension(new JApplication);
-		$environment->addGlobal('japp', \JFactory::getApplication());
+		$environment->addGlobal('japp', Factory::getApplication());
 	}
 }
