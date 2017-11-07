@@ -18,7 +18,7 @@ use Joomla\CMS\Factory;
  *
  * @since  1.0.0
  */
-class PluginLoader extends ExtensionLoader
+final class PluginLoader extends ExtensionLoader
 {
 	/**
 	 * Namespace applicable to this extension.
