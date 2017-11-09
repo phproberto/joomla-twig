@@ -147,9 +147,14 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 
 		foreach ($this->layoutFolders() as $title => $folder)
 		{
-			$groups[$title] = [];
-
 			$layouts = array_diff_key($this->folderLayouts($folder), $added);
+
+			if (!$layouts)
+			{
+				continue;
+			}
+
+			$groups[$title] = [];
 
 			foreach ($layouts as $layout => $file)
 			{
