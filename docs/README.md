@@ -27,9 +27,9 @@ echo Twig::render('@module/mod_menu/default.html.twig');
 /**
  * Render a library layout. This will search for layouts in:
  * - templates/{ACTIVE_TEMPLATE}/html/libraries/phproberto/default.html.twig
- * - modules/mod_menu/tmpl/default.html.twig
+ * - libraries/phproberto/layouts/default.html.twig
  */
-echo Twig::render('@library/phproberto/layouts/default.html.twig');
+echo Twig::render('@library/phproberto/default.html.twig');
 
 /**
  * Render a plugin layout. This will search for layouts in:
