@@ -50,7 +50,7 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 	 *
 	 * @return  array  Key: group name. Value: folder
 	 */
-	abstract public function getLayoutFolders();
+	abstract public function layoutFolders();
 
 	/**
 	 * Get the active frontend template.
@@ -145,7 +145,7 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 		$groups = parent::getGroups();
 		$added = [];
 
-		foreach ($this->getLayoutFolders() as $title => $folder)
+		foreach ($this->layoutFolders() as $title => $folder)
 		{
 			$groups[$title] = [];
 

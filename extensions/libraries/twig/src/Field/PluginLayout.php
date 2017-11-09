@@ -56,7 +56,7 @@ final class PluginLayout extends LayoutSelector
 	 *
 	 * @return  array
 	 */
-	public function getLayoutFolders()
+	public function layoutFolders()
 	{
 		$appFolder = $this->clientId ? JPATH_ADMINISTRATOR : JPATH_SITE;
 
