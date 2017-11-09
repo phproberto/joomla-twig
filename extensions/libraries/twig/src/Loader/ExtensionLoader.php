@@ -78,8 +78,6 @@ abstract class ExtensionLoader extends \Twig_Loader_Filesystem
 			return false;
 		}
 
-		$result = false;
-
 		try
 		{
 			$result = parent::findTemplate($name);
@@ -98,10 +96,15 @@ abstract class ExtensionLoader extends \Twig_Loader_Filesystem
 
 		if ($parsedName === $name)
 		{
-			throw $e;
+			if ($throw)
+			{
+				throw $e;
+			}
+
+			return false;
 		}
 
-		return parent::findTemplate($parsedName);
+		return parent::findTemplate($parsedName, $throw);
 	}
 
 	/**

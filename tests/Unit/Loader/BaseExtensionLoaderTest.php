@@ -30,6 +30,11 @@ abstract class BaseExtensionLoaderTest extends \TestCaseDatabase
 		parent::setUp();
 		$this->saveFactoryState();
 
+		$_SERVER['HTTP_HOST'] = 'mydomain.com';
+		$_SERVER['HTTP_USER_AGENT'] = 'Mozilla/5.0';
+		$_SERVER['REQUEST_URI'] = '/index.php';
+		$_SERVER['SCRIPT_NAME'] = '/index.php';
+
 		\JFactory::$document = $this->getMockDocument();
 		\JFactory::$language = $this->getMockLanguage();
 		\JFactory::$session  = $this->getMockSession();
