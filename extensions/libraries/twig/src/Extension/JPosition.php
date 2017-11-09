@@ -11,6 +11,7 @@ namespace Phproberto\Joomla\Twig\Extension;
 
 defined('_JEXEC') || die;
 
+use Joomla\CMS\Document\Renderer\Html\ModuleRenderer;
 use Joomla\CMS\Factory;
 use Joomla\CMS\Helper\ModuleHelper;
 use Twig\Extension\AbstractExtension;
@@ -49,8 +50,8 @@ final class JPosition extends AbstractExtension
 	 */
 	public function render($position, $attribs = [])
 	{
-		$modules  = ModuleHelper::getModules($position);
-		$renderer = Factory::getDocument()->loadRenderer('module');
+		$modules  = $this->getModules($position);
+		$renderer = $this->getModuleRenderer();
 		$html     = '';
 
 		foreach ($modules as $module)
@@ -59,6 +60,32 @@ final class JPosition extends AbstractExtension
 		}
 
 		return $html;
+	}
+
+	/**
+	 * Retrive modules in a specific template position.
+	 *
+	 * @param   string  $position  Name of the position whose modules we want to retrieve.
+	 *
+	 * @return  array
+	 *
+	 * @codeCoverageIgnore
+	 */
+	protected function getModules($position)
+	{
+		return ModuleHelper::getModules($position);
+	}
+
+	/**
+	 * Get an instance of the module renderer.
+	 *
+	 * @return  ModuleRenderer
+	 *
+	 * @codeCoverageIgnore
+	 */
+	protected function getModuleRenderer()
+	{
+		return Factory::getDocument()->loadRenderer('module');
 	}
 
 	/**
