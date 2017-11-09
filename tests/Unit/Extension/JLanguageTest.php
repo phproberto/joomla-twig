@@ -19,6 +19,8 @@ use Phproberto\Joomla\Twig\Extension\JLanguage;
  */
 class JLanguageTest extends \TestCase
 {
+	use Traits\HasFunctions;
+
 	private $extension;
 
 	/**
@@ -56,17 +58,9 @@ class JLanguageTest extends \TestCase
 	 *
 	 * @return  void
 	 */
-	public function testGetFunctionsReturnsCorrectData()
+	public function testGetFunctions()
 	{
-		$this->assertEquals(1, count($this->extension->getFunctions()));
-
-		$function = $this->extension->getFunctions()[0];
-
-		$callable = $function->getCallable();
-		$this->assertTrue(is_callable($callable));
-		$this->assertEquals('jlang', $function->getName());
-		$this->assertEquals(Language::class, $callable[0]);
-		$this->assertEquals('getInstance', $callable[1]);
+		$this->genericFunctionsTest();
 	}
 
 	/**
@@ -77,5 +71,20 @@ class JLanguageTest extends \TestCase
 	public function testGetNameReturnsCorrectName()
 	{
 		$this->assertEquals('jlang', $this->extension->getName());
+	}
+
+	/**
+	 * Functions expected to be added by the extension.
+	 *
+	 * @return  array
+	 */
+	protected function expectedFunctions()
+	{
+		return [
+			'jlang' => [
+				'class'  => Language::class,
+				'method' => 'getInstance'
+			]
+		];
 	}
 }

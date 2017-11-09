@@ -19,6 +19,8 @@ use Phproberto\Joomla\Twig\Extension\JHtml;
  */
 class JHtmlTest extends \TestCase
 {
+	use Traits\HasFunctions;
+
 	private $extension;
 
 	/**
@@ -41,15 +43,7 @@ class JHtmlTest extends \TestCase
 	 */
 	public function testGetFunctionsReturnsCorrectData()
 	{
-		$this->assertEquals(1, count($this->extension->getFunctions()));
-
-		$function = $this->extension->getFunctions()[0];
-
-		$callable = $function->getCallable();
-		$this->assertTrue(is_callable($callable));
-		$this->assertEquals('jhtml', $function->getName());
-		$this->assertEquals(HTMLHelper::class, $callable[0]);
-		$this->assertEquals('_', $callable[1]);
+		$this->genericFunctionsTest();
 	}
 
 	/**
@@ -60,5 +54,20 @@ class JHtmlTest extends \TestCase
 	public function testGetNameReturnsCorrectName()
 	{
 		$this->assertEquals('jhtml', $this->extension->getName());
+	}
+
+	/**
+	 * Functions expected to be added by the extension.
+	 *
+	 * @return  array
+	 */
+	protected function expectedFunctions()
+	{
+		return [
+			'jhtml' => [
+				'class'  => HTMLHelper::class,
+				'method' => '_'
+			]
+		];
 	}
 }

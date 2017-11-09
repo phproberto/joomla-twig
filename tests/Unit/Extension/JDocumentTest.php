@@ -19,6 +19,8 @@ use Phproberto\Joomla\Twig\Extension\JDocument;
  */
 class JDocumentTest extends \TestCase
 {
+	use Traits\HasFunctions;
+
 	private $extension;
 
 	/**
@@ -39,17 +41,9 @@ class JDocumentTest extends \TestCase
 	 *
 	 * @return  void
 	 */
-	public function testGetFunctionsReturnsCorrectData()
+	public function testGetFunctions()
 	{
-		$this->assertEquals(1, count($this->extension->getFunctions()));
-
-		$function = $this->extension->getFunctions()[0];
-
-		$callable = $function->getCallable();
-		$this->assertTrue(is_callable($callable));
-		$this->assertEquals('jdoc', $function->getName());
-		$this->assertEquals(Document::class, $callable[0]);
-		$this->assertEquals('getInstance', $callable[1]);
+		$this->genericFunctionsTest();
 	}
 
 	/**
@@ -60,5 +54,20 @@ class JDocumentTest extends \TestCase
 	public function testGetNameReturnsCorrectName()
 	{
 		$this->assertEquals('jdoc', $this->extension->getName());
+	}
+
+	/**
+	 * Functions expected to be added by the extension.
+	 *
+	 * @return  array
+	 */
+	protected function expectedFunctions()
+	{
+		return [
+			'jdoc' => [
+				'class'  => Document::class,
+				'method' => 'getInstance'
+			]
+		];
 	}
 }

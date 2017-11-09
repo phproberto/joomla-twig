@@ -19,6 +19,8 @@ use Phproberto\Joomla\Twig\Extension\JApplication;
  */
 class JApplicationTest extends \TestCaseDatabase
 {
+	use Traits\HasFunctions;
+
 	private $extension;
 
 	/**
@@ -55,17 +57,9 @@ class JApplicationTest extends \TestCaseDatabase
 	 *
 	 * @return  void
 	 */
-	public function testGetFunctionsReturnsCorrectData()
+	public function testGetFunctions()
 	{
-		$this->assertEquals(1, count($this->extension->getFunctions()));
-
-		$function = $this->extension->getFunctions()[0];
-
-		$callable = $function->getCallable();
-		$this->assertTrue(is_callable($callable));
-		$this->assertEquals('japp', $function->getName());
-		$this->assertEquals(CMSApplication::class, $callable[0]);
-		$this->assertEquals('getInstance', $callable[1]);
+		$this->genericFunctionsTest();
 	}
 
 	/**
@@ -76,5 +70,20 @@ class JApplicationTest extends \TestCaseDatabase
 	public function testGetNameReturnsJapp()
 	{
 		$this->assertEquals('japp', $this->extension->getName());
+	}
+
+	/**
+	 * Functions expected to be added by the extension.
+	 *
+	 * @return  array
+	 */
+	protected function expectedFunctions()
+	{
+		return [
+			'japp'        => [
+				'class'  => CMSApplication::class,
+				'method' => 'getInstance'
+			]
+		];
 	}
 }

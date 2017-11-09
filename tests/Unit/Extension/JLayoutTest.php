@@ -20,6 +20,8 @@ use Phproberto\Joomla\Twig\Extension\JLayout;
  */
 class JLayoutTest extends \TestCase
 {
+	use Traits\HasFunctions;
+
 	private $extension;
 
 	/**
@@ -54,30 +56,9 @@ class JLayoutTest extends \TestCase
 	 *
 	 * @return  void
 	 */
-	public function testGetFunctionsReturnsCorrectData()
+	public function testGetFunctions()
 	{
-		$expectedFunctions = $this->expectedFunctions();
-		$functions = $this->extension->getFunctions();
-
-		$this->assertEquals(count($expectedFunctions), count($functions));
-
-		foreach ($functions as $function)
-		{
-			$callable = $function->getCallable();
-			$functionName = $function->getName();
-
-			$this->assertTrue(array_key_exists($functionName, $expectedFunctions));
-
-			$expectedFunction = $expectedFunctions[$functionName];
-
-			$callableClass = is_string($callable[0]) ? $callable[0] : get_class($callable[0]);
-			$callableMethod = $callable[1];
-
-			$this->assertTrue(is_callable($callable));
-
-			$this->assertEquals($expectedFunction['class'], $callableClass);
-			$this->assertEquals($expectedFunction['method'], $callableMethod);
-		}
+		$this->genericFunctionsTest();
 	}
 
 	/**
@@ -108,7 +89,7 @@ class JLayoutTest extends \TestCase
 	 *
 	 * @return  array
 	 */
-	private function expectedFunctions()
+	protected function expectedFunctions()
 	{
 		return [
 			'jlayout'        => [
