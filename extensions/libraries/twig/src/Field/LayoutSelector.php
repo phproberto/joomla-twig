@@ -43,7 +43,7 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 	 *
 	 * @var  array
 	 */
-	private static $cachedGroups = [];
+	protected static $cachedGroups = [];
 
 	/**
 	 * Get the list of layout folders.
@@ -113,7 +113,7 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 	 *
 	 * @return  array
 	 */
-	protected function getFolderLayouts($folder)
+	protected function folderLayouts($folder)
 	{
 		$folder = \JPath::clean($folder);
 
@@ -126,10 +126,10 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 			function ($file)
 			{
 				return [
-					basename($file, '.html.twig') => $file
+					basename($file, '.html.twig') => basename($file)
 				];
 			},
-			\JFolder::files($folder, '^[^_]*\.html.twig$')
+			glob($folder . "/*.html.twig") ?: []
 		);
 
 		return $layouts ? call_user_func_array('array_merge', $layouts) : [];
@@ -149,7 +149,7 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 		{
 			$groups[$title] = [];
 
-			$layouts = array_diff_key($this->getFolderLayouts($folder), $added);
+			$layouts = array_diff_key($this->folderLayouts($folder), $added);
 
 			foreach ($layouts as $layout => $file)
 			{
