@@ -16,49 +16,8 @@ use Phproberto\Joomla\Twig\Field\ViewLayout;
  *
  * @since   __DEPLOY_VERSION__
  */
-class ViewLayoutTest extends \TestCaseDatabase
+class ViewLayoutTest extends BaseLayoutFieldTest
 {
-	/**
-	 * Sets up the fixture, for example, opens a network connection.
-	 * This method is called before a test is executed.
-	 *
-	 * @return  void
-	 */
-	protected function setUp()
-	{
-		parent::setUp();
-		$this->saveFactoryState();
-
-		\JFactory::$config      = $this->getMockConfig();
-		\JFactory::$application = $this->getMockCmsApp();
-	}
-
-	/**
-	 * Tears down the fixture, for example, closes a network connection.
-	 * This method is called after a test is executed.
-	 *
-	 * @return  void
-	 */
-	protected function tearDown()
-	{
-		$this->restoreFactoryState();
-		parent::tearDown();
-	}
-
-	/**
-	 * Gets the data set to be loaded into the database during setup
-	 *
-	 * @return  \PHPUnit_Extensions_Database_DataSet_CsvDataSet
-	 */
-	protected function getDataSet()
-	{
-		$dataSet = new \PHPUnit_Extensions_Database_DataSet_CsvDataSet(',', "'", '\\');
-		$dataSet->addTable('jos_extensions', JPATH_TEST_DATABASE . '/jos_extensions.csv');
-		$dataSet->addTable('jos_template_styles', JPATH_TEST_DATABASE . '/jos_template_styles.csv');
-
-		return $dataSet;
-	}
-
 	/**
 	 * cacheHash returns different id for different settings.
 	 *
@@ -125,7 +84,7 @@ class ViewLayoutTest extends \TestCaseDatabase
 
 		$expected = [
 			JPATH_BASE . '/components/com_users/views/login/tmpl',
-			JPATH_BASE . '/templates/protostar/html/com_users/login'
+			JPATH_BASE . '/templates/' . self::ACTIVE_TEMPLATE . '/html/com_users/login'
 		];
 
 		$this->assertSame($expected, array_values($folders));
@@ -163,42 +122,21 @@ class ViewLayoutTest extends \TestCaseDatabase
 	}
 
 	/**
-	 * Get a sample plugin \SimpleXMLElement by its key.
-	 *
-	 * @param   string  $key  Key to identify the sample module.
-	 *
-	 * @return  \SimpleXMLElement
-	 */
-	private function element($key = 'default')
-	{
-		return new \SimpleXMLElement($this->views()[$key]);
-	}
-
-	/**
-	 * Retrieve a sample field.
-	 *
-	 * @param   string  $key    Key to identify the sample module.
-	 * @param   string  $value  Value to assign in field setup
-	 *
-	 * @return  ViewLayout
-	 */
-	private function field($key = 'default', $value = 'default')
-	{
-		$field = new ViewLayout;
-
-		$this->assertTrue(
-			$field->setup($this->element($key), $value)
-		);
-
-		return $field;
-	}
-
-	/**
-	 * Get sample views.
+	 * Get the class of the field being tested.
 	 *
 	 * @return  array
 	 */
-	private function views()
+	protected function fieldClass()
+	{
+		return ViewLayout::class;
+	}
+
+	/**
+	 * Get the sample fields XML strings.
+	 *
+	 * @return  array
+	 */
+	protected function sampleFields()
 	{
 		return [
 			'default' => '<field

@@ -16,49 +16,8 @@ use Phproberto\Joomla\Twig\Field\ModuleLayout;
  *
  * @since   __DEPLOY_VERSION__
  */
-class ModuleLayoutTest extends \TestCaseDatabase
+class ModuleLayoutTest extends BaseLayoutFieldTest
 {
-	/**
-	 * Sets up the fixture, for example, opens a network connection.
-	 * This method is called before a test is executed.
-	 *
-	 * @return  void
-	 */
-	protected function setUp()
-	{
-		parent::setUp();
-		$this->saveFactoryState();
-
-		\JFactory::$config      = $this->getMockConfig();
-		\JFactory::$application = $this->getMockCmsApp();
-	}
-
-	/**
-	 * Tears down the fixture, for example, closes a network connection.
-	 * This method is called after a test is executed.
-	 *
-	 * @return  void
-	 */
-	protected function tearDown()
-	{
-		$this->restoreFactoryState();
-		parent::tearDown();
-	}
-
-	/**
-	 * Gets the data set to be loaded into the database during setup
-	 *
-	 * @return  \PHPUnit_Extensions_Database_DataSet_CsvDataSet
-	 */
-	protected function getDataSet()
-	{
-		$dataSet = new \PHPUnit_Extensions_Database_DataSet_CsvDataSet(',', "'", '\\');
-		$dataSet->addTable('jos_extensions', JPATH_TEST_DATABASE . '/jos_extensions.csv');
-		$dataSet->addTable('jos_template_styles', JPATH_TEST_DATABASE . '/jos_template_styles.csv');
-
-		return $dataSet;
-	}
-
 	/**
 	 * cacheHash returns different id for different settings.
 	 *
@@ -125,7 +84,7 @@ class ModuleLayoutTest extends \TestCaseDatabase
 
 		$expected = [
 			JPATH_BASE . '/modules/mod_menu/tmpl',
-			JPATH_BASE . '/templates/protostar/html/mod_menu'
+			JPATH_BASE . '/templates/' . self::ACTIVE_TEMPLATE . '/html/mod_menu'
 		];
 
 		$this->assertSame($expected, array_values($folders));
@@ -160,42 +119,21 @@ class ModuleLayoutTest extends \TestCaseDatabase
 	}
 
 	/**
-	 * Get a sample module \SimpleXMLElement by its key.
-	 *
-	 * @param   string  $key  Key to identify the sample module.
-	 *
-	 * @return  \SimpleXMLElement
-	 */
-	private function element($key = 'default')
-	{
-		return new \SimpleXMLElement($this->modules()[$key]);
-	}
-
-	/**
-	 * Retrieve a sample field.
-	 *
-	 * @param   string  $key    Key to identify the sample module.
-	 * @param   string  $value  Value to assign in field setup
-	 *
-	 * @return  ModuleLayout
-	 */
-	private function field($key = 'default', $value = 'default')
-	{
-		$field = new ModuleLayout;
-
-		$this->assertTrue(
-			$field->setup($this->element($key), $value)
-		);
-
-		return $field;
-	}
-
-	/**
-	 * Get sample modules.
+	 * Get the class of the field being tested.
 	 *
 	 * @return  array
 	 */
-	private function modules()
+	protected function fieldClass()
+	{
+		return ModuleLayout::class;
+	}
+
+	/**
+	 * Get the sample fields XML strings.
+	 *
+	 * @return  array
+	 */
+	protected function sampleFields()
 	{
 		return [
 			'default' => '<field
