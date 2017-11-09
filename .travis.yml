@@ -13,7 +13,9 @@ jdk:
 
 cache:
   directories:
-    - '$HOME/.sonar/cache'
+    - ./build/node_modules
+    - $HOME/.composer/cache/files
+    - $HOME/.sonar/cache
 
 php:
   - 7.0.21
