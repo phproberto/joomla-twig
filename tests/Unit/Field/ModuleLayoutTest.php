@@ -124,8 +124,8 @@ class ModuleLayoutTest extends \TestCaseDatabase
 		$this->assertSame(2, count($folders));
 
 		$expected = [
-			realpath(JPATH_BASE . '/modules/mod_menu/tmpl'),
-			realpath(JPATH_BASE . '/templates/protostar/html/mod_menu')
+			JPATH_BASE . '/modules/mod_menu/tmpl',
+			JPATH_BASE . '/templates/protostar/html/mod_menu'
 		];
 
 		$this->assertSame($expected, array_values($folders));

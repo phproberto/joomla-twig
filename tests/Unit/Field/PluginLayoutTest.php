@@ -124,8 +124,8 @@ class PluginLayoutTest extends \TestCaseDatabase
 		$this->assertSame(2, count($folders));
 
 		$expected = [
-			realpath(JPATH_BASE . '/plugins/content/vote/tmpl'),
-			realpath(JPATH_BASE . '/templates/protostar/html/plugins/content/vote')
+			JPATH_BASE . '/plugins/content/vote/tmpl',
+			JPATH_BASE . '/templates/protostar/html/plugins/content/vote'
 		];
 
 		$this->assertSame($expected, array_values($folders));
