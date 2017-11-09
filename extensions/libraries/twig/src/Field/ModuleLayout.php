@@ -41,7 +41,7 @@ final class ModuleLayout extends LayoutSelector
 	 */
 	protected function cacheHash()
 	{
-		return md5($this->type . '|' . $this->clientId . '|' . $this->module);
+		return parent::cacheHash() . md5($this->module);
 	}
 
 	/**

@@ -48,7 +48,7 @@ final class PluginLayout extends LayoutSelector
 	 */
 	protected function cacheHash()
 	{
-		return md5($this->type . '|' . $this->clientId . '|' . $this->pluginGroup . '|' . $this->pluginName);
+		return parent::cacheHash() . md5($this->pluginGroup . '|' . $this->pluginName);
 	}
 
 	/**

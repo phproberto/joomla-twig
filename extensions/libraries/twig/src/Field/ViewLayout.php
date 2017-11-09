@@ -48,7 +48,7 @@ final class ViewLayout extends LayoutSelector
 	 */
 	protected function cacheHash()
 	{
-		return md5($this->type . '|' . $this->clientId . '|' . $this->component . '|' . $this->view);
+		return parent::cacheHash() . md5($this->component . '|' . $this->view);
 	}
 
 	/**
