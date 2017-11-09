@@ -60,7 +60,7 @@ final class PluginLayout extends LayoutSelector
 	{
 		$appFolder = $this->clientId ? JPATH_ADMINISTRATOR : JPATH_SITE;
 
-		$mainFolder = $appFolder . '/plugins/' . $this->pluginGroup . '/' . $this->pluginName . '/tmpl/';
+		$mainFolder = $appFolder . '/plugins/' . $this->pluginGroup . '/' . $this->pluginName . '/tmpl';
 		$overridesFolder = $appFolder . '/templates/' . $this->activeTemplate() . '/html/plugins/' . $this->pluginGroup . '/' . $this->pluginName;
 
 		return [

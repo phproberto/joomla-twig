@@ -9,14 +9,14 @@
 
 namespace Phproberto\Joomla\Twig\Tests\Unit\Field;
 
-use Phproberto\Joomla\Twig\Field\ModuleLayout;
+use Phproberto\Joomla\Twig\Field\PluginLayout;
 
 /**
- * ModuleLayout field test.
+ * PluginLayout field test.
  *
  * @since   __DEPLOY_VERSION__
  */
-class ModuleLayoutTest extends \TestCaseDatabase
+class PluginLayoutTest extends \TestCaseDatabase
 {
 	/**
 	 * Sets up the fixture, for example, opens a network connection.
@@ -66,8 +66,8 @@ class ModuleLayoutTest extends \TestCaseDatabase
 	 */
 	public function testCacheHashReturnsSameHasForSameXml()
 	{
-		$field = $this->field('full');
-		$field2 = $this->field('full');
+		$field = $this->field();
+		$field2 = $this->field();
 
 		$reflection = new \ReflectionClass($field);
 		$method = $reflection->getMethod('cacheHash');
@@ -77,14 +77,14 @@ class ModuleLayoutTest extends \TestCaseDatabase
 	}
 
 	/**
-	 * cacheHash returns different hash for different client.
+	 * cacheHash returns different hash for different plugin group.
 	 *
 	 * @return  void
 	 */
-	public function testCacheHasReturnsDifferentHashForDifferentClient()
+	public function testCacheHasReturnsDifferentHashForDifferentGroup()
 	{
-		$field = $this->field('full');
-		$field2 = $this->field('full-backend');
+		$field = $this->field();
+		$field2 = $this->field('diff-group');
 
 		$reflection = new \ReflectionClass($field);
 		$method = $reflection->getMethod('cacheHash');
@@ -94,14 +94,14 @@ class ModuleLayoutTest extends \TestCaseDatabase
 	}
 
 	/**
-	 * cacheHash returns different hash for different client.
+	 * cacheHash returns different hash for different plugin name.
 	 *
 	 * @return  void
 	 */
-	public function testCacheHasReturnsDifferentHashForDifferentModule()
+	public function testCacheHasReturnsDifferentHashForDifferentName()
 	{
-		$field = $this->field('full');
-		$field2 = $this->field('latest-full');
+		$field = $this->field();
+		$field2 = $this->field('diff-name');
 
 		$reflection = new \ReflectionClass($field);
 		$method = $reflection->getMethod('cacheHash');
@@ -124,27 +124,30 @@ class ModuleLayoutTest extends \TestCaseDatabase
 		$this->assertSame(2, count($folders));
 
 		$expected = [
-			realpath(JPATH_BASE . '/modules/mod_menu/tmpl'),
-			realpath(JPATH_BASE . '/templates/protostar/html/mod_menu')
+			realpath(JPATH_BASE . '/plugins/content/vote/tmpl'),
+			realpath(JPATH_BASE . '/templates/protostar/html/plugins/content/vote')
 		];
 
 		$this->assertSame($expected, array_values($folders));
 	}
 
 	/**
-	 * Constructor test.
+	 * Setup sets group and name test.
 	 *
 	 * @return  void
 	 */
-	public function testSetupSetsModule()
+	public function testSetupSetsGroupAndName()
 	{
-		$field = $this->field('latest-full');
+		$field = $this->field();
 
 		$reflection = new \ReflectionClass($field);
-		$moduleProperty = $reflection->getProperty('module');
-		$moduleProperty->setAccessible(true);
+		$pluginGroupProperty = $reflection->getProperty('pluginGroup');
+		$pluginGroupProperty->setAccessible(true);
+		$pluginNameProperty = $reflection->getProperty('pluginName');
+		$pluginNameProperty->setAccessible(true);
 
-		$this->assertSame('mod_articles_latest', $moduleProperty->getValue($field));
+		$this->assertSame('content', $pluginGroupProperty->getValue($field));
+		$this->assertSame('vote', $pluginNameProperty->getValue($field));
 	}
 
 	/**
@@ -154,13 +157,13 @@ class ModuleLayoutTest extends \TestCaseDatabase
 	 */
 	public function testSetupReturnsFalseWhenParentFails()
 	{
-		$field = new ModuleLayout;
+		$field = new PluginLayout;
 
 		$this->assertFalse($field->setup(new \SimpleXMLElement('<test name="twig_layout"/>'), 'my-layout'));
 	}
 
 	/**
-	 * Get a sample module \SimpleXMLElement by its key.
+	 * Get a sample plugin \SimpleXMLElement by its key.
 	 *
 	 * @param   string  $key  Key to identify the sample module.
 	 *
@@ -168,7 +171,7 @@ class ModuleLayoutTest extends \TestCaseDatabase
 	 */
 	private function element($key = 'default')
 	{
-		return new \SimpleXMLElement($this->modules()[$key]);
+		return new \SimpleXMLElement($this->plugins()[$key]);
 	}
 
 	/**
@@ -177,11 +180,11 @@ class ModuleLayoutTest extends \TestCaseDatabase
 	 * @param   string  $key    Key to identify the sample module.
 	 * @param   string  $value  Value to assign in field setup
 	 *
-	 * @return  ModuleLayout
+	 * @return  PluginLayout
 	 */
 	private function field($key = 'default', $value = 'default')
 	{
-		$field = new ModuleLayout;
+		$field = new PluginLayout;
 
 		$this->assertTrue(
 			$field->setup($this->element($key), $value)
@@ -191,47 +194,38 @@ class ModuleLayoutTest extends \TestCaseDatabase
 	}
 
 	/**
-	 * Get sample modules.
+	 * Get sample plugins.
 	 *
 	 * @return  array
 	 */
-	private function modules()
+	private function plugins()
 	{
 		return [
 			'default' => '<field
 				name="twig_layout"
-				type="twig.modulelayout"
+				type="twig.pluginlayout"
 				label="Twig layout"
-				module="mod_menu"
+				pluginGroup="content"
+				pluginName="vote"
 				default="default"
-				clientId="0"
 				description="Twig layout to render"
 			/>',
-			'full' => '<field
-				name="first_layout"
-				type="twig.modulelayout"
-				label="First layout"
-				module="mod_menu"
+			'diff-group' => '<field
+				name="twig_layout"
+				type="twig.pluginlayout"
+				label="Twig layout"
+				pluginGroup="system"
+				pluginName="vote"
 				default="default"
-				clientId="0"
 				description="Twig layout to render"
 			/>',
-			'full-backend' => '<field
-				name="second_layout"
-				type="twig.modulelayout"
-				label="Second layout"
-				module="mod_menu"
+			'diff-name' => '<field
+				name="twig_layout"
+				type="twig.pluginlayout"
+				label="Twig layout"
+				pluginGroup="content"
+				pluginName="other"
 				default="default"
-				clientId="1"
-				description="Twig layout to render"
-			/>',
-			'latest-full' => '<field
-				name="third_layout"
-				type="twig.modulelayout"
-				label="Third layout"
-				module="mod_articles_latest"
-				default="default"
-				clientId="0"
 				description="Twig layout to render"
 			/>'
 		];
