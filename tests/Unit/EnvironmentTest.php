@@ -39,6 +39,9 @@ class EnvironmentTest extends \TestCaseDatabase
 		$this->saveFactoryState();
 
 		\JFactory::$session     = $this->getMockSession();
+
+		$this->dispatcher      = new \JEventDispatcher;
+		\TestReflection::setValue($this->dispatcher, 'instance', $this->dispatcher);
 	}
 
 	/**
@@ -54,6 +57,8 @@ class EnvironmentTest extends \TestCaseDatabase
 		$this->restoreFactoryState();
 
 		parent::tearDown();
+
+		\TestReflection::setValue($this->dispatcher, 'instance', null);
 	}
 
 	/**
@@ -65,9 +70,8 @@ class EnvironmentTest extends \TestCaseDatabase
 	{
 		$this->calledEvents = [];
 
-		$dispatcher = \JEventDispatcher::getInstance();
-		$dispatcher->register('onTwigBeforeLoad', [$this, 'onTwigBeforeLoad']);
-		$dispatcher->register('onTwigAfterLoad', [$this, 'onTwigAfterLoad']);
+		$this->dispatcher->register('onTwigBeforeLoad', [$this, 'onTwigBeforeLoad']);
+		$this->dispatcher->register('onTwigAfterLoad', [$this, 'onTwigAfterLoad']);
 
 		$loader = new \Twig_Loader_Array;
 		$options = ['sample' => 'option'];
