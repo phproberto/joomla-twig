@@ -1,0 +1,101 @@
+<h1>Twig examples:</h1>
+<hr>
+
+<h3>japp.getClientId()</h3>
+{{ dump(japp.getClientId()) }}
+<hr>
+
+<h3>japp('administrator').getClientId()</h3>
+{{ dump(japp('administrator').getClientId()) }}
+<hr>
+
+<h3>34|to_array</h3>
+{{ dump(34|to_array) }}
+<hr>
+
+<h3>jdoc.template</h3>
+{{ dump(jdoc.template) }}
+<hr>
+
+<h3>jdoc('json').getType()</h3>
+{{ dump(jdoc('json').getType()) }}
+<hr>
+
+<h3>jhtml('form.token')</h3>
+{{ dump(jhtml('form.token')) }}
+<hr>
+
+<h3>jlang.getName()</h3>
+{{ dump(jlang.getName()) }}	
+<hr>
+
+<h3>jlang('es-ES').getName():</h3>
+{{ dump(jlang('es-ES').getName()) }}	
+<hr>
+
+<h3>jlayout('joomla.html.treeprefix', constant('JPATH_SITE') ~ '/media', {'debug' : true}):</h3>
+<div style="background-color: grey; color: white; padding: 15px;">
+	{% set options = {'debug' : true} %}
+	{% set layout = jlayout('joomla.html.treeprefix', constant('JPATH_SITE') ~ '/media', options) %}
+
+	<h4>LayoutId:</h4>
+	{{ dump(layout.getLayoutId()) }} 
+	<hr>
+
+	<h4>IncludePaths:</h4>
+	{{ dump(layout.getIncludePaths()) }}
+	<hr>
+
+	<h4>Render:</h4>
+	{{ dump(layout.render({'level' : 10})) }}
+</div>
+
+<h3>jposition('position-8')</h3>
+{{ dump(jposition('position-8')) }}	
+<hr>
+
+<h3>jprofiler('joomla-twig')</h3>
+<div style="background-color: grey; color: white; padding: 15px;">
+	{% set profiler = jprofiler('joomla-twig') %}
+	<h4>mark:</h4>
+	{{ dump(profiler.mark('before something')) }}	
+	<h4>mark 2:</h4>
+	{{ dump(profiler.mark('after something')) }}	
+</div>
+<hr>
+
+<h3>jroute('index.php?option=com_content&view=category&id=27')</h3>
+{{ dump(jroute('index.php?option=com_content&view=category&id=27')) }}	
+<hr>
+
+<h3>jsession.getToken()</h3>
+{{ dump(jsession.getToken()) }}	
+<hr>
+
+<h3>jtext('JENABLED')</h3>
+{{ dump(jtext('JENABLED')) }}	
+<hr>
+
+<h3>jtext_sprintf('JNEXT_TITLE', 'My article title')</h3>
+{{ dump(jtext_sprintf('JNEXT_TITLE', 'My article title')) }}	
+<hr>
+
+<h3>juri</h3>
+{{ dump(juri) }}	
+<hr>
+
+<h3>juri('index.php?option=com_content&view=category')</h3>
+{{ dump(juri('index.php?option=com_content&view=category')) }}	
+<hr>
+
+<h3>juser.get('guest')</h3>
+{{ dump(juser.get('guest')) }}	
+<hr>
+
+<h3>juser(668).email</h3>
+{{ dump(juser(668).email) }}	
+<hr>
+
+<h3>'s:6:"foobar";'|unserialize</h3>
+{{ dump('s:6:"foobar";'|unserialize) }}	
+<hr>
