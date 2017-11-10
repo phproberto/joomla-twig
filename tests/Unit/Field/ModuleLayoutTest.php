@@ -84,7 +84,7 @@ class ModuleLayoutTest extends BaseLayoutFieldTest
 
 		$expected = [
 			JPATH_BASE . '/modules/mod_menu/tmpl',
-			JPATH_BASE . '/templates/' . self::ACTIVE_TEMPLATE . '/html/mod_menu'
+			JPATH_BASE . '/templates/' . \JFactory::getApplication()->getTemplate() . '/html/mod_menu'
 		];
 
 		$this->assertSame($expected, array_values($folders));

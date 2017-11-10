@@ -9,6 +9,9 @@
 
 namespace Phproberto\Joomla\Twig\Tests\Unit\Field;
 
+use Joomla\Registry\Registry;
+use Joomla\CMS\Application\SiteApplication;
+
 /**
  * ModuleLayout field test.
  *
@@ -16,13 +19,6 @@ namespace Phproberto\Joomla\Twig\Tests\Unit\Field;
  */
 abstract class BaseLayoutFieldTest extends \TestCaseDatabase
 {
-	/**
-	 * Descending direction for sorting.
-	 *
-	 * @const
-	 */
-	const ACTIVE_TEMPLATE = 'protostar';
-
 	/**
 	 * Sets up the fixture, for example, opens a network connection.
 	 * This method is called before a test is executed.
@@ -34,8 +30,14 @@ abstract class BaseLayoutFieldTest extends \TestCaseDatabase
 		parent::setUp();
 		$this->saveFactoryState();
 
+		$_SERVER['HTTP_HOST'] = 'mydomain.com';
+		$_SERVER['HTTP_USER_AGENT'] = 'Mozilla/5.0';
+		$_SERVER['REQUEST_URI'] = '/index.php';
+		$_SERVER['SCRIPT_NAME'] = '/index.php';
+
 		\JFactory::$config      = $this->getMockConfig();
-		\JFactory::$application = $this->getMockCmsApp();
+		\JFactory::$session     = $this->getMockSession();
+		\JFactory::$application = new SiteApplication($this->getMockInput(), new Registry(['session' => false]));
 	}
 
 	/**

@@ -84,7 +84,7 @@ class PluginLayoutTest extends BaseLayoutFieldTest
 
 		$expected = [
 			JPATH_BASE . '/plugins/content/vote/tmpl',
-			JPATH_BASE . '/templates/' . self::ACTIVE_TEMPLATE . '/html/plugins/content/vote'
+			JPATH_BASE . '/templates/' . \JFactory::getApplication()->getTemplate() . '/html/plugins/content/vote'
 		];
 
 		$this->assertSame($expected, array_values($folders));

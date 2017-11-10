@@ -84,7 +84,7 @@ class ViewLayoutTest extends BaseLayoutFieldTest
 
 		$expected = [
 			JPATH_BASE . '/components/com_users/views/login/tmpl',
-			JPATH_BASE . '/templates/' . self::ACTIVE_TEMPLATE . '/html/com_users/login'
+			JPATH_BASE . '/templates/' . \JFactory::getApplication()->getTemplate() . '/html/com_users/login'
 		];
 
 		$this->assertSame($expected, array_values($folders));

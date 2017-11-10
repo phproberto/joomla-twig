@@ -31,7 +31,7 @@ class LayoutSelectorTest extends BaseLayoutFieldTest
 		$method = $reflection->getMethod('activeTemplate');
 		$method->setAccessible(true);
 
-		$this->assertSame(self::ACTIVE_TEMPLATE, $method->invoke($field));
+		$this->assertSame(\JFactory::getApplication()->getTemplate(), $method->invoke($field));
 	}
 
 	/**
