@@ -11,10 +11,7 @@ namespace Phproberto\Joomla\Twig\Extension;
 
 defined('_JEXEC') || die;
 
-\JLoader::import('twig.library');
-
 use Joomla\CMS\Factory;
-use Twig\Error\SyntaxError;
 use Twig\Extension\AbstractExtension;
 use Twig\TwigFunction;
 
