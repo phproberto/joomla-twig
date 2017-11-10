@@ -52,11 +52,21 @@ final class Twig
 	}
 
 	/**
-	 * [getInstance description]
+	 * Clear the cached instance.
+	 *
+	 * @return  void
+	 */
+	public static function clear()
+	{
+		self::$instance = null;
+	}
+
+	/**
+	 * Get the cached instance
 	 *
 	 * @return  static
 	 */
-	private static function getInstance()
+	public static function instance()
 	{
 		if (null === self::$instance)
 		{
@@ -76,7 +86,7 @@ final class Twig
 	 */
 	public static function render($layout, $data = [])
 	{
-		return self::getInstance()->environment()->render($layout, $data);
+		return self::instance()->environment()->render($layout, $data);
 	}
 
 	/**
