@@ -44,7 +44,15 @@ You can find more examples/usages in the [documentation](./docs/README.md);
 
 * Ensure that your site meets the requirements
 * Download latest version from the [releases section](./releases)
-* Install zip file in your site through Extension Manager
+* Install zip file in your site through Extension Manager  
+
+For a fast test you can now use the integrated examples.html.twig inside the library. Enable debug mode in your Joomla configuration and add this code to wherever you want to display examples (for example in your template index.php):  
+
+```php
+JLoader::import('twig.library');
+
+echo Twig::render('@library/twig/examples.html.twig');
+```
 
 ## Documentation <a id="documentation"></a>
 
