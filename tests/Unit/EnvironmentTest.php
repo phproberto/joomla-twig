@@ -27,6 +27,13 @@ class EnvironmentTest extends \TestCaseDatabase
 	protected $calledEvents = [];
 
 	/**
+	 * Dispatcher used for testing.
+	 *
+	 * @var  \JEventDispatcher
+	 */
+	protected $dispatcher;
+
+	/**
 	 * Sets up the fixture, for example, opens a network connection.
 	 * This method is called before a test is executed.
 	 *
