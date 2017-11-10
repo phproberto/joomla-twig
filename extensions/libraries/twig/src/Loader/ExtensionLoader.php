@@ -80,31 +80,38 @@ abstract class ExtensionLoader extends \Twig_Loader_Filesystem
 
 		try
 		{
-			$result = parent::findTemplate($name);
+			$result = parent::findTemplate($name, true);
 		}
-		catch (\Exception $e)
+		catch (\Twig_Error_Loader $e)
 		{
-			$result = false;
+			$result = $this->findParsedNameTemplate($name);
 		}
 
-		if ($result)
+		if (!$result && $throw)
 		{
-			return $result;
+			throw new \Twig_Error_Loader($name);
 		}
 
+		return $result;
+	}
+
+	/**
+	 * Find a template with name parsed.
+	 *
+	 * @param   string  $name  Name of the template to search
+	 *
+	 * @return  mixed
+	 */
+	protected function findParsedNameTemplate($name)
+	{
 		$parsedName = $this->parseExtensionName($name);
 
-		if ($parsedName === $name)
+		if ($name === $parsedName)
 		{
-			if ($throw)
-			{
-				throw $e;
-			}
-
 			return false;
 		}
 
-		return parent::findTemplate($parsedName, $throw);
+		return parent::findTemplate($parsedName, false);
 	}
 
 	/**
