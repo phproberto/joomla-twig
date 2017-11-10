@@ -27,7 +27,8 @@ Some highlights:
 * Integrated cache.
 * Integrated debug mode.
 * All the extensions are integrated through plugins so you can extend/replace any plugin you need.
-* [SonarCloud](https://sonarcloud.io/dashboard?id=phproberto%3Ajoomla-twig) for Quality Asurance.  
+* 100% covered by unit tests. 
+* SonarCloud is used for QA. Check the [project in SonarCloud](https://sonarcloud.io/dashboard?id=phproberto%3Ajoomla-twig).  
 
 Example usage:  
 
