@@ -39,7 +39,7 @@ JLoader::import('twig.library');
 echo Twig::render('@template/view.html.twig');  
 ```
 
-You can find more examples/usages in the [documentation](./docs/README.md);  
+You can find more examples/usages in the [documentation](https://phproberto.github.io/joomla-twig/);  
 
 ## Installation <a id="installation"></a>
 
