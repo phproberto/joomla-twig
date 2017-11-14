@@ -10,6 +10,8 @@ JLoader::import('twig.library');
 
 Then you can render any component, module, library, plugin or template layout like:  
 
+### Component view layout  
+
 ```php
 /**
  * Render a component view layout. This will search for layouts in:
