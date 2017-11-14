@@ -1,5 +1,3 @@
-# joomla-twig documentation  
-
 While a full documentation is written here is a quick start.
 
 ## Quick start.
