@@ -17,7 +17,9 @@ Then you can render any layout like:
  * - components/com_users/views/login/default.html.twig
  */
 echo Twig::render('@component/com_users/login/default.html.twig');
+```
 
+```php
 /**
  * Render a module layout. This will search for layouts in:
  * - templates/{ACTIVE_TEMPLATE}/html/mod_menu/default.html.twig
