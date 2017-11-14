@@ -8,7 +8,7 @@ To start using twig layout you have to include the library call:
 JLoader::import('twig.library');
 ```
 
-Then you can render any layout like:  
+Then you can render any component, module, library, plugin or template layout like:  
 
 ```php
 /**
