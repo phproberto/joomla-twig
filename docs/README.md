@@ -2,12 +2,15 @@ While a full documentation is written here is a quick start.
 
 ## Quick start.
 
-After installing this package you can 
+To start using twig layout you have to include the library call:  
 
 ```php
-
 JLoader::import('twig.library');
+```
 
+Then you can render any layout like:  
+
+```php
 /**
  * Render a component view layout. This will search for layouts in:
  * - templates/{ACTIVE_TEMPLATE}/html/com_users/login/default.html.twig
