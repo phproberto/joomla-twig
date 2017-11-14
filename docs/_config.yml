@@ -1,1 +1,4 @@
-theme: jekyll-theme-tactile
+theme: phproberto/jekyll-test
+remote_theme: "phproberto/jekyll-test"
+plugins:
+  - jekyll-remote-theme
