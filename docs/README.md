@@ -21,6 +21,8 @@ Then you can render any component, module, library, plugin or template layout li
 echo Twig::render('@component/com_users/login/default.html.twig');
 ```
 
+### Module layout  
+
 ```php
 /**
  * Render a module layout. This will search for layouts in:
