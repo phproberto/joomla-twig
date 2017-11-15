@@ -1,0 +1,54 @@
+- title: Introduction
+  links: 
+    - title: About joomla-git
+      url: docs/README.md
+- title: Global variables
+  links: 
+    - title: japp
+      url: docs/globals/japp.md 
+    - title: jdoc
+      url: docs/globals/jdoc.md 
+    - title: jlang
+      url: docs/globals/jlang.md 
+    - title: jsession
+      url: docs/globals/jsession.md 
+    - title: juser
+      url: docs/globals/juser.md 
+    - title: juri
+      url: docs/globals/juri.md
+- title: Functions
+  links: 
+    - title: japp()
+      url: docs/functions/japp.md 
+    - title: jdoc()
+      url: docs/functions/jdoc.md 
+    - title: jhtml()
+      url: docs/functions/jhtml.md 
+    - title: jlang()
+      url: docs/functions/jlang.md 
+    - title: jlayout()
+      url: docs/functions/jlayout.md 
+    - title: jlayout_debug()
+      url: docs/functions/jlayout_debug.md 
+    - title: jlayout_render()
+      url: docs/functions/jlayout_render.md 
+    - title: jposition()
+      url: docs/functions/jposition.md 
+    - title: jprofiler()
+      url: docs/functions/jprofiler.md 
+    - title: jroute()
+      url: docs/functions/jroute.md 
+    - title: jtext()
+      url: docs/functions/jtext.md 
+    - title: jtext_sprintf()
+      url: docs/functions/jtext_sprintf.md 
+    - title: juri()
+      url: docs/functions/juri.md 
+    - title: juser()
+      url: docs/functions/juser.md
+- title: Filters
+  links: 
+    - title: to_array
+      url: docs/globals/to_array.md 
+    - title: unserialize
+      url: docs/globals/unserialize.md 
