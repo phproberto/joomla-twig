@@ -1,54 +1,54 @@
 - title: Introduction
   links: 
     - title: About joomla-git
-      url: docs/README.md
+      url: docs
 - title: Global variables
   links: 
     - title: japp
-      url: docs/globals/japp.md 
+      url: globals/japp 
     - title: jdoc
-      url: docs/globals/jdoc.md 
+      url: globals/jdoc 
     - title: jlang
-      url: docs/globals/jlang.md 
+      url: globals/jlang 
     - title: jsession
-      url: docs/globals/jsession.md 
+      url: globals/jsession 
     - title: juser
-      url: docs/globals/juser.md 
+      url: globals/juser 
     - title: juri
-      url: docs/globals/juri.md
+      url: globals/juri
 - title: Functions
   links: 
     - title: japp()
-      url: docs/functions/japp.md 
+      url: functions/japp 
     - title: jdoc()
-      url: docs/functions/jdoc.md 
+      url: functions/jdoc 
     - title: jhtml()
-      url: docs/functions/jhtml.md 
+      url: functions/jhtml 
     - title: jlang()
-      url: docs/functions/jlang.md 
+      url: functions/jlang 
     - title: jlayout()
-      url: docs/functions/jlayout.md 
+      url: functions/jlayout 
     - title: jlayout_debug()
-      url: docs/functions/jlayout_debug.md 
+      url: functions/jlayout_debug 
     - title: jlayout_render()
-      url: docs/functions/jlayout_render.md 
+      url: functions/jlayout_render 
     - title: jposition()
-      url: docs/functions/jposition.md 
+      url: functions/jposition 
     - title: jprofiler()
-      url: docs/functions/jprofiler.md 
+      url: functions/jprofiler 
     - title: jroute()
-      url: docs/functions/jroute.md 
+      url: functions/jroute 
     - title: jtext()
-      url: docs/functions/jtext.md 
+      url: functions/jtext 
     - title: jtext_sprintf()
-      url: docs/functions/jtext_sprintf.md 
+      url: functions/jtext_sprintf 
     - title: juri()
-      url: docs/functions/juri.md 
+      url: functions/juri 
     - title: juser()
-      url: docs/functions/juser.md
+      url: functions/juser
 - title: Filters
   links: 
     - title: to_array
-      url: docs/globals/to_array.md 
+      url: globals/to_array 
     - title: unserialize
-      url: docs/globals/unserialize.md 
+      url: globals/unserialize 
