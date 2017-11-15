@@ -1,54 +1,54 @@
 - title: Introduction
   links: 
     - title: About joomla-git
-      url: {{ site.baseurl }}
+      url: /
 - title: Global variables
   links: 
     - title: japp
-      url: {{ site.baseurl }}/globals/japp 
+      url: /globals/japp 
     - title: jdoc
-      url: {{ site.baseurl }}/globals/jdoc 
+      url: /globals/jdoc 
     - title: jlang
-      url: {{ site.baseurl }}/globals/jlang 
+      url: /globals/jlang 
     - title: jsession
-      url: {{ site.baseurl }}/globals/jsession 
+      url: /globals/jsession 
     - title: juser
-      url: {{ site.baseurl }}/globals/juser 
+      url: /globals/juser 
     - title: juri
-      url: {{ site.baseurl }}/globals/juri
-- title: {{ site.baseurl }}/functions
+      url: /globals/juri
+- title: /functions
   links: 
     - title: japp()
-      url: {{ site.baseurl }}/functions/japp 
+      url: /functions/japp 
     - title: jdoc()
-      url: {{ site.baseurl }}/functions/jdoc 
+      url: /functions/jdoc 
     - title: jhtml()
-      url: {{ site.baseurl }}/functions/jhtml 
+      url: /functions/jhtml 
     - title: jlang()
-      url: {{ site.baseurl }}/functions/jlang 
+      url: /functions/jlang 
     - title: jlayout()
-      url: {{ site.baseurl }}/functions/jlayout 
+      url: /functions/jlayout 
     - title: jlayout_debug()
-      url: {{ site.baseurl }}/functions/jlayout_debug 
+      url: /functions/jlayout_debug 
     - title: jlayout_render()
-      url: {{ site.baseurl }}/functions/jlayout_render 
+      url: /functions/jlayout_render 
     - title: jposition()
-      url: {{ site.baseurl }}/functions/jposition 
+      url: /functions/jposition 
     - title: jprofiler()
-      url: {{ site.baseurl }}/functions/jprofiler 
+      url: /functions/jprofiler 
     - title: jroute()
-      url: {{ site.baseurl }}/functions/jroute 
+      url: /functions/jroute 
     - title: jtext()
-      url: {{ site.baseurl }}/functions/jtext 
+      url: /functions/jtext 
     - title: jtext_sprintf()
-      url: {{ site.baseurl }}/functions/jtext_sprintf 
+      url: /functions/jtext_sprintf 
     - title: juri()
-      url: {{ site.baseurl }}/functions/juri 
+      url: /functions/juri 
     - title: juser()
-      url: {{ site.baseurl }}/functions/juser
+      url: /functions/juser
 - title: Filters
   links: 
     - title: to_array
-      url: {{ site.baseurl }}/filters/to_array 
+      url: /filters/to_array 
     - title: unserialize
-      url: {{ site.baseurl }}/filters/unserialize 
+      url: /filters/unserialize 
