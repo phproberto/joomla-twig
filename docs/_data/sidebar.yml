@@ -1,7 +1,7 @@
 - title: Introduction
   links: 
     - title: About joomla-git
-      url: docs
+      url: ./
 - title: Global variables
   links: 
     - title: japp
