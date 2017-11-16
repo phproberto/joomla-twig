@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension version="2.5" client="site" type="plugin" group="twig" method="upgrade">
+<extension version="3.8" client="site" type="plugin" group="twig" method="upgrade">
 	<name>PLG_TWIG_JLANG</name>
 	<version>1.0.0</version>
 	<creationDate>October 2017</creationDate>
