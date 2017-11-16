@@ -1,10 +1,9 @@
 ## japp
-> Global variable
 
-This function is equivalent to use JFactory::getApplication()   
+This function is equivalent to use Factory::getApplication()   
 
-* [Returns](#returns)
-* [Examples](#examples)
+1. [Returns](#returns)
+2. [Examples](#examples)
 
 ### Returns <a id="returns"></a>
 
@@ -13,5 +12,9 @@ This function is equivalent to use JFactory::getApplication()
 ### Examples <a id="examples"></a>
 
 ```twig
+{# 
+	This will print something like: 
+	The active template is protostar
+#}
 <pre>The active template is {% raw %}{{ japp.getTemplate() }}{% endraw %}</pre>
 ```
