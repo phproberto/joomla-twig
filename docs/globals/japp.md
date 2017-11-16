@@ -13,5 +13,5 @@ This function is equivalent to use JFactory::getApplication()
 ### Examples <a id="examples"></a>
 
 ```twig
-<pre>The active template is {{ japp.getTemplate() }}</pre>
+<pre>The active template is {% raw %}{{ japp.getTemplate() }}{% endraw %}</pre>
 ```
