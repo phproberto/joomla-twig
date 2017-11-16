@@ -52,7 +52,11 @@ echo Twig::render('@library/phproberto/default.html.twig');
  * - plugins/content/joomla/tmpl/default.html.twig
  */
 echo Twig::render('@plugin/content/joomla/default.html.twig');
+```
 
+### Template layout  
+
+```php
 /**
  * Render a template layout. This will search for layouts in:
  * - templates/{ACTIVE_TEMPLATE}/html/default.html.twig
