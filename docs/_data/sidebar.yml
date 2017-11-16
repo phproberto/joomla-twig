@@ -12,10 +12,10 @@
       url: /globals/jlang 
     - title: jsession
       url: /globals/jsession 
-    - title: juser
-      url: /globals/juser 
     - title: juri
       url: /globals/juri
+    - title: juser
+      url: /globals/juser 
 - title: Functions
   links: 
     - title: japp()

@@ -12,8 +12,6 @@ This variable is a proxy of Factory::getSession(). It allows to access the activ
 ### Examples <a id="examples"></a>
 
 ```twig
-{# 
-	Retrieve a session token to use it in forms/urls:
-#}
+{# Retrieve a session token to use it in forms/urls #}
 <a href="index.php?{% raw %}{{ jsession.getToken() }}{% endraw %}=1">Sample link with token</a>
 ```
