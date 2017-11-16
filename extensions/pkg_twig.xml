@@ -40,6 +40,6 @@
 		<file type="plugin" id="unserialize" group="twig" enabled="true">plugins/twig/unserialize</file>
 	</files>
 	<updateservers>
-		<server type="extension" name="Joomla Twig Update Site">https://raw.githubusercontent.com/phproberto/joomla-twig/tree/master/updates/twig_update.xml</server>
+		<server type="extension" name="Joomla Twig Update Site">https://raw.githubusercontent.com/phproberto/joomla-twig/master/updates/twig_update.xml</server>
 	</updateservers>
 </extension>
