@@ -1,2 +1,0 @@
-## jdoc()
-> Function

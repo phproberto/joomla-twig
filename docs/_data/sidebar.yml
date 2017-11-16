@@ -18,8 +18,6 @@
       url: /globals/juser 
 - title: Functions
   links: 
-    - title: jdoc()
-      url: /functions/jdoc 
     - title: jhtml()
       url: /functions/jhtml 
     - title: jlang()
