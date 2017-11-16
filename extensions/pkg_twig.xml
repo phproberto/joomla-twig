@@ -10,7 +10,7 @@
 	<packager>Roberto Segura</packager>
 	<packagename>twig</packagename>
 	<packagerurl>http://www.phproberto.com</packagerurl>
-	<version>1.0.0-beta2</version>
+	<version>1.0.0</version>
 	<description>PKG_TWIG_XML_DESCRIPTION</description>
 	<scriptfile>install.php</scriptfile>
 

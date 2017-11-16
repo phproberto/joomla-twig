@@ -57,7 +57,7 @@ echo Twig::render('@library/twig/examples.html.twig');
 
 ## Documentation <a id="documentation"></a>
 
-See [documentation](./docs/README.md) for detailed documentation.
+See [https://phproberto.github.io/joomla-twig/](https://phproberto.github.io/joomla-twig/) for detailed documentation.
 
 ## Requirements <a id="requirements"></a>
 
