@@ -1,4 +1,4 @@
-## jdoc
+## jlang
 
 This variable is a proxy of Factory::getLanguage(). It allows to access the active language inside twig layouts.  
 
