@@ -21,8 +21,9 @@ cache:
     - $HOME/.sonar/cache
 
 php:
-  - 7.0.21
+  - 7.0
   - 7.1
+  - 7.2
 
 branches:
   only:
