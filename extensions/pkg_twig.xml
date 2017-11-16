@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="package" version="3.6" method="upgrade">
+<extension type="package" version="3.8" method="upgrade">
 	<name>PKG_TWIG</name>
 	<creationDate>Octover 2017</creationDate>
 	<author>Roberto Segura</author>
