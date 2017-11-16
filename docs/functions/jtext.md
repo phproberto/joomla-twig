@@ -1,2 +1,2 @@
-# jtext()
+## jtext()
 > Function

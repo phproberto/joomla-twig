@@ -1,2 +1,2 @@
-# jdoc()
+## jdoc()
 > Function

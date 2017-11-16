@@ -1,2 +1,2 @@
-# jlang
+## jlang
 > Global variable

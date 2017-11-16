@@ -1,2 +1,2 @@
-# jhtml()
+## jhtml()
 > Function

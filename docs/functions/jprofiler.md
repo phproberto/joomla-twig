@@ -1,2 +1,2 @@
-# jprofiler()
+## jprofiler()
 > Function

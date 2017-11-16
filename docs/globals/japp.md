@@ -1,2 +1,2 @@
-# japp
+## japp
 > Global variable
