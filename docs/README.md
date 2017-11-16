@@ -30,7 +30,11 @@ echo Twig::render('@component/com_users/login/default.html.twig');
  * - modules/mod_menu/tmpl/default.html.twig
  */
 echo Twig::render('@module/mod_menu/default.html.twig');
+```
 
+### Library layout  
+
+```php
 /**
  * Render a library layout. This will search for layouts in:
  * - templates/{ACTIVE_TEMPLATE}/html/libraries/phproberto/default.html.twig

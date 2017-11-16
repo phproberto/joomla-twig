@@ -16,7 +16,7 @@
       url: /globals/juser 
     - title: juri
       url: /globals/juri
-- title: /functions
+- title: Functions
   links: 
     - title: japp()
       url: /functions/japp 
