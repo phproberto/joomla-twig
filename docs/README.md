@@ -1,6 +1,6 @@
-While a full documentation is written here is a quick start.
-
 ## Quick start.
+
+While a full documentation is written here is a quick start.  
 
 To start using twig layout you have to include the library call:  
 
