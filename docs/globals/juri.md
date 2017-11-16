@@ -1,6 +1,6 @@
 ## juri
 
-This variable is a proxy of JUri::getInstance(). It allows to access the active URL as a Uri object inside twig layouts.  
+This variable is a proxy of Uri::getInstance(). It allows to access the active URL as a Uri object inside twig layouts.  
 
 1. [Returns](#returns)
 2. [Examples](#examples)
