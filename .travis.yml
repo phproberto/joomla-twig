@@ -7,6 +7,9 @@ addons:
     organization: "phproberto-github"
     token:
       secure: "$SONAR_TOKEN"
+    branches:
+      - develop
+      - master
       
 jdk:
   - oraclejdk8
