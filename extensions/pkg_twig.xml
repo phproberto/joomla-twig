@@ -39,4 +39,7 @@
 		<file type="plugin" id="juser" group="twig" enabled="true">plugins/twig/juser</file>
 		<file type="plugin" id="unserialize" group="twig" enabled="true">plugins/twig/unserialize</file>
 	</files>
+	<updateservers>
+		<server type="extension" name="Joomla Twig Update Site">https://raw.githubusercontent.com/phproberto/joomla-twig/tree/master/updates/twig_update.xml</server>
+	</updateservers>
 </extension>
