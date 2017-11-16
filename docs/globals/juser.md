@@ -1,4 +1,4 @@
-## juri
+## juser
 
 This variable is a proxy of Factory::getUser(). It allows to access the active user as a User object inside twig layouts.  
 
