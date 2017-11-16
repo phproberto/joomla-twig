@@ -1,0 +1,2 @@
+# jdoc
+> Global variable

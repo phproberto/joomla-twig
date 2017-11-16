@@ -1,0 +1,2 @@
+# juser
+> Global variable

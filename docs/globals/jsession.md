@@ -1,0 +1,2 @@
+# jsession
+> Global variable

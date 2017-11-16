@@ -1,0 +1,2 @@
+# juri
+> Global variable
