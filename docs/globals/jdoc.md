@@ -1,6 +1,6 @@
 ## jdoc
 
-This function is equivalent to use Factory::getDocument()  
+This variable is a proxy of Factory::getDocument(). It allows to access the active document inside twig layouts.  
 
 1. [Returns](#returns)
 2. [Examples](#examples)

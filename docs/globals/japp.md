@@ -1,6 +1,6 @@
 ## japp
 
-This function is equivalent to use Factory::getApplication()   
+This variable is a proxy of Factory::getApplication(). It allows to access the active application inside twig layouts.     
 
 1. [Returns](#returns)
 2. [Examples](#examples)
