@@ -30,10 +30,14 @@ final class JLayout extends AbstractExtension
 	 */
 	public function getFunctions()
 	{
+		$options = [
+			'is_safe' => ['html']
+		];
+
 		return [
 			new TwigFunction('jlayout', [$this, 'getFileLayout']),
-			new TwigFunction('jlayout_render', [LayoutHelper::class, 'render']),
-			new TwigFunction('jlayout_debug', [LayoutHelper::class, 'debug'])
+			new TwigFunction('jlayout_render', [LayoutHelper::class, 'render'], $options),
+			new TwigFunction('jlayout_debug', [LayoutHelper::class, 'debug'], $options)
 		];
 	}
 
