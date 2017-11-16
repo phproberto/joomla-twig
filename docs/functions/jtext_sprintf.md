@@ -1,0 +1,2 @@
+# jtext_sprintf()
+> Function
