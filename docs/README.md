@@ -41,7 +41,11 @@ echo Twig::render('@module/mod_menu/default.html.twig');
  * - libraries/phproberto/layouts/default.html.twig
  */
 echo Twig::render('@library/phproberto/default.html.twig');
+```
 
+### Plugin layout  
+
+```php
 /**
  * Render a plugin layout. This will search for layouts in:
  * - templates/{ACTIVE_TEMPLATE}/html/plugins/content/joomla/default.html.twig
