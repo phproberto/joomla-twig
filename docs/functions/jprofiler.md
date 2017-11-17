@@ -21,6 +21,5 @@ This function is a proxy of `Joomla\CMS\Profiler\Profiler::getInstance()`. It al
 {% set profiler = jprofiler('twig') %} 
 <pre>{{ profiler.mark('before loading something') }}</pre>
 <pre>{{ profiler.mark('after loading something') }}</pre>
-<h3>japp.getClientId()</h3>
 {% endraw %}
 ```
