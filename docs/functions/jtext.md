@@ -21,7 +21,8 @@ This function is a proxy of `Joomla\CMS\Language\Text::_()`. It allows to use tr
 
 ```twig
 {% raw %}
-{#  Display the translation of the JENABLED language string #}
+{#  Display the translation of the JENABLED language string. It will display something like:
+	"Something is enabled" #}
 Something is {{ jtext('JENABLED') }}
 {% endraw %}
 ```

@@ -20,6 +20,8 @@ Fast rendering of JLayout files inside a twig layouts. Proxy of `\Joomla\CMS\Lay
 ### Examples <a id="examples"></a>
 
 ```twig
+{% raw %}
 {#  Render the joomla.html.treeprefix layout with ['level' => 10] as data #}
-{% raw %}{{ jlayout_render('joomla.html.treeprefix', {'level' : 10}) }}{% endraw %}
+{{ jlayout_render('joomla.html.treeprefix', {'level' : 10}) }}
+{% endraw %}
 ```

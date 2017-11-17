@@ -19,8 +19,8 @@ Create an instance of `\Joomla\CMS\Layout\FileLayout` to use it inside a twig la
 ### Examples <a id="examples"></a>
 
 ```twig
-{#  Create a layout instance of `joomla.system.message` to render some dynamically generated messages #}
 {% raw %}
+{#  Create a layout instance of `joomla.system.message` to render some dynamically generated messages #}
 {% set data = { 
 		'msgList' : {
 			'error' : [

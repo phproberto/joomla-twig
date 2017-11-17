@@ -18,6 +18,8 @@ It allows to render a module position inside a twig layout.
 ### Examples <a id="examples"></a>
 
 ```twig
-{#  Render the content of the template position-7 #}
-{% raw %}{{ jposition('position-8') }}{% endraw %}
+{% raw %}
+{#  Render the content of the template position-8 #}
+{{ jposition('position-8') }}
+{% endraw %}
 ```

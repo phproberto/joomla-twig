@@ -18,6 +18,8 @@ This function is a proxy of `Language::getInstance()`. It allows to access HTML 
 ### Examples <a id="examples"></a>
 
 ```twig
+{% raw %}
 {#  Show the spanish language name #}
-{% raw %}{{ jlang('es-ES').getName() }}{% endraw %}
+{{ jlang('es-ES').getName() }}
+{% endraw %}
 ```

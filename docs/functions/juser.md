@@ -18,7 +18,7 @@ This function is a proxy of `Joomla\CMS\Factory::getUser()`. It allows to retrie
 
 ```twig
 {% raw %}
-{# Retrieve active user not using any id #}
+{# Retrieve active user not using any id. This is not usually required because you can already use `juser` global var #}
 {% set activeUser = juser() %}
 
 {# Retrieve the user with id: 668 #}

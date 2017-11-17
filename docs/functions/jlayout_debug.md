@@ -20,6 +20,8 @@ Fast debug of JLayout files rendering inside a twig layouts. Proxy of `\Joomla\C
 ### Examples <a id="examples"></a>
 
 ```twig
+{% raw %}
 {#  Debug the joomla.html.treeprefix layout with ['level' => 10] as data #}
-{% raw %}{{ jlayout_debug('joomla.html.treeprefix', {'level' : 10}) }}{% endraw %}
+{{ jlayout_debug('joomla.html.treeprefix', {'level' : 10}) }}
+{% endraw %}
 ```

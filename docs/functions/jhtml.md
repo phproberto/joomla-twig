@@ -18,9 +18,9 @@ This function is a proxy of `HTMLHelper::_($key)`. It allows to access HTML draw
 ### Examples <a id="examples"></a>
 
 ```twig
-{# 
-	Render a form token. It will render something like:  
-	<input type="hidden" name="19fa6812708e295180f8d5e08963cd5b" value="1" />
- #}
-{% raw %}{{ jhtml('form.token') }}{% endraw %}
+{% raw %}
+{# Render a form token. It will render something like:  
+	<input type="hidden" name="19fa6812708e295180f8d5e08963cd5b" value="1" />#}
+{{ jhtml('form.token') }}
+{% endraw %}
 ```
