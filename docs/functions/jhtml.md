@@ -1,4 +1,4 @@
-## jhtml($key)
+## jhtml($key, $...)
 
 This function is a proxy of `HTMLHelper::_($key)`. It allows to access HTML drawing classes inside twig layouts.  
 
@@ -9,7 +9,7 @@ This function is a proxy of `HTMLHelper::_($key)`. It allows to access HTML draw
 ### Parameters <a id="parameters"></a>
 
 * `string`  **$key**  The name of helper method to load, (prefix).(class).function prefix and class are optional and can be used to load custom html helpers.
-* `...`               Optional parameters for the helper method.
+* `mixed`   **$...**  Optional parameters for the helper method.
 
 ### Returns <a id="returns"></a>
 
