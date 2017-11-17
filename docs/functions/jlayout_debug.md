@@ -1,4 +1,4 @@
-## jlayout_render($layoutFile, $displayData = null, $basePath = '', $options = null)
+## jlayout_debug($layoutFile, $displayData = null, $basePath = '', $options = null)
 
 Fast debug of JLayout files rendering inside a twig layouts. Proxy of `\Joomla\CMS\LayoutHelper::debug()`.  
 
