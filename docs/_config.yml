@@ -3,7 +3,6 @@ description: Twig 2.0 & Twig extensions integration for Joomla!
 show_nav: false
 show_sidebar: true
 show_downloads: true
-download_url: "https://github.com/phproberto/joomla-twig/releases/latest"
 theme: phproberto/jekyll-test
 remote_theme: "phproberto/jekyll-test"
 plugins:
