@@ -12,6 +12,8 @@ This variable is a proxy of Factory::getDocument(). It allows to access the acti
 ### Examples <a id="examples"></a>
 
 ```twig
+{% raw %}
 {# Load a script in this page from a twig layout #}
-<pre>{% raw %}{% set script = jdoc.addScriptDeclaration('alert("Hello world!")') %}{% endraw %}</pre>
+{% do jdoc.addScriptDeclaration('alert("Hello world!")') %}
+{% endraw %}
 ```
