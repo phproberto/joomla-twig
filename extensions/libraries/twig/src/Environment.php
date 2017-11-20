@@ -27,7 +27,7 @@ final class Environment extends BaseEnvironment
 	 * Application where enviroment is loaded.
 	 *
 	 * @var     CMSApplication
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.0.2
 	 */
 	private $app;
 
@@ -63,7 +63,7 @@ final class Environment extends BaseEnvironment
 	 *
 	 * @return  CMSApplication
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.0.2
 	 */
 	private function activeApplication()
 	{
