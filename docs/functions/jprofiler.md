@@ -25,7 +25,7 @@ This function is a proxy of `Joomla\CMS\Profiler\Profiler::getInstance()`. It al
 
 {# Here what you want to debug #}
 
-{# echo memory & time consumed after something.
+{# echo memory & time consumed after something. #}
 <pre>{{ profiler.mark('after loading something') }}</pre>
 {% endraw %}
 ```
