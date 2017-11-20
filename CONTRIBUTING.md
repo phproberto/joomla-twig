@@ -37,7 +37,7 @@ We will use two concepts in this document that you need to understand:
 
 Nothing better than an image to describe the joomla-twig development workflow. The idea is to have a 100% isolated folder with joomla-twig code and a joomla testing site that get's automatically updated when a change happens in joomla-twig code.
 
-![Workflow](./images/workflow.jpg)
+<img src="https://phproberto.github.io/joomla-twig/images/workflow.jpg" alt="Development workflow schema" class="responsive"/>
 
 ### 2. Setting up required tools. <a id="tools"></a>
 
