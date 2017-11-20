@@ -1,7 +1,9 @@
 - title: Introduction
   links: 
-    - title: About joomla-twig
+    - title: Quick start
       url: /
+    - title: Contributing
+      url: /CONTRIBUTING
 - title: Global variables
   links: 
     - title: japp
