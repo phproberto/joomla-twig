@@ -10,6 +10,8 @@ namespace Phproberto\Joomla\Twig;
 
 defined('_JEXEC') || die;
 
+use Joomla\CMS\Application\CMSApplication;
+use Joomla\CMS\Factory;
 use Joomla\CMS\Plugin\PluginHelper;
 use Twig\Loader\LoaderInterface;
 use Twig\Environment as BaseEnvironment;
@@ -21,6 +23,14 @@ use Twig\Environment as BaseEnvironment;
  */
 final class Environment extends BaseEnvironment
 {
+	/**
+	 * Application where enviroment is loaded.
+	 *
+	 * @var     CMSApplication
+	 * @since   __DEPLOY_VERSION__
+	 */
+	private $app;
+
 	/**
 	 * Plugins connected to the events triggered by this class.
 	 *
@@ -35,14 +45,29 @@ final class Environment extends BaseEnvironment
 	 *
 	 * @param   LoaderInterface  $loader   Loader instance
 	 * @param   array            $options  An array of options
+	 * @param   CMSApplication   $app      CMSApplication | null active application
 	 */
-	public function __construct(LoaderInterface $loader, $options = [])
+	public function __construct(LoaderInterface $loader, $options = [], CMSApplication $app = null)
 	{
+		$this->app = $app ?: $this->activeApplication();
+
 		$this->trigger('onTwigBeforeLoad', [&$loader, &$options]);
 
 		parent::__construct($loader, $options);
 
 		$this->trigger('onTwigAfterLoad', [$options]);
+	}
+
+	/**
+	 * Get the active Joomla application.
+	 *
+	 * @return  CMSApplication
+	 *
+	 * @since   __DEPLOY_VERSION__
+	 */
+	private function activeApplication()
+	{
+		return Factory::getApplication();
 	}
 
 	/**
@@ -68,13 +93,11 @@ final class Environment extends BaseEnvironment
 	 */
 	public function trigger($event, $params = [])
 	{
-		$dispatcher = \JEventDispatcher::getInstance();
-
 		$this->importPlugins();
 
 		// Always send enviroment as first param
 		array_unshift($params, $this);
 
-		return $dispatcher->trigger($event, $params);
+		return $this->app->triggerEvent($event, $params);
 	}
 }

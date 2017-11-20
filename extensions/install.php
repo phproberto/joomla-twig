@@ -9,6 +9,8 @@
 
 defined('_JEXEC') || die;
 
+use Joomla\CMS\Factory;
+
 /**
  * Package installer
  *
@@ -56,7 +58,7 @@ class Pkg_TwigInstallerScript
 				$extName  = (string) $node->attributes()->id;
 				$extGroup = (string) $node->attributes()->group;
 
-				$db = JFactory::getDbo();
+				$db = Factory::getDbo();
 				$query = $db->getQuery(true);
 				$query->update($db->quoteName("#__extensions"));
 				$query->set("enabled=1");
@@ -111,7 +113,7 @@ class Pkg_TwigInstallerScript
 		// Package manifest found
 		if (file_exists($manifestFile))
 		{
-			$this->manifest = JFactory::getXML($manifestFile);
+			$this->manifest = simplexml_load_file($manifestFile);
 
 			return;
 		}

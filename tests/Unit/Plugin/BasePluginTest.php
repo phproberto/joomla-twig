@@ -20,6 +20,32 @@ use Phproberto\Joomla\Twig\Tests\Unit\Plugin\Stubs\SamplePlugin;
 class BasePluginTest extends \TestCase
 {
 	/**
+	 * Sets up the fixture, for example, opens a network connection.
+	 * This method is called before a test is executed.
+	 *
+	 * @return  void
+	 */
+	protected function setUp()
+	{
+		$this->saveFactoryState();
+
+		\JFactory::$config      = $this->getMockConfig();
+		\JFactory::$application = $this->getMockCmsApp();
+	}
+
+	/**
+	 * Tears down the fixture, for example, closes a network connection.
+	 * This method is called after a test is executed.
+	 *
+	 * @return  void
+	 */
+	protected function tearDown()
+	{
+		$this->restoreFactoryState();
+		parent::tearDown();
+	}
+
+	/**
 	 * pluginPath returns correct path.
 	 *
 	 * @return  void

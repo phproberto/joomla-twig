@@ -11,6 +11,7 @@ namespace Phproberto\Joomla\Twig\Tests\Unit;
 
 use Twig\Loader\LoaderInterface;
 use Phproberto\Joomla\Twig\Environment;
+use Joomla\CMS\Application\CMSApplication;
 
 /**
  * Environment tests.
@@ -45,10 +46,16 @@ class EnvironmentTest extends \TestCaseDatabase
 	{
 		$this->saveFactoryState();
 
-		\JFactory::$session     = $this->getMockSession();
+		\JFactory::$config      = $this->getMockConfig();
+		\JFactory::$session  = $this->getMockSession();
 
 		$this->dispatcher      = new \JEventDispatcher;
 		\TestReflection::setValue($this->dispatcher, 'instance', $this->dispatcher);
+
+		$app = $this->getMockForAbstractClass(CMSApplication::class);
+		$app->loadDispatcher($this->dispatcher);
+
+		\JFactory::$application = $app;
 	}
 
 	/**
@@ -77,8 +84,8 @@ class EnvironmentTest extends \TestCaseDatabase
 	{
 		$this->calledEvents = [];
 
-		$this->dispatcher->register('onTwigBeforeLoad', [$this, 'onTwigBeforeLoad']);
-		$this->dispatcher->register('onTwigAfterLoad', [$this, 'onTwigAfterLoad']);
+		\JFactory::$application->registerEvent('onTwigBeforeLoad', [$this, 'onTwigBeforeLoad']);
+		\JFactory::$application->registerEvent('onTwigAfterLoad', [$this, 'onTwigAfterLoad']);
 
 		$loader = new \Twig_Loader_Array;
 		$options = ['sample' => 'option'];
