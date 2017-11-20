@@ -4,11 +4,6 @@ So you want to contribute to joomla-twig? THANK YOU!!
 
 This project uses a set of tools (mainly Node.js & Composer) and a special development environment that may scare you if you aren't familiar with it but will definitely improve your skills as web developer and your development speed. Any time spent configuring joomla-twig development environment will make you a better developer.  
 
-Our main goal :  
-
-* It keeps core folder isolated.
-* It automatically updates 
-
 Remember that I'm here to help you because I'm the most interested in making contributing as easy as possible. If you get blocked setting things up create an issue. If I missed some information here or there is something you find confusing create an issue.  
 
 ### Index.
