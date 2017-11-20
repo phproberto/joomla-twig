@@ -5,6 +5,6 @@ show_sidebar: true
 show_downloads: true
 theme: phproberto/jekyll-test
 remote_theme: "phproberto/jekyll-test"
-include: CONTRIBUTING.md
+include: contributing.md
 plugins:
   - jekyll-remote-theme
