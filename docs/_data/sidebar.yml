@@ -1,9 +1,11 @@
-- title: Introduction
+- title: Basics
   links: 
     - title: Quick start
       url: /
     - title: Contributing
       url: /contributing
+    - title: License
+      url: /license
 - title: Global variables
   links: 
     - title: japp
