@@ -103,6 +103,20 @@ class EnvironmentTest extends \TestCaseDatabase
 	}
 
 	/**
+	 * @test
+	 *
+	 * @return void
+	 */
+	public function triggerReturnsArrayForNonRegisteredEvent()
+	{
+		$loader = new \Twig_Loader_Array;
+		$options = ['sample' => 'option'];
+		$environment = new Environment($loader, $options);
+
+		$this->assertSame([], $environment->trigger('onUnexistingEvent'));
+	}
+
+	/**
 	 * Triggered before environment has been loaded.
 	 *
 	 * @param   Environment      $environment  Loaded environment
