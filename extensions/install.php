@@ -19,6 +19,14 @@ use Joomla\CMS\Factory;
 class Pkg_TwigInstallerScript
 {
 	/**
+	 * Minimum PHP version required.
+	 *
+	 * @const
+	 * @since   __DEPLOY_VERSION__
+	 */
+	const REQUIRED_PHP_VERSION = '7.0.0';
+
+	/**
 	 * Manifest of the extension being processed
 	 *
 	 * @var  SimpleXMLElement
@@ -132,5 +140,25 @@ class Pkg_TwigInstallerScript
 	public function postflight($type, $parent)
 	{
 		$this->enablePlugins($parent);
+	}
+
+	/**
+	 * Method to run after an install/update/discover method
+	 *
+	 * @param   object  $type    type of change (install, update or discover_install)
+	 * @param   object  $parent  class calling this method
+	 *
+	 * @return  void
+	 *
+	 * @since   __DEPLOY_VERSION__
+	 */
+	public function preflight($type, $parent)
+	{
+		if (version_compare(PHP_VERSION, self::REQUIRED_PHP_VERSION) < 0)
+		{
+			$msg = \JText::sprintf('PKG_TWIG_ERROR_REQUIRED_VERSION', self::REQUIRED_PHP_VERSION, PHP_VERSION);
+
+			throw new \RuntimeException($msg);
+		}
 	}
 }
