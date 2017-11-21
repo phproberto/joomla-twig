@@ -50,14 +50,14 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 	 *
 	 * @return  array  Key: group name. Value: folder
 	 */
-	abstract public function layoutFolders();
+	abstract public function layoutFolders() : array;
 
 	/**
 	 * Get the active frontend template.
 	 *
 	 * @return  string
 	 */
-	protected function activeTemplate()
+	protected function activeTemplate() : string
 	{
 		if (!isset(static::$activeTemplates[$this->clientId]))
 		{
@@ -71,7 +71,7 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 
 			$db->setQuery($query);
 
-			static::$activeTemplates[$this->clientId] = $db->loadResult();
+			static::$activeTemplates[$this->clientId] = (string) $db->loadResult();
 		}
 
 		return static::$activeTemplates[$this->clientId];
@@ -82,7 +82,7 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 	 *
 	 * @return  string
 	 */
-	protected function cacheHash()
+	protected function cacheHash() : string
 	{
 		return md5($this->type . '|' . $this->clientId);
 	}
@@ -113,7 +113,7 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 	 *
 	 * @return  array
 	 */
-	protected function folderLayouts($folder)
+	protected function folderLayouts(string $folder) : array
 	{
 		$folder = \JPath::clean($folder);
 
@@ -140,7 +140,7 @@ abstract class LayoutSelector extends \JFormFieldGroupedList
 	 *
 	 * @return  array
 	 */
-	protected function loadGroups()
+	protected function loadGroups() : array
 	{
 		$groups = parent::getGroups();
 		$added = [];
