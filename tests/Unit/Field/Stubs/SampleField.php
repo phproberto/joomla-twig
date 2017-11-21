@@ -19,15 +19,32 @@ use Phproberto\Joomla\Twig\Field\LayoutSelector;
 class SampleField extends LayoutSelector
 {
 	/**
+	 * Groups that loadGroups() will return.
+	 *
+	 * @var  array
+	 */
+	public $loadGroups;
+
+	/**
 	 * Get the list of layout folders.
 	 *
 	 * @return  array  Key: group name. Value: folder
 	 */
-	public function layoutFolders()
+	public function layoutFolders() : array
 	{
 		return [
 			'Tests'      => __DIR__ . '/tmpl',
 			'Unexisting' => __DIR__ . '/unexisting'
 		];
+	}
+
+	/**
+	 * Load available option groups
+	 *
+	 * @return  array
+	 */
+	protected function loadGroups() : array
+	{
+		return $this->loadGroups ?: parent::loadGroups();
 	}
 }

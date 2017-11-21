@@ -27,7 +27,7 @@ final class JSession extends AbstractExtension
 	 *
 	 * @return  array
 	 */
-	public function getFunctions()
+	public function getFunctions() : array
 	{
 		return [
 			new TwigFunction('jsession', [Factory::class, 'getSession'])
@@ -39,7 +39,7 @@ final class JSession extends AbstractExtension
 	 *
 	 * @return  string
 	 */
-	public function getName()
+	public function getName() : string
 	{
 		return 'jsession';
 	}

@@ -26,7 +26,7 @@ final class JArray extends AbstractExtension
 	 *
 	 * @return  array
 	 */
-	public function getFilters()
+	public function getFilters() : array
 	{
 		return [
 			new TwigFilter('to_array', [$this, 'toArray'])
@@ -40,7 +40,7 @@ final class JArray extends AbstractExtension
 	 *
 	 * @return  array
 	 */
-	public function toArray($var)
+	public function toArray($var) : array
 	{
 		return (array) ($var);
 	}
@@ -50,7 +50,7 @@ final class JArray extends AbstractExtension
 	 *
 	 * @return  string
 	 */
-	public function getName()
+	public function getName() : string
 	{
 		return 'jarray';
 	}

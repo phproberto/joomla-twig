@@ -34,11 +34,17 @@ final class Environment extends BaseEnvironment
 	/**
 	 * Plugins connected to the events triggered by this class.
 	 *
+	 * @var     array
+	 * @since   __DEPLOY_VERSION__
+	 */
+	private $importablePluginTypes = ['twig'];
+
+	/**
+	 * Plugins that have been already imported.
+	 *
 	 * @var  array
 	 */
-	private $importedPluginTypes = [
-		'twig'
-	];
+	private $importedPluginTypes = [];
 
 	/**
 	 * Constructor.
@@ -47,7 +53,7 @@ final class Environment extends BaseEnvironment
 	 * @param   array            $options  An array of options
 	 * @param   CMSApplication   $app      CMSApplication | null active application
 	 */
-	public function __construct(LoaderInterface $loader, $options = [], CMSApplication $app = null)
+	public function __construct(LoaderInterface $loader, array $options = [], CMSApplication $app = null)
 	{
 		$this->app = $app ?: $this->activeApplication();
 
@@ -65,7 +71,7 @@ final class Environment extends BaseEnvironment
 	 *
 	 * @since   1.0.2
 	 */
-	private function activeApplication()
+	private function activeApplication() : CMSApplication
 	{
 		return Factory::getApplication();
 	}
@@ -77,9 +83,13 @@ final class Environment extends BaseEnvironment
 	 */
 	private function importPlugins()
 	{
-		foreach ($this->importedPluginTypes as $pluginType)
+		$importablePluginTypes = array_diff($this->importablePluginTypes, $this->importedPluginTypes);
+
+		foreach ($importablePluginTypes as $pluginType)
 		{
 			PluginHelper::importPlugin($pluginType);
+
+			$this->importedPluginTypes[] = $pluginType;
 		}
 	}
 
@@ -89,15 +99,15 @@ final class Environment extends BaseEnvironment
 	 * @param   string  $event   Event to trigger
 	 * @param   array   $params  Params for the event triggered
 	 *
-	 * @return  mixed
+	 * @return  array
 	 */
-	public function trigger($event, $params = [])
+	public function trigger(string $event, array $params = []) : array
 	{
 		$this->importPlugins();
 
-		// Always send enviroment as first param
+		// Always send environment as first param
 		array_unshift($params, $this);
 
-		return $this->app->triggerEvent($event, $params);
+		return (array) $this->app->triggerEvent($event, $params);
 	}
 }

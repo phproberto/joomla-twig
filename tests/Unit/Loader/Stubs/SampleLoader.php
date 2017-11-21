@@ -26,14 +26,33 @@ class SampleLoader extends ExtensionLoader
 	protected $extensionNamespace = 'sample-loader';
 
 	/**
+	 * Value that will be returned by parseExtensionName().
+	 *
+	 * @var  string
+	 */
+	public $parsedExtensionName;
+
+	/**
 	 * Get the paths to search for templates.
 	 *
 	 * @return  array
 	 */
-	protected function getTemplatePaths()
+	protected function getTemplatePaths() : array
 	{
 		return [
 			__DIR__ . '/tmpl'
 		];
+	}
+
+	/**
+	 * Parse a received extension name.
+	 *
+	 * @param   string  $name  Name of the template to search
+	 *
+	 * @return  string
+	 */
+	protected function parseExtensionName(string $name) : string
+	{
+		return $this->parsedExtensionName ?: parent::parseExtensionName($name);
 	}
 }

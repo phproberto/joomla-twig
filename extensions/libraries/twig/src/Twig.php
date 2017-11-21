@@ -66,7 +66,7 @@ final class Twig
 	 *
 	 * @return  static
 	 */
-	public static function instance()
+	public static function instance() : Twig
 	{
 		if (null === self::$instance)
 		{
@@ -84,7 +84,7 @@ final class Twig
 	 *
 	 * @return  string
 	 */
-	public static function render($layout, $data = [])
+	public static function render(string $layout, array $data = []) : string
 	{
 		return self::instance()->environment()->render($layout, $data);
 	}
@@ -94,7 +94,7 @@ final class Twig
 	 *
 	 * @return  self
 	 */
-	public function environment()
+	public function environment() : Environment
 	{
 		return $this->environment;
 	}

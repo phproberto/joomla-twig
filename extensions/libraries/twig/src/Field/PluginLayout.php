@@ -46,7 +46,7 @@ final class PluginLayout extends LayoutSelector
 	 *
 	 * @return  string
 	 */
-	protected function cacheHash()
+	protected function cacheHash() : string
 	{
 		return parent::cacheHash() . md5($this->pluginGroup . '|' . $this->pluginName);
 	}
@@ -56,7 +56,7 @@ final class PluginLayout extends LayoutSelector
 	 *
 	 * @return  array
 	 */
-	public function layoutFolders()
+	public function layoutFolders() : array
 	{
 		$appFolder = $this->clientId ? JPATH_ADMINISTRATOR : JPATH_SITE;
 

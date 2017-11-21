@@ -25,7 +25,7 @@ class LayoutSelectorTest extends BaseLayoutFieldTest
 	 */
 	public function testActiveTemplateReturnsActiveTemplate()
 	{
-		$field = $this->getMockBuilder(SampleField::class)->getMock();
+		$field = new SampleField;
 
 		$reflection = new \ReflectionClass($field);
 		$method = $reflection->getMethod('activeTemplate');
@@ -41,7 +41,7 @@ class LayoutSelectorTest extends BaseLayoutFieldTest
 	 */
 	public function testGetGroupsReturnsCachedData()
 	{
-		$field = $this->getMockBuilder(SampleField::class)->getMock();
+		$field = new SampleField;
 
 		$reflection = new \ReflectionClass($field);
 
@@ -71,13 +71,8 @@ class LayoutSelectorTest extends BaseLayoutFieldTest
 	{
 		$loadedGroups = [5, 6, 7];
 
-		$field = $this->getMockBuilder(SampleField::class)
-			->setMethods(array('loadGroups'))
-			->getMock();
-
-		$field->expects($this->once())
-			->method('loadGroups')
-			->willReturn($loadedGroups);
+		$field = new SampleField;
+		$field->loadGroups = $loadedGroups;
 
 		$reflection = new \ReflectionClass($field);
 
@@ -98,9 +93,7 @@ class LayoutSelectorTest extends BaseLayoutFieldTest
 	 */
 	public function testFolderLayoutsReturnsEmptyArrayForUnexistingFolder()
 	{
-		$field = $this->getMockBuilder(SampleField::class)
-			->setMethods(array('loadGroups'))
-			->getMock();
+		$field = new SampleField;
 
 		$reflection = new \ReflectionClass($field);
 
@@ -117,9 +110,7 @@ class LayoutSelectorTest extends BaseLayoutFieldTest
 	 */
 	public function testFolderLayoutsReturnsLayoutsInExistingFolder()
 	{
-		$field = $this->getMockBuilder(SampleField::class)
-			->setMethods(array('loadGroups'))
-			->getMock();
+		$field = new SampleField;
 
 		$reflection = new \ReflectionClass($field);
 
@@ -141,10 +132,7 @@ class LayoutSelectorTest extends BaseLayoutFieldTest
 	 */
 	public function testLoadGroupsLoadsGroups()
 	{
-		$field = $this->getMockBuilder(SampleField::class)
-			->setMethods(array('cacheHash'))
-			->getMock();
-
+		$field = new SampleField;
 		$reflection = new \ReflectionClass($field);
 
 		$elementProperty = $reflection->getProperty('element');

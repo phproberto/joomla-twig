@@ -32,7 +32,7 @@ final class TemplateLoader extends ExtensionLoader
 	 *
 	 * @return  array
 	 */
-	protected function getTemplatePaths()
+	protected function getTemplatePaths() : array
 	{
 		$paths = [];
 

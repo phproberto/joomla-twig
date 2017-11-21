@@ -32,7 +32,7 @@ abstract class ExtensionLoader extends \Twig_Loader_Filesystem
 	 *
 	 * @param   string|array  $paths  A path or an array of paths where to look for templates
 	 */
-	public function __construct($paths = [])
+	public function __construct(array $paths = [])
 	{
 		$this->setPaths($this->getTemplatePaths(), $this->extensionNamespace);
 
@@ -44,7 +44,7 @@ abstract class ExtensionLoader extends \Twig_Loader_Filesystem
 	 *
 	 * @return  string
 	 */
-	protected function getBaseAppPath()
+	protected function getBaseAppPath() : string
 	{
 		if (Factory::getApplication()->isAdmin())
 		{
@@ -59,7 +59,7 @@ abstract class ExtensionLoader extends \Twig_Loader_Filesystem
 	 *
 	 * @return  array
 	 */
-	abstract protected function getTemplatePaths();
+	abstract protected function getTemplatePaths() : array;
 
 	/**
 	 * Find a template.
@@ -102,7 +102,7 @@ abstract class ExtensionLoader extends \Twig_Loader_Filesystem
 	 *
 	 * @return  mixed
 	 */
-	protected function findParsedNameTemplate($name)
+	protected function findParsedNameTemplate(string $name)
 	{
 		$parsedName = $this->parseExtensionName($name);
 
@@ -121,7 +121,7 @@ abstract class ExtensionLoader extends \Twig_Loader_Filesystem
 	 *
 	 * @return  boolean
 	 */
-	protected function nameInExtensionNamespace($name)
+	protected function nameInExtensionNamespace(string $name) : bool
 	{
 		$nameParts = explode('/', $name);
 
@@ -135,7 +135,7 @@ abstract class ExtensionLoader extends \Twig_Loader_Filesystem
 	 *
 	 * @return  string
 	 */
-	protected function parseExtensionName($name)
+	protected function parseExtensionName(string $name) : string
 	{
 		return $name;
 	}

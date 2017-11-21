@@ -27,7 +27,7 @@ final class JLanguage extends AbstractExtension
 	 *
 	 * @return  array
 	 */
-	public function getFunctions()
+	public function getFunctions() : array
 	{
 		return [
 			new TwigFunction('jlang', [Language::class, 'getInstance'])
@@ -39,7 +39,7 @@ final class JLanguage extends AbstractExtension
 	 *
 	 * @return  string
 	 */
-	public function getName()
+	public function getName() : string
 	{
 		return 'jlang';
 	}

@@ -28,7 +28,7 @@ final class JLayout extends AbstractExtension
 	 *
 	 * @return  array
 	 */
-	public function getFunctions()
+	public function getFunctions() : array
 	{
 		$options = [
 			'is_safe' => ['html']
@@ -46,7 +46,7 @@ final class JLayout extends AbstractExtension
 	 *
 	 * @return  FileLayout
 	 */
-	public function getFileLayout()
+	public function getFileLayout() : FileLayout
 	{
 		$class = new \ReflectionClass(FileLayout::class);
 
@@ -58,7 +58,7 @@ final class JLayout extends AbstractExtension
 	 *
 	 * @return  string
 	 */
-	public function getName()
+	public function getName() : string
 	{
 		return 'jlayout';
 	}

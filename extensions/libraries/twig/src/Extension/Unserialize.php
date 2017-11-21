@@ -26,7 +26,7 @@ final class Unserialize extends AbstractExtension
 	 *
 	 * @return  array
 	 */
-	public function getFilters()
+	public function getFilters() : array
 	{
 		return [
 			new TwigFilter('unserialize', 'unserialize')
@@ -38,7 +38,7 @@ final class Unserialize extends AbstractExtension
 	 *
 	 * @return  string
 	 */
-	public function getName()
+	public function getName() : string
 	{
 		return 'junserialize';
 	}

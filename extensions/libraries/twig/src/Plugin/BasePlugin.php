@@ -32,7 +32,7 @@ abstract class BasePlugin extends CMSPlugin
 	 *
 	 * @return  string
 	 */
-	protected function pluginPath()
+	protected function pluginPath() : string
 	{
 		if (null === $this->pluginPath)
 		{
