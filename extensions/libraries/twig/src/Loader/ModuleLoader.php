@@ -32,7 +32,7 @@ final class ModuleLoader extends ExtensionLoader
 	 *
 	 * @return  array
 	 */
-	protected function getTemplatePaths()
+	protected function getTemplatePaths() : array
 	{
 		$paths = [];
 
@@ -55,7 +55,7 @@ final class ModuleLoader extends ExtensionLoader
 	 *
 	 * @return  string
 	 */
-	protected function parseExtensionName($name)
+	protected function parseExtensionName(string $name) : string
 	{
 		$nameParts = explode('/', $name);
 

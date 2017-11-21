@@ -175,16 +175,9 @@ class ExtensionLoaderTest extends BaseExtensionLoaderTest
 	public function testFindTemplateReturnsParentFindTemplateIfParsedNameIsDifferentThanSentName()
 	{
 		$name = '@sample-loader/unexisting.html.twig';
-		$parsedName = '@sample-loader/tmpl/unexisting.html.twig';
 
-		$loader = $this->getMockBuilder(SampleLoader::class)
-			->setMethods(array('parseExtensionName'))
-			->getMock();
-
-		$loader->expects($this->once())
-			->method('parseExtensionName')
-			->with($this->equalTo($name))
-			->willReturn($parsedName);
+		$loader = new SampleLoader;
+		$loader->parsedExtensionName = '@sample-loader/tmpl/unexisting.html.twig';
 
 		$reflection = new \ReflectionClass($loader);
 		$method = $reflection->getMethod('findTemplate');
