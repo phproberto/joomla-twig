@@ -29,7 +29,7 @@ final class JPosition extends AbstractExtension
 	 *
 	 * @return  array
 	 */
-	public function getFunctions()
+	public function getFunctions() : array
 	{
 		$options = [
 			'is_safe' => ['html']
@@ -48,7 +48,7 @@ final class JPosition extends AbstractExtension
 	 *
 	 * @return  string
 	 */
-	public function render($position, $attribs = [])
+	public function render(string $position, array $attribs = []) : string
 	{
 		$modules  = $this->getModules($position);
 		$renderer = $this->getModuleRenderer();
@@ -71,7 +71,7 @@ final class JPosition extends AbstractExtension
 	 *
 	 * @codeCoverageIgnore
 	 */
-	protected function getModules($position)
+	protected function getModules(string $position) : array
 	{
 		return ModuleHelper::getModules($position);
 	}
@@ -83,7 +83,7 @@ final class JPosition extends AbstractExtension
 	 *
 	 * @codeCoverageIgnore
 	 */
-	protected function getModuleRenderer()
+	protected function getModuleRenderer() : ModuleRenderer
 	{
 		return Factory::getDocument()->loadRenderer('module');
 	}
@@ -93,7 +93,7 @@ final class JPosition extends AbstractExtension
 	 *
 	 * @return  string
 	 */
-	public function getName()
+	public function getName() : string
 	{
 		return 'jposition';
 	}

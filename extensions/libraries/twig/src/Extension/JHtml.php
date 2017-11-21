@@ -27,7 +27,7 @@ final class JHtml extends AbstractExtension
 	 *
 	 * @return  array
 	 */
-	public function getFunctions()
+	public function getFunctions() : array
 	{
 		$options = [
 			'is_safe' => ['html']
@@ -43,7 +43,7 @@ final class JHtml extends AbstractExtension
 	 *
 	 * @return  string
 	 */
-	public function getName()
+	public function getName() : string
 	{
 		return 'jhtml';
 	}

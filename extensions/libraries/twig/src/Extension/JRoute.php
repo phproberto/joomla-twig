@@ -27,7 +27,7 @@ final class JRoute extends AbstractExtension
 	 *
 	 * @return  array
 	 */
-	public function getFunctions()
+	public function getFunctions() : array
 	{
 		return [
 			new TwigFunction('jroute', [Route::class, '_']),
@@ -39,7 +39,7 @@ final class JRoute extends AbstractExtension
 	 *
 	 * @return  string
 	 */
-	public function getName()
+	public function getName() : string
 	{
 		return 'jroute';
 	}

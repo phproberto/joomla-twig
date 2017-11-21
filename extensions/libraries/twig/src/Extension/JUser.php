@@ -27,7 +27,7 @@ final class JUser extends AbstractExtension
 	 *
 	 * @return  array
 	 */
-	public function getFunctions()
+	public function getFunctions() : array
 	{
 		return [
 			new TwigFunction('juser', [Factory::class, 'getUser'])
@@ -39,7 +39,7 @@ final class JUser extends AbstractExtension
 	 *
 	 * @return  string
 	 */
-	public function getName()
+	public function getName() : string
 	{
 		return 'juser';
 	}

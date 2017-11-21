@@ -27,7 +27,7 @@ final class JText extends AbstractExtension
 	 *
 	 * @return  array
 	 */
-	public function getFunctions()
+	public function getFunctions() : array
 	{
 		return [
 			new TwigFunction('jtext', [Text::class, '_']),
@@ -40,7 +40,7 @@ final class JText extends AbstractExtension
 	 *
 	 * @return  string
 	 */
-	public function getName()
+	public function getName() : string
 	{
 		return 'jtext';
 	}
