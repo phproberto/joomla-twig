@@ -25,6 +25,9 @@
   "require-dev": {
     "phpunit/phpunit": "^4.8.35",
     "joomla/coding-standards": "~2.0@alpha",
-    "squizlabs/php_codesniffer": "~2.8"
+    "squizlabs/php_codesniffer": "^2.8"
+  },
+  "scripts": {
+    "test" : "./vendor/bin/phpunit"
   }
 }

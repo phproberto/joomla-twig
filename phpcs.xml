@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<ruleset name="joomla-twig standard">
+<ruleset name="joomla with short arrays standard">
 	<rule ref="./vendor/joomla/coding-standards/Joomla">
 		<exclude name="Generic.Arrays.DisallowShortArraySyntax"/>
 	</rule>

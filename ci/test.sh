@@ -1,3 +1,3 @@
 #!/bin/bash
-./vendor/bin/phpcs --standard="ruleset.xml"
+./vendor/bin/phpcs
 ./vendor/bin/phpunit --configuration ci/phpunit.ci.xml
