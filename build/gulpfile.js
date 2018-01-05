@@ -24,14 +24,10 @@ gulp.task('release', function (cb) {
 
 			return gulp.src([
 					rootPath + '/**/*',
-					'!' + rootPath + '/libraries/twig/vendor/**/test',
-					'!' + rootPath + '/libraries/twig/vendor/**/test/**/*',
-					'!' + rootPath + '/libraries/twig/vendor/**/Test',
-					'!' + rootPath + '/libraries/twig/vendor/**/Test/**/*',
-					'!' + rootPath + '/libraries/twig/vendor/**/tests',
-					'!' + rootPath + '/libraries/twig/vendor/**/tests/**/*',
-					'!' + rootPath + '/libraries/twig/vendor/**/Tests',
-					'!' + rootPath + '/libraries/twig/vendor/**/Tests/**/*',
+					'!' + rootPath + '/libraries/twig/vendor/twig/extensions/test',
+					'!' + rootPath + '/libraries/twig/vendor/twig/extensions/test/**',
+					'!' + rootPath + '/libraries/twig/vendor/twig/twig/test',
+					'!' + rootPath + '/libraries/twig/vendor/twig/twig/test/**',
 					'!' + rootPath + '/libraries/twig/vendor/**/docs/**/*',
 					'!' + rootPath + '/libraries/twig/vendor/**/docs',
 					'!' + rootPath + '/libraries/twig/vendor/**/doc/**/*',
