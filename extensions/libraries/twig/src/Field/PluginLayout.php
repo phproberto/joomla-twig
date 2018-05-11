@@ -18,7 +18,7 @@ use Joomla\CMS\Language\Text;
  *
  * @since  1.0.0
  */
-final class PluginLayout extends LayoutSelector
+class PluginLayout extends LayoutSelector
 {
 	/**
 	 * The form field type.
