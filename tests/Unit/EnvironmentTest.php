@@ -46,8 +46,8 @@ class EnvironmentTest extends \TestCaseDatabase
 	{
 		$this->saveFactoryState();
 
-		\JFactory::$config      = $this->getMockConfig();
-		\JFactory::$session  = $this->getMockSession();
+		\JFactory::$config  = $this->getMockConfig();
+		\JFactory::$session = $this->getMockSession(['getId' => uniqid()]);
 
 		$this->dispatcher      = new \JEventDispatcher;
 		\TestReflection::setValue($this->dispatcher, 'instance', $this->dispatcher);
