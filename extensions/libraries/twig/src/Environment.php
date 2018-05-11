@@ -35,7 +35,7 @@ final class Environment extends BaseEnvironment
 	 * Plugins connected to the events triggered by this class.
 	 *
 	 * @var     array
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.0.3
 	 */
 	private $importablePluginTypes = ['twig'];
 

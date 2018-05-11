@@ -8,7 +8,7 @@
 	<authorUrl>www.phproberto.com</authorUrl>
 	<copyright>Copyright (C) 2017 Roberto Segura López. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later, see LICENSE.</license>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<description>Twig library</description>
 	<files>
 		<folder>form</folder>

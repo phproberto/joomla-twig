@@ -22,7 +22,7 @@ class Pkg_TwigInstallerScript
 	 * Minimum PHP version required.
 	 *
 	 * @const
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.0.3
 	 */
 	const REQUIRED_PHP_VERSION = '7.0.0';
 
@@ -150,7 +150,7 @@ class Pkg_TwigInstallerScript
 	 *
 	 * @return  void
 	 *
-	 * @since   __DEPLOY_VERSION__
+	 * @since   1.0.3
 	 */
 	public function preflight($type, $parent)
 	{
