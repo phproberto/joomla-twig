@@ -6,6 +6,10 @@
       url: /contributing
     - title: License
       url: /license
+- title: Usage
+  links: 
+    - title: Modules
+      url: /usage/modules
 - title: Global variables
   links: 
     - title: japp
