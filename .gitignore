@@ -1,3 +1,10 @@
+# IDEs
+/.idea
+.phpintel
+*.sublime*
+*.code-workspace
+.vscode
+
 # Build
 gulp-config.json
 node_modules/
