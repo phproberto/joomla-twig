@@ -12,7 +12,7 @@ defined('_JEXEC') || die;
 
 use Phproberto\Joomla\Twig\Traits\HasParams;
 use Phproberto\Joomla\Twig\Traits\HasLayoutData;
-use Phproberto\Joomla\Twig\Module\Traits\HasTwigRenderer;
+use Phproberto\Joomla\Twig\Traits\HasTwigRenderer;
 
 /**
  * Base twig module.

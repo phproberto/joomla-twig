@@ -2,7 +2,7 @@
 <extension type="library" method="upgrade" version="3.6">
 	<name>Twig - Library</name>
 	<libraryname>twig</libraryname>
-	<creationDate>October 2017</creationDate>
+	<creationDate>October 2018</creationDate>
 	<author>Roberto Segura</author>
 	<authorEmail>roberto@phproberto.com</authorEmail>
 	<authorUrl>www.phproberto.com</authorUrl>

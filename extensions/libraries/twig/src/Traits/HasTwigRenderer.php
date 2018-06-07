@@ -6,7 +6,7 @@
  * @license    See COPYING.txt
  */
 
-namespace Phproberto\Joomla\Twig\Module\Traits;
+namespace Phproberto\Joomla\Twig\Traits;
 
 defined('_JEXEC') || die;
 

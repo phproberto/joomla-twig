@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="package" version="3.8" method="upgrade">
 	<name>PKG_TWIG</name>
-	<creationDate>Octover 2017</creationDate>
+	<creationDate>June 2018</creationDate>
 	<author>Roberto Segura</author>
 	<authorEmail>roberto@phproberto.com</authorEmail>
 	<authorUrl>www.phproberto.com</authorUrl>
