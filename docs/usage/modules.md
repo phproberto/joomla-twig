@@ -9,6 +9,7 @@ Joomla-twig provides a base module that you can extend and have your twig module
 Let's imagine that we want to create a module named `mod_phproberto_login` and we want it to use Twig layouts for it.
 
 Our module final folder structure would be something like:  
+
 ```
 * mod_phproberto_login
     * language
@@ -104,6 +105,7 @@ Time to create our layouts!
 Let's create an example file `tmpl/default.html.twig` with some content:
 
 ```twig
+{% raw %}
 {% set postText = params.get('posttext') %}
 <div class="{{ cssClass }}" id="{{ cssId }}">
 	<form action="{{ jroute('index.php')}}" method="post" id="login-form" class="form-inline">
@@ -125,6 +127,7 @@ Let's create an example file `tmpl/default.html.twig` with some content:
 		<button type="submit" tabindex="0" name="Submit" class="btn btn-primary login-button">{{ jtext('JLOGIN') }}</button>
 	</form>
 </div>
+{% endraw %}
 ```
 
 I stole the previous code from Joomla's `mod_login` module to show some of the features that we can use in the module. Let's hightlight some key features we are using in this layout:

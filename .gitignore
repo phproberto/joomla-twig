@@ -11,6 +11,9 @@ node_modules/
 /build/releases
 .scannerwork
 
+# Docs
+/_site
+
 # Composer
 /vendor/
 composer.lock
