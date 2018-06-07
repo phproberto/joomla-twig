@@ -26,7 +26,7 @@ Our module final folder structure would be something like:
 Most of that structure will be already familiar for you. The only differences are:
 
 * `src` : The folder where our module class will reside. Joomla provides a base class to render almost everything except for modules. Joomla-twig gives you a nice base class to start with.
-* `tmpl`: Inside the tmpl folder we have files with the `html.twig` extension. Those files are the twig layouts that we will use instead of our traditional php layouts.
+* `tmpl`: Inside the tmpl folder we have files with the `.html.twig` extension. Those files are the twig layouts that we will use instead of our traditional php layouts.
 
 The first thing we will do is to create the content of the module entry point. That's the `mod_phproberto_login.php` file:
 
@@ -51,7 +51,7 @@ use Phproberto\Joomla\Module\Site\Login\LoginModule;
 
 $modInstance = new LoginModule($params, $module);
 
-$layout = '@modules/mod_phproberto_login/' . $params->get('layout', 'default') . 'html.twig';
+$layout = '@module/mod_phproberto_login/' . $params->get('layout', 'default') . '.html.twig';
 
 echo $modInstance->render($layout);
 
