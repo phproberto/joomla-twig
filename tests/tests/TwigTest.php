@@ -18,7 +18,7 @@ use Joomla\CMS\Application\SiteApplication;
 /**
  * Twig tests.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class TwigTest extends \TestCaseDatabase
 {

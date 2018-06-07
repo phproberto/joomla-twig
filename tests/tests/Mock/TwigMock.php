@@ -18,7 +18,7 @@ use Phproberto\Joomla\Twig\Environment;
 /**
  * Twig tests.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class TwigMock extends \TestCaseDatabase
 {

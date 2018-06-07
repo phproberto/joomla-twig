@@ -16,7 +16,7 @@ use Joomla\Registry\Registry;
 /**
  * For classes having params.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.1.0
  */
 trait HasParams
 {

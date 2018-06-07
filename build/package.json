@@ -1,12 +1,14 @@
 {
   "name": "joomla-twig",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Gulp build system for joomla-twig library",
   "main": "gulpfile.js",
   "directories": {
     "doc": "docs"
   },
-  "dependencies": {},
+  "dependencies": {
+    "npm": "^6.1.0"
+  },
   "devDependencies": {
     "browser-sync": "^2.18.13",
     "del": "^3.0.0",

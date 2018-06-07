@@ -15,7 +15,7 @@ use Joomla\CMS\Application\SiteApplication;
 /**
  * ModuleLayout field test.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 abstract class BaseLayoutFieldTest extends \TestCaseDatabase
 {

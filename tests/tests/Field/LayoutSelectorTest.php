@@ -14,7 +14,7 @@ use Phproberto\Joomla\Twig\Tests\Field\Stubs\SampleField;
 /**
  * Base LayoutSelector class test.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class LayoutSelectorTest extends BaseLayoutFieldTest
 {

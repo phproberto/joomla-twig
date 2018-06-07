@@ -16,7 +16,7 @@ use Phproberto\Joomla\Twig\Tests\Loader\Stubs\SampleLoader;
 /**
  * Base ExtensionLoader class tests.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class ExtensionLoaderTest extends BaseExtensionLoaderTest
 {

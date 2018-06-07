@@ -14,7 +14,7 @@ use Phproberto\Joomla\Twig\Field\LayoutSelector;
 /**
  * Sample field to test LayoutSelector class.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class SampleField extends LayoutSelector
 {

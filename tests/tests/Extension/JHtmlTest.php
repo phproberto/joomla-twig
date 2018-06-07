@@ -15,7 +15,7 @@ use Phproberto\Joomla\Twig\Extension\JHtml;
 /**
  * JHtml extension test.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class JHtmlTest extends \TestCase
 {

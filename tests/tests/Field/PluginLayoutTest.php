@@ -14,7 +14,7 @@ use Phproberto\Joomla\Twig\Field\PluginLayout;
 /**
  * PluginLayout field test.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class PluginLayoutTest extends BaseLayoutFieldTest
 {

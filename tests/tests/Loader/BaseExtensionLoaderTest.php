@@ -15,7 +15,7 @@ use Joomla\CMS\Application\SiteApplication;
 /**
  * Base extension loader tests.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 abstract class BaseExtensionLoaderTest extends \TestCaseDatabase
 {

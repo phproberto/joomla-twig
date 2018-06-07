@@ -14,7 +14,7 @@ defined('_JEXEC') || die;
 /**
  * For classes having cached layout data.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.1.0
  */
 trait HasLayoutData
 {

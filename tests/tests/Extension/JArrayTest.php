@@ -14,7 +14,7 @@ use Phproberto\Joomla\Twig\Extension\JArray;
 /**
  * JArray extension test.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class JArrayTest extends \TestCase
 {

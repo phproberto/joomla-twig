@@ -17,7 +17,7 @@ use Phproberto\Joomla\Twig\Traits\HasTwigRenderer;
 /**
  * Base twig module.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 abstract class BaseTwigModule
 {

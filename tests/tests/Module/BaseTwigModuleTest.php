@@ -24,7 +24,7 @@ defined('_JEXEC') || die;
 /**
  * BaseTwigModule tests.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class BaseTwigModuleTest extends \TestCaseDatabase
 {

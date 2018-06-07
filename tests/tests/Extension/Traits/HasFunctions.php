@@ -13,7 +13,7 @@ defined('_JEXEC') || die;
 /**
  * Trait for common tests for extensions with functions.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 trait HasFunctions
 {

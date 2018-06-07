@@ -15,7 +15,7 @@ use Phproberto\Joomla\Twig\Extension\JUser;
 /**
  * JUser extension test.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class JUserTest extends \TestCase
 {

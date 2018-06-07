@@ -15,7 +15,7 @@ use Phproberto\Joomla\Twig\Tests\Plugin\Stubs\SamplePlugin;
 /**
  * BasePlugin tests.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class BasePluginTest extends \TestCase
 {

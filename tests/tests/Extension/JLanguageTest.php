@@ -15,7 +15,7 @@ use Phproberto\Joomla\Twig\Extension\JLanguage;
 /**
  * JLanguage extension test.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class JLanguageTest extends \TestCase
 {

@@ -15,7 +15,7 @@ use Phproberto\Joomla\Twig\Twig;
 /**
  * For classes having a linked app.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.1.0
  */
 trait HasTwigRenderer
 {

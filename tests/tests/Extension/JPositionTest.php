@@ -14,7 +14,7 @@ use Phproberto\Joomla\Twig\Extension\JPosition;
 /**
  * JPosition extension test.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class JPositionTest extends \TestCaseDatabase
 {

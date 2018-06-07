@@ -14,7 +14,7 @@ use Phproberto\Joomla\Twig\Extension\Unserialize;
 /**
  * Unserialize extension test.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class UnserializeTest extends \TestCase
 {

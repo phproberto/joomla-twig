@@ -14,7 +14,7 @@ use Phproberto\Joomla\Twig\Field\ViewLayout;
 /**
  * ViewLayout field test.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class ViewLayoutTest extends BaseLayoutFieldTest
 {

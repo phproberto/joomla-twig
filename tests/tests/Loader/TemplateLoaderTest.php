@@ -14,7 +14,7 @@ use Phproberto\Joomla\Twig\Loader\TemplateLoader;
 /**
  * TemplateLoader tests.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.1.0
  */
 class TemplateLoaderTest extends BaseExtensionLoaderTest
 {
