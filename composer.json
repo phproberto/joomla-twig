@@ -19,7 +19,7 @@
   },
   "autoload-dev": {
       "psr-4": {
-          "Phproberto\\Joomla\\Twig\\Tests\\": "tests/"
+          "Phproberto\\Joomla\\Twig\\Tests\\": "tests/tests"
       }
   },
   "require-dev": {
@@ -28,6 +28,13 @@
     "squizlabs/php_codesniffer": "^2.8"
   },
   "scripts": {
-    "test" : "./vendor/bin/phpunit"
+    "clean": "cd ./build && gulp clean",
+    "copy" : "cd ./build && gulp copy",
+    "cs" : "./vendor/bin/phpcs",
+    "dev": "cd ./build && gulp",
+    "release" : "cd ./build && gulp release",
+    "setup" : "cd ./build && npm install && cp gulp-config.dist.json gulp-config.json",
+    "test" : "./vendor/bin/phpunit",
+    "watch" : "cd ./build && gulp watch"
   }
 }
