@@ -5,7 +5,7 @@
 	<author>Roberto Segura</author>
 	<authorEmail>roberto@phproberto.com</authorEmail>
 	<authorUrl>www.phproberto.com</authorUrl>
-	<copyright>Copyright (C) 2017 Roberto Segura López. All rights reserved.</copyright>
+	<copyright>Copyright (C) 2017-2018 Roberto Segura López. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later, see LICENSE.</license>
 	<packager>Roberto Segura</packager>
 	<packagename>twig</packagename>

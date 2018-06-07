@@ -3,7 +3,7 @@
  * @package     Phproberto.Joomla-Twig
  * @subpackage  Plugin.Jroute
  *
- * @copyright  Copyright (C) 2017 Roberto Segura López, Inc. All rights reserved.
+ * @copyright  Copyright (C) 2017-2018 Roberto Segura López, Inc. All rights reserved.
  * @license    See COPYING.txt
  */
 
