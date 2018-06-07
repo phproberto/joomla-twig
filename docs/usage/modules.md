@@ -86,7 +86,7 @@ use Phproberto\Joomla\Twig\Module\BaseTwigModule;
  *
  * @since  1.0.0
  */
-class EmpresaClientesModule extends BaseTwigModule
+class LoginModule extends BaseTwigModule
 {
 }
 
