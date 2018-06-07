@@ -35,7 +35,7 @@ abstract class BaseExtensionLoaderTest extends \TestCaseDatabase
 		$_SERVER['REQUEST_URI'] = '/index.php';
 		$_SERVER['SCRIPT_NAME'] = '/index.php';
 
-		\JFactory::$config      = $this->getMockConfig();
+		\JFactory::$config   = $this->getMockConfig();
 		\JFactory::$document = $this->getMockDocument();
 		\JFactory::$language = $this->getMockLanguage();
 		\JFactory::$session  = $this->getMockSession();
