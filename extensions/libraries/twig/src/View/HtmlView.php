@@ -11,7 +11,6 @@ namespace Phproberto\Joomla\Twig\View;
 
 defined('_JEXEC') || die;
 
-use Joomla\CMS\Application\ApplicationHelper;
 use Joomla\CMS\MVC\View\HtmlView as BaseView;
 use Phproberto\Joomla\Twig\Traits\HasLayoutData;
 use Phproberto\Joomla\Twig\View\Traits\HasTwigRenderer;
