@@ -7,7 +7,7 @@
  * @license    See COPYING.txt
  */
 
-namespace Phproberto\Joomla\Twig\Tests;
+namespace Phproberto\Joomla\Twig\Tests\View;
 
 defined('_JEXEC') || die;
 
@@ -15,14 +15,13 @@ use Joomla\CMS\Factory;
 use Phproberto\Joomla\Twig\Twig;
 use Phproberto\Joomla\Twig\Environment;
 use Phproberto\Joomla\Twig\View\HtmlView;
-use Phproberto\Joomla\Twig\Tests\View\Stubs\SampleTwigView;
 
 /**
  * HtmlView tests.
  *
  * @since   __DEPLOY_VERSION__
  */
-class HtmlViewTest extends \TestCase
+class HtmlViewTest extends \TestCaseDatabase
 {
 	/**
 	 * @test

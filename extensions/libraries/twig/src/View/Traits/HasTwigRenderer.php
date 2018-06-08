@@ -21,6 +21,13 @@ use Phproberto\Joomla\Twig\Twig;
 trait HasTwigRenderer
 {
 	/**
+	 * Component option.
+	 *
+	 * @var  string
+	 */
+	protected $option;
+
+	/**
 	 * Get the data that will be sent to renderer.
 	 *
 	 * @return  array
@@ -32,7 +39,37 @@ trait HasTwigRenderer
 	 *
 	 * @return  string
 	 */
-	abstract public function getOption();
+	public function getOption()
+	{
+		if (null === $this->option)
+		{
+			$this->option = $this->getOptionFromPrefix();
+		}
+
+		return $this->option;
+	}
+
+	/**
+	 * Get the component from the prefix. Ex.: ContentViewArticle will return com_content
+	 *
+	 * @return  string
+	 */
+	protected function getOptionFromPrefix()
+	{
+		$class = get_class($this);
+
+		if (false !== strpos($class, '\\'))
+		{
+			$name = array_filter(explode('\\', strstr($class, 'View', true)));
+			$name = strtolower(end($name));
+		}
+		else
+		{
+			$name = strtolower(strstr($class, 'View', true));
+		}
+
+		return 'com_' . strtolower($name);
+	}
 
 	/**
 	 * Load a template file -- first look in the templates folder for an override

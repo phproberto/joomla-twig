@@ -58,5 +58,4 @@ abstract class HtmlView extends BaseView
 			'view' => $this
 		];
 	}
-
 }
