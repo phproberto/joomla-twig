@@ -19,7 +19,7 @@ use Phproberto\Joomla\Twig\View\HtmlView;
 /**
  * HtmlView tests.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.2.0
  */
 class HtmlViewTest extends \TestCaseDatabase
 {

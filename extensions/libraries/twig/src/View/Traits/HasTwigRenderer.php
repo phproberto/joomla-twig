@@ -16,7 +16,7 @@ use Phproberto\Joomla\Twig\Twig;
 /**
  * To easily connect Twig rendering to any view.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.2.0
  */
 trait HasTwigRenderer
 {

@@ -18,7 +18,7 @@ use Phproberto\Joomla\Twig\View\Traits\HasTwigRenderer;
 /**
  * Base HTML view.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.2.0
  */
 abstract class HtmlView extends BaseView
 {

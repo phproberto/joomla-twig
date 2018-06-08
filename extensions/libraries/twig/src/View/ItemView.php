@@ -16,7 +16,7 @@ use Phproberto\Joomla\Twig\View\HtmlView;
 /**
  * Base item view.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.2.0
  */
 abstract class ItemView extends HtmlView
 {

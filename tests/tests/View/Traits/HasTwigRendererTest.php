@@ -20,7 +20,7 @@ use Phproberto\Joomla\Twig\Tests\View\Traits\Stubs\ClassWithTwigRenderer;
 /**
  * HasTwigRenderer tests.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.2.0
  */
 class HasTwigRendererTest extends \TestCaseDatabase
 {

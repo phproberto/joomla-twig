@@ -17,7 +17,7 @@ use Phproberto\Joomla\Twig\Traits\HasParams;
 /**
  * HasParams tests.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.2.0
  */
 class HasParamsTest extends \TestCase
 {
