@@ -1,4 +1,4 @@
-## Using Twig in your Joomla! modules
+## Using Twig in modules
 
 Start using Twig layouts in your modules is easy. And you can even do it on a B/C way!
 

@@ -10,6 +10,8 @@
   links: 
     - title: Modules
       url: /usage/modules
+    - title: Views
+      url: /usage/views
 - title: Global variables
   links: 
     - title: japp
