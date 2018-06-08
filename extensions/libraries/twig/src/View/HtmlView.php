@@ -26,28 +26,6 @@ abstract class HtmlView extends BaseView
 	use HasLayoutData, HasTwigRenderer;
 
 	/**
-	 * Component option.
-	 *
-	 * @var  string
-	 */
-	protected $option;
-
-	/**
-	 * Get this component option.
-	 *
-	 * @return  string
-	 */
-	public function getOption()
-	{
-		if (null === $this->option)
-		{
-			$this->option = ApplicationHelper::getComponentName();
-		}
-
-		return $this->option;
-	}
-
-	/**
 	 * Load layout data.
 	 *
 	 * @return  array

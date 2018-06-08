@@ -58,24 +58,12 @@ class HtmlViewTest extends \TestCaseDatabase
 	 *
 	 * @return void
 	 */
-	public function getOptionReturnsCorrectValue()
-	{
-		$view = $this->viewMock([], ['base_path' => __DIR__]);
-
-		$this->assertSame('com_phproberto', $view->getOption());
-	}
-
-	/**
-	 * @test
-	 *
-	 * @return void
-	 */
 	public function loadTemplateReturnsCorrectOutput()
 	{
 		$loader = new \Twig_Loader_Array(
 			[
-				'@component/com_phproberto/sample/default.html.twig' => 'view: {{ view.getName()}} - layout: {{ view.getLayout() }}',
-				'@component/com_phproberto/sample2/another.html.twig' => 'view: {{ view.getName()}} - layout: {{ view.getLayout() }}'
+				'@component/com_phproberto/test/default.html.twig' => 'view: {{ view.getName()}} - layout: {{ view.getLayout() }}',
+				'@component/com_phproberto/test2/another.html.twig' => 'view: {{ view.getName()}} - layout: {{ view.getLayout() }}'
 			]
 		);
 		$environment = new Environment($loader);
@@ -92,17 +80,28 @@ class HtmlViewTest extends \TestCaseDatabase
 		$instanceProperty->setAccessible(true);
 		$instanceProperty->setValue($twig, $twig);
 
-		$view = $this->viewMock([], ['name' => 'sample', 'base_path' => __DIR__]);
+		$view = $this->mockForAbstractClass(
+			HtmlView::class,
+			[
+				'mockClassName' => 'PhprobertoViewTest'
+			]
+		);
 
-		$this->assertSame('view: sample - layout: default', $view->loadTemplate());
-		$this->assertSame('view: sample - layout: default', $view->loadTemplate('inexistent-layout'));
+		$this->assertSame('view: test - layout: default', $view->loadTemplate());
+		$this->assertSame('view: test - layout: default', $view->loadTemplate('inexistent-layout'));
 
-		$view = $this->viewMock(['getLayout'], ['name' => 'sample2', 'base_path' => __DIR__]);
+		$view = $this->mockForAbstractClass(
+			HtmlView::class,
+			[
+				'mockClassName' => 'PhprobertoViewTest2',
+				'methods' => ['getLayout']
+			]
+		);
 
 		$view->method('getLayout')
 			->willReturn('another');
 
-		$this->assertSame('view: sample2 - layout: another', $view->loadTemplate());
+		$this->assertSame('view: test2 - layout: another', $view->loadTemplate());
 	}
 
 	/**
