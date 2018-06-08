@@ -12,6 +12,8 @@ namespace Phproberto\Joomla\Twig\Tests;
 defined('_JEXEC') || die;
 
 use Joomla\CMS\Factory;
+use Phproberto\Joomla\Twig\Twig;
+use Phproberto\Joomla\Twig\Environment;
 use Phproberto\Joomla\Twig\View\HtmlView;
 use Phproberto\Joomla\Twig\Tests\View\Stubs\SampleTwigView;
 
@@ -62,6 +64,46 @@ class HtmlViewTest extends \TestCase
 		$view = $this->viewMock([], ['base_path' => __DIR__]);
 
 		$this->assertSame('com_phproberto', $view->getOption());
+	}
+
+	/**
+	 * @test
+	 *
+	 * @return void
+	 */
+	public function loadTemplateReturnsCorrectOutput()
+	{
+		$loader = new \Twig_Loader_Array(
+			[
+				'@component/com_phproberto/sample/default.html.twig' => 'view: {{ view.getName()}} - layout: {{ view.getLayout() }}',
+				'@component/com_phproberto/sample2/another.html.twig' => 'view: {{ view.getName()}} - layout: {{ view.getLayout() }}'
+			]
+		);
+		$environment = new Environment($loader);
+
+		$twig = Twig::instance();
+
+		$twigReflection = new \ReflectionClass($twig);
+
+		$environmentProperty = $twigReflection->getProperty('environment');
+		$environmentProperty->setAccessible(true);
+		$environmentProperty->setValue($twig, $environment);
+
+		$instanceProperty = $twigReflection->getProperty('instance');
+		$instanceProperty->setAccessible(true);
+		$instanceProperty->setValue($twig, $twig);
+
+		$view = $this->viewMock([], ['name' => 'sample', 'base_path' => __DIR__]);
+
+		$this->assertSame('view: sample - layout: default', $view->loadTemplate());
+		$this->assertSame('view: sample - layout: default', $view->loadTemplate('inexistent-layout'));
+
+		$view = $this->viewMock(['getLayout'], ['name' => 'sample2', 'base_path' => __DIR__]);
+
+		$view->method('getLayout')
+			->willReturn('another');
+
+		$this->assertSame('view: sample2 - layout: another', $view->loadTemplate());
 	}
 
 	/**
