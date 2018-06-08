@@ -35,7 +35,7 @@ trait HasParams
 	 *
 	 * @return  mixed
 	 */
-	public function getParam($name, $defaultValue)
+	public function getParam($name, $defaultValue = null)
 	{
 		return $this->params->get($name, $defaultValue);
 	}
