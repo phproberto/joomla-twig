@@ -14,7 +14,7 @@ defined('_JEXEC') || die;
 use Joomla\CMS\Application\ApplicationHelper;
 use Joomla\CMS\MVC\View\HtmlView as BaseView;
 use Phproberto\Joomla\Twig\Traits\HasLayoutData;
-use Phproberto\Joomla\Twig\Twig;
+use Phproberto\Joomla\Twig\View\Traits\HasTwigRenderer;
 
 /**
  * Base HTML view.
@@ -23,7 +23,7 @@ use Phproberto\Joomla\Twig\Twig;
  */
 abstract class HtmlView extends BaseView
 {
-	use HasLayoutData;
+	use HasLayoutData, HasTwigRenderer;
 
 	/**
 	 * Component option.
@@ -59,34 +59,4 @@ abstract class HtmlView extends BaseView
 		];
 	}
 
-	/**
-	 * Load a template file -- first look in the templates folder for an override
-	 *
-	 * @param   string  $tpl  The name of the template source file; automatically searches the template paths and compiles as needed.
-	 *
-	 * @return  string  The output of the the template script.
-	 *
-	 * @throws  \Exception
-	 */
-	public function loadTemplate($tpl = null)
-	{
-		$layout = $this->getLayout();
-		$tpl = $tpl ? $layout . '_' . $tpl : $layout;
-
-		$renderer = Twig::instance();
-
-		$data = $this->getLayoutData();
-		$prefix = '@component/' . $this->getOption() . '/' . $this->getName();
-
-		$name = $prefix . '/' . $tpl . '.html.twig';
-
-		if ($renderer->environment()->getLoader()->exists($name))
-		{
-			return $renderer->render($name, $data);
-		}
-
-		$name = $prefix . '/default.html.twig';
-
-		return $renderer->render($name, $data);
-	}
 }
