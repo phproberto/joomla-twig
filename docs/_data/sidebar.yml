@@ -38,6 +38,12 @@
       url: /functions/jlayout_debug 
     - title: jlayout_render()
       url: /functions/jlayout_render 
+    - title: jmodule_get_module()
+      url: /functions/jmodule_get_module 
+    - title: jmodule_get_modules()
+      url: /functions/jmodule_get_modules
+    - title: jmodule_render_module()
+      url: /functions/jmodule_render_module
     - title: jposition()
       url: /functions/jposition 
     - title: jprofiler()
