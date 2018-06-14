@@ -33,7 +33,7 @@ final class JPosition extends AbstractExtension
 	{
 		return [
 			new TwigFunction('jposition', [$this, 'render'], ['is_safe' => ['html']]),
-			new TwigFunction('jposition_modules', [$this, 'getModules'])
+			new TwigFunction('jposition_modules', [ModuleHelper::class, 'getModules'])
 		];
 	}
 
@@ -47,7 +47,7 @@ final class JPosition extends AbstractExtension
 	 */
 	public function render(string $position, array $attribs = []) : string
 	{
-		$modules  = $this->getModules($position);
+		$modules  = ModuleHelper::getModules($position);
 		$renderer = $this->getModuleRenderer();
 		$html     = '';
 
@@ -57,20 +57,6 @@ final class JPosition extends AbstractExtension
 		}
 
 		return $html;
-	}
-
-	/**
-	 * Retrive modules in a specific template position.
-	 *
-	 * @param   string  $position  Name of the position whose modules we want to retrieve.
-	 *
-	 * @return  array
-	 *
-	 * @codeCoverageIgnore
-	 */
-	public function getModules(string $position) : array
-	{
-		return ModuleHelper::getModules($position);
 	}
 
 	/**
