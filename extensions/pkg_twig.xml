@@ -33,6 +33,7 @@
 		<file type="plugin" id="jmodule" group="twig" enabled="true">plugins/twig/jmodule</file>
 		<file type="plugin" id="jprofiler" group="twig" enabled="true">plugins/twig/jprofiler</file>
 		<file type="plugin" id="jposition" group="twig" enabled="true">plugins/twig/jposition</file>
+		<file type="plugin" id="jregistry" group="twig" enabled="true">plugins/twig/jregistry</file>
 		<file type="plugin" id="jroute" group="twig" enabled="true">plugins/twig/jroute</file>
 		<file type="plugin" id="jsession" group="twig" enabled="true">plugins/twig/jsession</file>
 		<file type="plugin" id="jtext" group="twig" enabled="true">plugins/twig/jtext</file>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.8" client="site" type="plugin" group="twig" method="upgrade">
+	<name>PLG_TWIG_JREGISTRY</name>
+	<version>1.0.0</version>
+	<creationDate>June 2018</creationDate>
+	<author>Roberto Segura</author>
+	<authorEmail>roberto@phproberto.com</authorEmail>
+	<authorUrl>www.phproberto.com</authorUrl>
+	<copyright>Copyright (C) 2017-2018 Roberto Segura López. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later, see LICENSE.</license>
+	<description>PLG_TWIG_JREGISTRY_DESC</description>
+	<files>
+		<folder>language</folder>
+		<filename plugin="jregistry">jregistry.php</filename>
+		<filename>jregistry.xml</filename>
+	</files>
+</extension>
