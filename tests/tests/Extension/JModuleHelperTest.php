@@ -75,10 +75,6 @@ class JModuleHelperTest extends \TestCase
 			'jmodule_render_module' => [
 				'class'  => ModuleHelper::class,
 				'method' => 'renderModule'
-			],
-			'jmodule_module_cache' => [
-				'class'  => ModuleHelper::class,
-				'method' => 'moduleCache'
 			]
 		];
 	}
