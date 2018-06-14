@@ -31,12 +31,9 @@ final class JPosition extends AbstractExtension
 	 */
 	public function getFunctions() : array
 	{
-		$options = [
-			'is_safe' => ['html']
-		];
-
 		return [
-			new TwigFunction('jposition', [$this, 'render'], $options)
+			new TwigFunction('jposition', [$this, 'render'], ['is_safe' => ['html']]),
+			new TwigFunction('jposition_modules', [$this, 'getModules'])
 		];
 	}
 
@@ -71,7 +68,7 @@ final class JPosition extends AbstractExtension
 	 *
 	 * @codeCoverageIgnore
 	 */
-	protected function getModules(string $position) : array
+	public function getModules(string $position) : array
 	{
 		return ModuleHelper::getModules($position);
 	}

@@ -97,6 +97,19 @@ class JPositionTest extends \TestCaseDatabase
 	}
 
 	/**
+	 * @test
+	 *
+	 * @return void
+	 */
+	public function getModulesReturnsCorrectValue()
+	{
+		$modules = $this->extension->getModules('position-7');
+
+		$this->assertTrue(is_array($modules));
+		$this->assertTrue(count($modules) > 0);
+	}
+
+	/**
 	 * Functions expected to be added by the extension.
 	 *
 	 * @return  array
@@ -107,6 +120,10 @@ class JPositionTest extends \TestCaseDatabase
 			'jposition'        => [
 				'class'  => JPosition::class,
 				'method' => 'render'
+			],
+			'jposition_modules'        => [
+				'class'  => JPosition::class,
+				'method' => 'getModules'
 			]
 		];
 	}
