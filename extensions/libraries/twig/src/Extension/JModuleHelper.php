@@ -20,7 +20,7 @@ use Twig\TwigFunction;
 /**
  * Module helper access for Twig.
  *
- * @since  __DEPLOY_VERSION__
+ * @since  1.3.0
  */
 final class JModuleHelper extends AbstractExtension
 {

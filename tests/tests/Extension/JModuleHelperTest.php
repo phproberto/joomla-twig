@@ -15,7 +15,7 @@ use Phproberto\Joomla\Twig\Extension\JModuleHelper;
 /**
  * JModuleHelper extension test.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   1.3.0
  */
 class JModuleHelperTest extends \TestCase
 {
