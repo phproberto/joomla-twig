@@ -108,10 +108,6 @@ class JPositionTest extends \TestCaseDatabase
 			'jposition'        => [
 				'class'  => JPosition::class,
 				'method' => 'render'
-			],
-			'jposition_modules'        => [
-				'class'  => ModuleHelper::class,
-				'method' => 'getModules'
 			]
 		];
 	}

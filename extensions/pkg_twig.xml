@@ -30,6 +30,7 @@
 		<file type="plugin" id="jhtml" group="twig" enabled="true">plugins/twig/jhtml</file>
 		<file type="plugin" id="jlang" group="twig" enabled="true">plugins/twig/jlang</file>
 		<file type="plugin" id="jlayout" group="twig" enabled="true">plugins/twig/jlayout</file>
+		<file type="plugin" id="jmodule" group="twig" enabled="true">plugins/twig/jmodule</file>
 		<file type="plugin" id="jprofiler" group="twig" enabled="true">plugins/twig/jprofiler</file>
 		<file type="plugin" id="jposition" group="twig" enabled="true">plugins/twig/jposition</file>
 		<file type="plugin" id="jroute" group="twig" enabled="true">plugins/twig/jroute</file>
