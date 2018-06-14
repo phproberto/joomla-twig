@@ -34,7 +34,7 @@ final class JModuleHelper extends AbstractExtension
 		return [
 			new TwigFunction('jmodule_get_module', [ModuleHelper::class, 'getModule']),
 			new TwigFunction('jmodule_get_modules', [ModuleHelper::class, 'getModules']),
-			new TwigFunction('jmodule_render_module', [ModuleHelper::class, 'renderModule']),
+			new TwigFunction('jmodule_render_module', [ModuleHelper::class, 'renderModule'], ['is_safe' => ['html']]),
 			new TwigFunction('jmodule_module_cache', [ModuleHelper::class, 'moduleCache'])
 		];
 	}
