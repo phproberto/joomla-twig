@@ -48,6 +48,8 @@
       url: /functions/jposition 
     - title: jprofiler()
       url: /functions/jprofiler 
+    - title: jregistry()
+      url: /functions/jregistry 
     - title: jroute()
       url: /functions/jroute 
     - title: jtext()
