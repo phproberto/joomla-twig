@@ -35,6 +35,13 @@ class PlgTwigCache extends BasePlugin
 	 */
 	public function onTwigBeforeLoad(Environment $environment, LoaderInterface $loader, &$options)
 	{
-		$options['cache'] = Factory::getConfig()->get('cache_path', JPATH_CACHE) . '/twig';
+		$cacheFolder = Factory::getConfig()->get('cache_path', JPATH_CACHE) . '/twig';
+
+		if ($cacheFolder !== JPATH_CACHE)
+		{
+			$cacheFolder .= '/' . (Factory::getApplication()->isSite() ? 'site' : 'admin');
+		}
+
+		$options['cache'] = $cacheFolder;
 	}
 }
