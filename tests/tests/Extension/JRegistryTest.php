@@ -17,7 +17,7 @@ use Phproberto\Joomla\Twig\Extension\JRegistry;
 /**
  * JRegistry extension test.
  *
- * @since   __DEPLOY_VERSION__
+ * @since   4.0.0
  */
 class JRegistryTest extends \TestCase
 {

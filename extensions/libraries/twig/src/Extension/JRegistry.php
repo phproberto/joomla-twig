@@ -18,7 +18,7 @@ use Twig\Extension\AbstractExtension;
 /**
  * Registry integration for Twig.
  *
- * @since  1.0.0
+ * @since  4.0.0
  */
 final class JRegistry extends AbstractExtension
 {

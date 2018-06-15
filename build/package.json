@@ -1,6 +1,6 @@
 {
   "name": "joomla-twig",
-  "version": "1.3.0",
+  "version": "1.4.0",
   "description": "Gulp build system for joomla-twig library",
   "main": "gulpfile.js",
   "directories": {
