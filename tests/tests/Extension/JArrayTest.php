@@ -10,6 +10,7 @@
 namespace Phproberto\Joomla\Twig\Tests\Extension;
 
 use Phproberto\Joomla\Twig\Extension\JArray;
+use Phproberto\Joomla\Twig\Tests\Extension\Traits\HasFilters;
 
 /**
  * JArray extension test.
@@ -18,6 +19,8 @@ use Phproberto\Joomla\Twig\Extension\JArray;
  */
 class JArrayTest extends \TestCase
 {
+	use HasFilters;
+
 	private $extension;
 
 	/**
@@ -40,15 +43,7 @@ class JArrayTest extends \TestCase
 	 */
 	public function testGetFiltersReturnsCorrectData()
 	{
-		$this->assertEquals(1, count($this->extension->getFilters()));
-
-		$filter = $this->extension->getFilters()[0];
-
-		$callable = $filter->getCallable();
-		$this->assertTrue(is_callable($callable));
-		$this->assertEquals('to_array', $filter->getName());
-		$this->assertEquals(JArray::class, get_class($callable[0]));
-		$this->assertEquals('toArray', $callable[1]);
+		$this->genericFiltersTest();
 	}
 
 	/**
@@ -70,5 +65,24 @@ class JArrayTest extends \TestCase
 	{
 		$this->assertSame([2], $this->extension->toArray(2));
 		$this->assertSame(['test'], $this->extension->toArray('test'));
+	}
+
+	/**
+	 * Functions expected to be added by the extension.
+	 *
+	 * @return  array
+	 */
+	protected function expectedFilters()
+	{
+		return [
+			'to_array' => [
+				'class'  => JArray::class,
+				'method' => 'toArray'
+			],
+			'array_values' => [
+				'class'  => null,
+				'method' => 'array_values'
+			]
+		];
 	}
 }

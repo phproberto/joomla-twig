@@ -11,9 +11,9 @@
     </testsuites>
     <logging>
         <log type="coverage-clover"
-             target="../coverage/report-clover.xml"/>
+             target="../tests/coverage/report-clover.xml"/>
         <log type="junit"
-             target="../coverage/report-junit.xml"
+             target="../tests/coverage/report-junit.xml"
              logIncompleteSkipped="false"/>
     </logging>
     <filter>

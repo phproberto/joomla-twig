@@ -29,7 +29,8 @@ final class JArray extends AbstractExtension
 	public function getFilters() : array
 	{
 		return [
-			new TwigFilter('to_array', [$this, 'toArray'])
+			new TwigFilter('to_array', [$this, 'toArray']),
+			new TwigFilter('array_values', 'array_values')
 		];
 	}
 
