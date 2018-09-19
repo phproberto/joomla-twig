@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <extension type="package" version="3.8" method="upgrade">
 	<name>PKG_TWIG</name>
-	<creationDate>June 2018</creationDate>
+	<creationDate>September 2018</creationDate>
 	<author>Roberto Segura</author>
 	<authorEmail>roberto@phproberto.com</authorEmail>
 	<authorUrl>www.phproberto.com</authorUrl>
@@ -10,7 +10,7 @@
 	<packager>Roberto Segura</packager>
 	<packagename>twig</packagename>
 	<packagerurl>http://www.phproberto.com</packagerurl>
-	<version>1.4.0</version>
+	<version>1.5.0</version>
 	<description>PKG_TWIG_XML_DESCRIPTION</description>
 	<scriptfile>install.php</scriptfile>
 

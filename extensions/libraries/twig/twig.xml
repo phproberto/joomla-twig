@@ -2,13 +2,13 @@
 <extension type="library" method="upgrade" version="3.6">
 	<name>Twig - Library</name>
 	<libraryname>twig</libraryname>
-	<creationDate>June 2018</creationDate>
+	<creationDate>September 2018</creationDate>
 	<author>Roberto Segura</author>
 	<authorEmail>roberto@phproberto.com</authorEmail>
 	<authorUrl>www.phproberto.com</authorUrl>
 	<copyright>Copyright (C) 2017-2018 Roberto Segura López. All rights reserved.</copyright>
 	<license>GNU General Public License version 2 or later, see LICENSE.</license>
-	<version>1.4.0</version>
+	<version>1.5.0</version>
 	<description>Twig library</description>
 	<files>
 		<folder>form</folder>
