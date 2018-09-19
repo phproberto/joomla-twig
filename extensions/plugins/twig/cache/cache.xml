@@ -14,4 +14,22 @@
 		<filename plugin="cache">cache.php</filename>
 		<filename>cache.xml</filename>
 	</files>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field
+					name="enabled"
+					type="list"
+					label="PLG_TWIG_CACHE_PARAM_ENABLED"
+					description="PLG_TWIG_CACHE_PARAM_ENABLED_DESC"
+					class="btn-group btn-group-yesno"
+					default="0"
+					>
+					<option value="0">PLG_TWIG_CACHE_PARAM_ENABLED_OPTION_GLOBAL</option>
+					<option value="1">JENABLED</option>
+					<option value="2">JDISABLED</option>
+				</field>
+			</fieldset>
+		</fields>
+	</config>
 </extension>
